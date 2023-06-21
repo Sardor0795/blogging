@@ -11,6 +11,7 @@ export const globalContainer = css`
 `;
 
 export const signUpButton = css`
+  border: none;
   padding: 8px 12px;
   background-color: #1c1c1c;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.06),
@@ -23,6 +24,8 @@ export const signUpButton = css`
   line-height: 1.1;
   text-align: center;
   color: #ffffff;
+  transition: 0.2s linear;
+  cursor: pointer;
 
   &:hover {
     transform: translateY(-2px);

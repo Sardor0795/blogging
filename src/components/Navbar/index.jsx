@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Container, OuterContainer } from "./style";
+import AuthorizedNavbar from "./AuthorizedNavbar";
+import UnauthorizedNavbar from "./UnauthorizedNavbar";
 
 function Navbar() {
+  const [auth] = useState(false);
+
   return (
     <>
-      <OuterContainer>
-        <Container>n</Container>
-      </OuterContainer>
+      {auth ? <AuthorizedNavbar /> : <UnauthorizedNavbar />}
       <Outlet />
     </>
   );
