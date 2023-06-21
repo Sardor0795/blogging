@@ -3,8 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
   /* CSS Variables */
   :root {
-    --dark-color: #3a3a3a;
-    --blue-color: #2639ED;
+    
   }
   /* Universal selector */
   * {
