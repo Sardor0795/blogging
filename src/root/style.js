@@ -6,9 +6,9 @@ export const GlobalStyles = createGlobalStyle`
     --dark-black: #1C1C1C;
     --light-black: #3A3A3A;
     --light-blue: #D7ECFF;
+    --light-yellow: #FFFBD7;
     --gray: #969696;
     --blue: #0085FF;
-    --yellow: #FFFBD7;
   }
   /* Universal selector */
   * {
