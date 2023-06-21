@@ -51,7 +51,9 @@ function UnauthorizedNavbar() {
             Loyiha haqida
           </NavbarLink>
           <NavbarLink type="desktop">Yozish</NavbarLink>
-          <NavbarLink type="desktop">Kirish</NavbarLink>
+          <NavbarLink onClick={() => setAuthOpened(true)} type="desktop">
+            Kirish
+          </NavbarLink>
           <SignUpButton onClick={() => setAuthOpened(true)} type="desktop">
             Boshlash
           </SignUpButton>
@@ -71,7 +73,7 @@ function UnauthorizedNavbar() {
                 </SearchButton>
                 <SignUpButton onClick={openAuth}>Boshlash</SignUpButton>
                 <NavbarLink onClick={() => setOpened(false)}>Yozish</NavbarLink>
-                <NavbarLink onClick={() => setOpened(false)}>Kirish</NavbarLink>
+                <NavbarLink onClick={openAuth}>Kirish</NavbarLink>
                 <NavbarLink onClick={() => setOpened(false)} to="/about">
                   Loyiha haqida
                 </NavbarLink>
