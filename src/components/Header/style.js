@@ -56,6 +56,13 @@ export const MoreContentLink = styled.a`
   line-height: 24px;
   display: flex;
   align-items: center;
+  transition: 0.2s linear;
+  &:hover {
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
 `;
 
 export const MoreLinkIcon = styled(LinkIcon)`
