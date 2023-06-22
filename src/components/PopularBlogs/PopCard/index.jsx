@@ -10,10 +10,10 @@ import {
   PopCardWrapper,
 } from "./style";
 
-export const PopCard = ({ cardImg, cardDate, cardAuthor, cardTitle }) => {
+export const PopCard = ({ cardimg, cardDate, cardAuthor, cardTitle }) => {
   return (
     <PopCardWrapper>
-      <PopCardImg cardImg={cardImg} />
+      <PopCardImg cardimg={cardimg} />
       <PopCardContent>
         <PopCardInfoWrap>
           <PopCardDate>{cardDate}</PopCardDate>
