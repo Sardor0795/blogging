@@ -3,7 +3,7 @@ import { globalContainer } from "../../../root/global";
 
 export const OuterContainer = styled.div`
   background-color: #fff;
-  padding-block: 80px;
+  padding-block: 50px 80px;
 `;
 
 export const Container = styled.div`
