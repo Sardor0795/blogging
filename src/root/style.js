@@ -49,7 +49,7 @@ export const GlobalStyles = createGlobalStyle`
   ::-webkit-scrollbar-thumb:active{
   	background: rgba(58, 58, 58, 0.6);
   }
-  
+
   *::selection {
     background: #1B5BF7;
     color: #fff;
@@ -58,5 +58,9 @@ export const GlobalStyles = createGlobalStyle`
 
   img, svg {
     user-select: none;
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
