@@ -20,12 +20,12 @@ export const PopCardImg = styled.div`
 export const PopCardContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `;
 
 export const PopCardInfoWrap = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 8px;
 `;
 export const PopCardDate = styled.div`
   color: #969696;
@@ -56,4 +56,7 @@ export const PopCardTitle = styled.div`
   font-weight: 500;
   line-height: 24px;
   max-width: 264px;
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
 `;
