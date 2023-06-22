@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 
 export const PopCardWrapper = styled.div`
   display: flex;
+  @media (max-width: 355px) {
+    align-items: center;
+  }
 `;
 
 export const PopCardImg = styled(Link)`
@@ -27,6 +30,9 @@ export const PopCardInfoWrap = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 8px;
+  @media (max-width: 355px) {
+    flex-wrap: wrap;
+  }
 `;
 export const PopCardDate = styled.div`
   color: #969696;
@@ -64,5 +70,8 @@ export const PopCardTitle = styled(Link)`
 
   @media (max-width: 1024px) {
     max-width: 100%;
+  }
+  @media (max-width: 355px) {
+    font-size: 14px;
   }
 `;
