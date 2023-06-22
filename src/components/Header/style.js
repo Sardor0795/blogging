@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { globalContainer, signUpButton } from "../../root/global";
-import { ReactComponent as LinkIcon } from "../../assets/icons/more_link_icon.svg";
+import { ReactComponent as linkIcon } from "../../assets/icons/more_link_icon.svg";
+import headerBg from "../../assets/images/header_bg.svg";
 
 export const OuterContainer = styled.div`
   background-color: var(--light-blue);
+  background-image: url("${headerBg}");
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 477px) bottom calc(-132px);
 `;
 
 export const Container = styled.div`
@@ -65,7 +69,7 @@ export const MoreContentLink = styled.a`
   }
 `;
 
-export const MoreLinkIcon = styled(LinkIcon)`
+export const MoreLinkIcon = styled(linkIcon)`
   width: 16px;
   height: 16px;
   margin-left: 4px;
