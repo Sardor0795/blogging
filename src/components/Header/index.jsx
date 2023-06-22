@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, HashTag, HashTagsWrapper, HeaderText, HeaderTitle, MoreContentLink, OuterContainer, SignUpButton } from "./style";
+import { Container, HashTag, HashTagsWrapper, HeaderText, HeaderTitle, MoreContentLink, MoreLinkIcon, OuterContainer, SignUpButton } from "./style";
 
 function Header() {
   return (
@@ -20,7 +20,9 @@ function Header() {
           <HashTag>#texnologiya</HashTag>
           <HashTag>#san’at</HashTag>
         </HashTagsWrapper>
-        <MoreContentLink href="#">ko‘proq mavzularni ko‘rish</MoreContentLink>
+        <MoreContentLink href="#">ko‘proq mavzularni ko‘rish
+        <MoreLinkIcon/>
+        </MoreContentLink>
       </Container>
     </OuterContainer>
   );

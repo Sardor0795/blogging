@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { globalContainer, signUpButton } from "../../root/global";
+import { ReactComponent as LinkIcon } from "../../assets/icons/more_link_icon.svg";
 
 export const OuterContainer = styled.div`
   background-color: var(--light-blue);
@@ -53,4 +54,12 @@ export const MoreContentLink = styled.a`
   font-size: 16px;
   font-family: Inter;
   line-height: 24px;
+  display: flex;
+  align-items: center;
+`;
+
+export const MoreLinkIcon = styled(LinkIcon)`
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
 `;
