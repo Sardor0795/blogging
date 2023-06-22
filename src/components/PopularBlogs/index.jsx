@@ -68,7 +68,7 @@ function PopularBlogs() {
           {mockData.map((v) => (
             <PopCard
               key={v.id}
-              cardImg={v.img}
+              cardimg={v.img}
               cardDate={v.date}
               cardAuthor={v.author}
               cardTitle={v.title}

@@ -6,7 +6,7 @@ export const PopCardWrapper = styled.div`
 `;
 
 export const PopCardImg = styled.div`
-  background-image: url(${({ cardImg }) => (cardImg ? cardImg : noImg)});
+  background-image: url(${({ cardimg }) => (cardimg ? cardimg : noImg)});
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
