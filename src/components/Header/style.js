@@ -8,6 +8,10 @@ export const OuterContainer = styled.div`
   background-image: url("${headerBg}");
   background-repeat: no-repeat;
   background-position: left calc(50% + 477px) bottom calc(-132px);
+  @media (max-width: 771px) {
+    background-size: 60%;
+    background-position: left calc(50% + 252px) bottom calc(-83px);
+  }
 `;
 
 export const Container = styled.div`
@@ -22,6 +26,10 @@ export const HeaderTitle = styled.h1`
   font-family: Mountella;
   max-width: 824px;
   margin-bottom: 16px;
+  @media (max-width: 771px) {
+    font-size: 48px;
+    width: 100%;
+  }
 `;
 
 export const HeaderText = styled.p`
@@ -30,6 +38,10 @@ export const HeaderText = styled.p`
   font-family: Inter;
   line-height: 28px;
   margin-bottom: 40px;
+  @media (max-width: 771px) {
+    font-size: 20px;
+    margin-bottom: 32px;
+  }
 `;
 
 export const SignUpButton = styled.button`
