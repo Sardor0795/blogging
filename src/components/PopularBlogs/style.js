@@ -19,10 +19,17 @@ export const SectionTitle = styled.h3`
   line-height: 24px;
   display: flex;
   align-items: center;
+  margin-bottom: 32px;
 `;
 
 export const TitleIcon = styled(titleIcon)`
   width: 24px;
   height: 24px;
   margin-right: 8px;
+`;
+
+export const PopCardsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 `;
