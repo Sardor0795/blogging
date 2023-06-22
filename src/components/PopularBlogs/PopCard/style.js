@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import noImg from "../../../assets/images/no-img.png";
+import { Link } from "react-router-dom";
 
 export const PopCardWrapper = styled.div`
   display: flex;
 `;
 
-export const PopCardImg = styled.div`
+export const PopCardImg = styled(Link)`
   background-image: url(${({ cardimg }) => (cardimg ? cardimg : noImg)});
   background-size: cover;
   background-position: center center;
@@ -49,13 +50,18 @@ export const PopCardAuthor = styled.div`
   line-height: 20px;
 `;
 
-export const PopCardTitle = styled.div`
+export const PopCardTitle = styled(Link)`
   color: #1c1c1c;
   font-size: 16px;
   font-family: Inter;
   font-weight: 500;
   line-height: 24px;
   max-width: 264px;
+  transition: color 0.2s ease;
+  &:hover {
+    color: var(--blue);
+  }
+
   @media (max-width: 1024px) {
     max-width: 100%;
   }
