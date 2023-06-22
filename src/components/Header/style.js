@@ -12,6 +12,10 @@ export const OuterContainer = styled.div`
     background-size: 60%;
     background-position: left calc(50% + 252px) bottom calc(-83px);
   }
+  @media (max-width: 376px) {
+    background-size: 65%;
+    background-position: left calc(50% + 54px) bottom calc(46px);
+  }
 `;
 
 export const Container = styled.div`
@@ -30,6 +34,9 @@ export const HeaderTitle = styled.h1`
     font-size: 48px;
     width: 100%;
   }
+  @media (max-width: 376px) {
+    font-size: 36px;
+  }
 `;
 
 export const HeaderText = styled.p`
@@ -42,6 +49,9 @@ export const HeaderText = styled.p`
     font-size: 20px;
     margin-bottom: 32px;
   }
+  @media (max-width: 376px) {
+    font-size: 16px;
+  }
 `;
 
 export const SignUpButton = styled.button`
@@ -51,6 +61,7 @@ export const SignUpButton = styled.button`
 
 export const HashTagsWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export const HashTag = styled.span`
@@ -61,7 +72,7 @@ export const HashTag = styled.span`
   &:not(:last-child) {
     margin-right: 24px;
   }
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 `;
 
 export const MoreContentLink = styled.a`
