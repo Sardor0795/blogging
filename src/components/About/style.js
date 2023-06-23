@@ -19,7 +19,7 @@ export const HeaderBgImg = styled(headerBg)`
   height: 500px;
   position: absolute;
   top: -120px;
-  right: -80px;
+  left: calc(50% + 355px);
   z-index: 10;
   pointer-events: none;
 `;
