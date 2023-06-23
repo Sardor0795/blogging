@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 
 export const PopCardWrapper = styled.div`
   display: flex;
-  @media (max-width: 355px) {
-    align-items: center;
-  }
+  align-items: center;
 `;
 
 export const PopCardImg = styled(Link)`
