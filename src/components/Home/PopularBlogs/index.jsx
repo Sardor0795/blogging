@@ -50,7 +50,6 @@ function PopularBlogs() {
                       foregroundColor={"#fff"}
                       viewBox="0 0 380 70"
                     >
-                      {/* Only SVG shapes */}
                       <rect x="0" y="0" rx="8" ry="8" width="70" height="70" />
                       <rect
                         x="80"

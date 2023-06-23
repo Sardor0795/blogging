@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import useSearch from "../../../hooks/useSearch";
 import { useLocation, useNavigate } from "react-router-dom";
-import { replaceUrl } from "../../../utils/replaceUrl";
 import {
   Dropdown,
   DropdownBody,
@@ -9,11 +7,13 @@ import {
   Layer,
   ListCard,
   TopPart,
-} from "./filter-part.style";
-import { ReactComponent as NewArticlesIcon } from "../../../assets/icons/new_articles.svg";
-import { ReactComponent as DropdownIcon } from "../../../assets/icons/new_articles_dropdown.svg";
-import { ReactComponent as ListIcon } from "../../../assets/icons/new_articles_list.svg";
-import { ReactComponent as CardIcon } from "../../../assets/icons/new_articles_card.svg";
+} from "./style";
+import { useSearch } from "./../../../../hooks/useSearch";
+import { replaceUrl } from "./../../../../utils/replaceUrl";
+import { ReactComponent as NewArticlesIcon } from "../../../../assets/icons/new_articles.svg";
+import { ReactComponent as DropdownIcon } from "../../../../assets/icons/new_articles_dropdown.svg";
+import { ReactComponent as ListIcon } from "../../../../assets/icons/new_articles_list.svg";
+import { ReactComponent as CardIcon } from "../../../../assets/icons/new_articles_card.svg";
 
 function FilterPart() {
   // Toggle List Card  --Start

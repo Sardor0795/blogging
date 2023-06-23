@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import useSearch from "../../../hooks/useSearch";
 import { OuterContainer, Container, Items } from "./style";
-import FilterPart from "./filter-part.component";
+import FilterPart from "./Filter";
 import ListArticle from "../../Article/List";
 import CardArticle from "./../../Article/Card";
-import useSearch from "../../../hooks/useSearch";
+import ListSkeleton from "../../ListSkeleton";
+import CardSkeleton from "../../CardSkeleton";
 
 function NewArticles() {
   const search = useSearch();
@@ -15,7 +17,9 @@ function NewArticles() {
   }, [search]);
 
   useEffect(() => {
-    setData([1, 2, 3, 4, 5, 6]);
+    setTimeout(() => {
+      setData([1, 2, 3, 4, 5, 6]);
+    }, 4000);
   }, []);
 
   return (
@@ -29,7 +33,9 @@ function NewArticles() {
                 ? data?.map((item, index) => (
                     <CardArticle data={item} key={index} />
                   ))
-                : "Loading"}
+                : Array(6)
+                    .fill()
+                    .map((item, index) => <CardSkeleton key={index} />)}
             </>
           ) : (
             <>
@@ -37,7 +43,9 @@ function NewArticles() {
                 ? data?.map((item, index) => (
                     <ListArticle data={item} key={index} />
                   ))
-                : "Loading"}
+                : Array(6)
+                    .fill()
+                    .map((item, index) => <ListSkeleton key={index} />)}
             </>
           )}
         </Items>
