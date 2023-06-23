@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { globalContainer } from "../../root/global";
-import { ReactComponent as titleIcon } from "../../assets/icons/title-icon.svg";
+import { globalContainer } from "../../../root/global";
+import { ReactComponent as titleIcon } from "../../../assets/icons/title-icon.svg";
 
 export const OuterContainer = styled.div`
   margin: 80px 0;

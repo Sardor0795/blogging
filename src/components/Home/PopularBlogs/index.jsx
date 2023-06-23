@@ -7,7 +7,7 @@ import {
   TitleIcon,
 } from "./style";
 
-import PopBlogImg from "../../assets/images/pop-blog-sample-img.jpg";
+import PopBlogImg from "../../../assets/images/pop-blog-sample-img.jpg";
 import { PopCard } from "./PopCard";
 
 const mockData = [

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import noImg from "../../../assets/images/no-img.png";
+import noImg from "../../../../assets/images/no-img.png";
 import { Link } from "react-router-dom";
 
 export const PopCardWrapper = styled.div`
