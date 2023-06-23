@@ -62,7 +62,7 @@ export const ContentLinkWrapper = styled.div`
       margin-right: 20px;
     }
   }
-  @media (max-width: 377px) {
+  @media (max-width: 590px) {
     width: 100%;
     &:not(:last-child) {
       margin-bottom: 32px;
