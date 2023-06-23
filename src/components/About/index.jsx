@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import { Container, HeaderBgImg, OuterContainer } from "./style";
+import { Container, HeaderBgImg, OuterContainer, UzbMap, UzbMapWrap } from "./style";
 import Navbar from "../Navbar/index";
 
 function About() {
@@ -8,7 +8,11 @@ function About() {
     <OuterContainer>
       <Navbar yellowbg="true" />
       <Header />
-      <Container></Container>
+      <Container>
+        <UzbMapWrap>
+          <UzbMap/>
+        </UzbMapWrap>
+      </Container>
       <HeaderBgImg />
     </OuterContainer>
   );
