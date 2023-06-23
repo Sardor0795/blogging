@@ -1,10 +1,14 @@
 import React from "react";
+import Header from "./Header";
 import { Container, OuterContainer } from "./style";
+import Navbar from "../Navbar/index";
 
 function About() {
   return (
     <OuterContainer>
-      <Container>About</Container>
+      <Navbar yellowbg="true"/>
+      <Header />
+      <Container></Container>
     </OuterContainer>
   );
 }

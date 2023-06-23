@@ -3,12 +3,12 @@ import { Outlet } from "react-router-dom";
 import AuthorizedNavbar from "./AuthorizedNavbar";
 import UnauthorizedNavbar from "./UnauthorizedNavbar";
 
-function Navbar() {
+function Navbar({yellowbg}) {
   const [auth] = useState(false);
 
   return (
     <>
-      {auth ? <AuthorizedNavbar /> : <UnauthorizedNavbar />}
+      {auth ? <AuthorizedNavbar yellowbg={yellowbg} /> : <UnauthorizedNavbar yellowbg={yellowbg} />}
       <Outlet />
     </>
   );
