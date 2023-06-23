@@ -20,26 +20,11 @@ function Header() {
       <OuterContainer>
         <Container>
           <HeaderTitle>
-            Bizning maqsadimiz oʻzbek ilmiy kontentini boyitish
+          O‘zbek ma’naviy boy davlat, ammo internet kontenti-chi?
           </HeaderTitle>
           <HeaderText>
-            Bilimingizni maqolalarda ulashing va hamjamiyatni kengaytiring
+          Bizning maqsadimiz mana shu bo’shliqni to’ldirishga urinish va yosh auditoriya yordamida bunga erishish.
           </HeaderText>
-          <SignUpButton onClick={() => setAuthOpened(true)} type="button">
-            Hamjamiyatga qo’shiling
-          </SignUpButton>
-          <HashTagsWrapper>
-            <HashTag>#dolzarb</HashTag>
-            <HashTag>#ta’lim</HashTag>
-            <HashTag>#iqtisodiyot</HashTag>
-            <HashTag>#madaniyat</HashTag>
-            <HashTag>#texnologiya</HashTag>
-            <HashTag>#san’at</HashTag>
-          </HashTagsWrapper>
-          <MoreContentLink href="#">
-            ko‘proq mavzularni ko‘rish
-            <MoreLinkIcon />
-          </MoreContentLink>
         </Container>
       </OuterContainer>
       <Auth opened={authOpened} setOpened={setAuthOpened} />

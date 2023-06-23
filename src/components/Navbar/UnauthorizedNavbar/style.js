@@ -7,7 +7,8 @@ export const OuterContainer = styled.div`
   z-index: 10;
   top: 0;
   left: 0;
-  background-color: var(--light-blue);
+  background-color: ${({ yellowbg }) =>
+    yellowbg ? "var(--light-yellow)" : "var(--light-blue)"};
   padding-block: 18px;
   transition: 0.2s linear;
 

@@ -42,8 +42,20 @@ export const HeaderTitle = styled.h1`
     font-size: 48px;
     width: 100%;
   }
-  @media (max-width: 376px) {
+  @media (max-width: 515px) {
+    font-size: 41px;
+  }
+  @media (max-width: 440px) {
     font-size: 36px;
+  }
+  @media (max-width: 390px) {
+    font-size: 31px;
+  }
+  @media (max-width: 335px) {
+    font-size: 30px;
+  }
+  @media (max-width: 325px) {
+    font-size: 29px;
   }
 `;
 
