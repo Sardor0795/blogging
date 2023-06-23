@@ -44,6 +44,27 @@ export const HeaderBgImg = styled(headerBg)`
     width: 350px;
     height: 350px;
   }
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+
+export const HeaderBgImgMobile = styled(headerBg)`
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: -120px;
+  left: calc(50% + 355px);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+  @media (max-width: 700px) {
+    left: calc(50% + 100px);
+    top: 80px;
+    width: 350px;
+    height: 350px;
+    display: block;
+  }
   @media (max-width: 655px) {
     left: calc(50% + 50px);
     width: 350px;
