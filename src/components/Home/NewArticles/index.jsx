@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import useSearch from "../../../hooks/useSearch";
-import { OuterContainer, Container, Items } from "./style";
+import { OuterContainer, Container, Items, ButtonRow } from "./style";
 import FilterPart from "./Filter";
 import ListArticle from "../../Article/List";
 import CardArticle from "./../../Article/Card";
 import ListSkeleton from "../../ListSkeleton";
 import CardSkeleton from "../../CardSkeleton";
+import { ReactComponent as LoadMore } from "../../../assets/icons/load_more.svg";
 
 function NewArticles() {
   const search = useSearch();
@@ -49,6 +50,12 @@ function NewArticles() {
             </>
           )}
         </Items>
+        <ButtonRow>
+          <button>
+            <LoadMore />
+            <p>Ko’proq yuklash</p>
+          </button>
+        </ButtonRow>
       </Container>
     </OuterContainer>
   );
