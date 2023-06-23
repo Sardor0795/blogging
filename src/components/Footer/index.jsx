@@ -26,7 +26,7 @@ function Footer() {
   return (
     <OuterContainer>
       <Container>
-        <LogoLinkWrapper>
+        <LogoLinkWrapper to="/">
           <FooterLogo />
         </LogoLinkWrapper>
         <Content>

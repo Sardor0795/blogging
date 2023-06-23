@@ -9,6 +9,15 @@ export const OuterContainer = styled.div`
   left: 0;
   background-color: var(--light-blue);
   padding-block: 18px;
+  transition: 0.2s linear;
+
+  ${({ scrolling }) =>
+    scrolling === "true" &&
+    css`
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+    `}
 `;
 
 const container = css`
@@ -39,9 +48,9 @@ export const ForLogo = styled(Link)`
     width: 100%;
   }
 
-  @media screen and (max-width: 400px) {
+  /* @media screen and (max-width: 400px) {
     width: 110px;
-  }
+  } */
 `;
 
 export const RightSide = styled.div`

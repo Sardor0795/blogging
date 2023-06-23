@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   ForLogo,
@@ -22,6 +22,7 @@ function UnauthorizedNavbar() {
   const [opened, setOpened] = useState(false);
   const [searchOpened, setSearchOpened] = useState(false);
   const [authOpened, setAuthOpened] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
 
   const openSearch = () => {
     setOpened(false);
@@ -33,8 +34,15 @@ function UnauthorizedNavbar() {
     setAuthOpened(true);
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) setScrolling(true);
+      else setScrolling(false);
+    });
+  }, []);
+
   return (
-    <OuterContainer>
+    <OuterContainer scrolling={`${scrolling}`}>
       <Container>
         <ForLogo to="/" onClick={() => setOpened(false)}>
           <Logo />

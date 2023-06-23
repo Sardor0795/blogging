@@ -6,8 +6,8 @@ export const Layer = styled.div`
   z-index: 12;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   transition: 0.2s linear;
   background-color: rgba(22, 0, 0, 0.5);
   visibility: ${({ opened }) => (opened === "true" ? "visible" : "hidden")};
