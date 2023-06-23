@@ -51,6 +51,9 @@ export const ContentLinks = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 32px;
+  @media (max-width: 1070px) {
+    margin-bottom: 0px;
+  }
 `;
 
 export const ContentLinkWrapper = styled.div`
@@ -62,8 +65,31 @@ export const ContentLinkWrapper = styled.div`
       margin-right: 20px;
     }
   }
+  @media (max-width: 1070px) {
+    margin-right: 0px;
+    margin-bottom: 24px;
+    width: 50%;
+    &:not(:last-child) {
+      margin-right: 0px;
+      padding-right: 20px;
+    }
+  }
+  @media (max-width: 930px) {
+    &:nth-child(2n) {
+      text-align: right;
+    }
+  }
+  @media (max-width: 850px) {
+    width: unset;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
   @media (max-width: 590px) {
     width: 100%;
+    &:nth-child(2n) {
+      text-align: unset;
+    }
     &:not(:last-child) {
       margin-bottom: 32px;
     }
@@ -77,6 +103,7 @@ export const ContentLink = styled(Link)`
   font-family: Inter;
   line-height: 24px;
   transition: color 0.2s ease;
+  white-space: nowrap;
   &:hover {
     color: var(--blue);
   }
