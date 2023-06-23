@@ -58,7 +58,8 @@ export const HeaderBgImg = styled(headerBg)`
     left: 30%;
   }
   @media (max-width: 400px) {
-    left: 10%;
+    width: 250px;
+    height: 250px;
   }
 `;
 
@@ -67,6 +68,12 @@ export const UzbMapWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 771px) {
+    padding: 65px 0;
+  }
+  @media (max-width: 600px) {
+    padding: 48px 0;
+  }
 `;
 
 export const UzbMap = styled.div`
@@ -77,4 +84,10 @@ export const UzbMap = styled.div`
   width: 100%;
   max-width: 855px;
   height: 556px;
+  @media (max-width: 771px) {
+    height: 360px;
+  }
+  @media (max-width: 375px) {
+    height: 185px;
+  }
 `;
