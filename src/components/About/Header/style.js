@@ -10,6 +10,9 @@ export const Container = styled.div`
   ${globalContainer};
   margin-inline: auto;
   padding: 85px 0 75px 0;
+  @media (max-width: 600px) {
+    padding: 48px 0;
+  }
 `;
 
 export const HeaderTitle = styled.h1`
@@ -30,12 +33,6 @@ export const HeaderTitle = styled.h1`
   }
   @media (max-width: 390px) {
     font-size: 31px;
-  }
-  @media (max-width: 335px) {
-    font-size: 30px;
-  }
-  @media (max-width: 325px) {
-    font-size: 29px;
   }
 `;
 
