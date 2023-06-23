@@ -90,6 +90,9 @@ export const SocialMedia = styled(Link)`
   &:hover {
     color: var(--blue);
   }
+  &:active {
+    transform: translateY(2px);
+  }
   &:not(:last-child) {
     margin-right: 16px;
   }
@@ -101,6 +104,7 @@ export const YouTubeIcon = styled(youTubeIcon)``;
 
 export const Downloads = styled.div`
   display: flex;
+  margin-bottom: 5px;
 `;
 
 export const DownloadAppStore = styled(Link)`
@@ -110,6 +114,9 @@ export const DownloadAppStore = styled(Link)`
   width: 124px;
   height: 36px;
   margin-right: 16px;
+  &:active {
+    transform: translateY(2px);
+  }
 `;
 export const DownloadPlayMarket = styled(Link)`
   background-image: url(${playMarketIcon});
@@ -117,4 +124,7 @@ export const DownloadPlayMarket = styled(Link)`
   background-size: cover;
   width: 124px;
   height: 36px;
+  &:active {
+    transform: translateY(2px);
+  }
 `;
