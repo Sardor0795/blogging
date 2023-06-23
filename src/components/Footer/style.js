@@ -20,10 +20,17 @@ export const Container = styled.div`
   margin-inline: auto;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 850px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const LogoLinkWrapper = styled(Link)`
   margin-right: 48px;
+  @media (max-width: 850px) {
+    width: 100%;
+    margin-bottom: 32px;
+  }
 `;
 
 export const FooterLogo = styled(Logo)`
@@ -35,10 +42,14 @@ export const FooterLogo = styled(Logo)`
 export const Content = styled.div`
   max-width: 552px;
   margin-right: 60px;
+  @media (max-width: 1096px) {
+    margin-right: 32px;
+  }
 `;
 
 export const ContentLinks = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 32px;
 `;
 
@@ -55,6 +66,11 @@ export const ContentLink = styled(Link)`
   &:not(:last-child) {
     margin-right: 32px;
   }
+  @media (max-width: 1136px) {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
 `;
 
 export const ContentText = styled.p`
@@ -70,18 +86,24 @@ export const ContentCopyright = styled.p`
   font-size: 13px;
   font-family: Inter;
   line-height: 20px;
+  @media (max-width: 850px) {
+    display: none;
+  }
 `;
 
 export const Socials = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: space-between;
+  @media (max-width: 850px) {
+    align-items: flex-start;
+  }
 `;
 
 export const SocialMedias = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 64px;
 `;
 
 export const SocialMedia = styled(Link)`
@@ -104,7 +126,9 @@ export const YouTubeIcon = styled(youTubeIcon)``;
 
 export const Downloads = styled.div`
   display: flex;
-  margin-bottom: 5px;
+  @media (max-width: 850px) {
+    margin-bottom: 32px;
+  }
 `;
 
 export const DownloadAppStore = styled(Link)`
@@ -126,5 +150,17 @@ export const DownloadPlayMarket = styled(Link)`
   height: 36px;
   &:active {
     transform: translateY(2px);
+  }
+`;
+
+export const MobileCopyright = styled.p`
+  color: #969696;
+  font-size: 13px;
+  font-family: Inter;
+  line-height: 20px;
+  display: none;
+  width: 100%;
+  @media (max-width: 850px) {
+    display: block;
   }
 `;

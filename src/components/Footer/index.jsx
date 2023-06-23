@@ -18,6 +18,7 @@ import {
   DownloadAppStore,
   DownloadPlayMarket,
   LogoLinkWrapper,
+  MobileCopyright,
 } from "./style";
 
 function Footer() {
@@ -57,6 +58,7 @@ function Footer() {
             <DownloadPlayMarket />
           </Downloads>
         </Socials>
+        <MobileCopyright>© Copyright 2023 Boss Blog inc.</MobileCopyright>
       </Container>
     </OuterContainer>
   );
