@@ -112,3 +112,45 @@ export const UzbMap = styled.div`
     height: 185px;
   }
 `;
+
+export const AboutContentWrap = styled.div`
+  padding: 80px 0;
+  @media (max-width: 600px) {
+    padding: 48px 0;
+  }
+`;
+
+export const AboutContentText = styled.p`
+  color: #1c1c1c;
+  font-size: 64px;
+  font-family: Mountella;
+  margin-bottom: 32px;
+  @media (max-width: 771px) {
+    font-size: 48px;
+  }
+  @media (max-width: 600px) {
+    font-size: 32px;
+  }
+`;
+
+export const AboutContentBtn = styled.button`
+  color: #1c1c1c;
+  text-align: center;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 28px;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.06);
+  padding: 12px 16px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+`;
