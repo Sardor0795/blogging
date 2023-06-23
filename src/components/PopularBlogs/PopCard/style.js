@@ -38,7 +38,7 @@ export const PopCardDate = styled.div`
   color: #969696;
   font-size: 12px;
   font-family: Inter;
-  line-height: 16px;
+  line-height: 1.1;
   letter-spacing: 0.48px;
   text-transform: uppercase;
 `;
@@ -53,25 +53,29 @@ export const PopCardAuthor = styled.div`
   color: #969696;
   font-size: 13px;
   font-family: Inter;
-  line-height: 20px;
+  line-height: 1.1;
 `;
 
-export const PopCardTitle = styled(Link)`
+export const PopCardTitle = styled.div`
+  max-width: 264px;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
+`;
+
+export const TitleLink = styled(Link)`
   color: #1c1c1c;
   font-size: 16px;
   font-family: Inter;
   font-weight: 500;
   line-height: 24px;
-  max-width: 264px;
   transition: color 0.2s ease;
   &:hover {
     color: var(--blue);
   }
-
-  @media (max-width: 1024px) {
-    max-width: 100%;
-  }
   @media (max-width: 355px) {
     font-size: 14px;
+    line-height: 1.1;
   }
 `;

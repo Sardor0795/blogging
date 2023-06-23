@@ -8,6 +8,7 @@ import {
   PopCardInfoWrap,
   PopCardTitle,
   PopCardWrapper,
+  TitleLink,
 } from "./style";
 
 export const PopCard = ({ cardimg, cardDate, cardAuthor, cardTitle }) => {
@@ -20,7 +21,9 @@ export const PopCard = ({ cardimg, cardDate, cardAuthor, cardTitle }) => {
           <PopCardDot />
           <PopCardAuthor>{cardAuthor}</PopCardAuthor>
         </PopCardInfoWrap>
-        <PopCardTitle>{cardTitle}</PopCardTitle>
+        <PopCardTitle>
+          <TitleLink>{cardTitle}</TitleLink>
+        </PopCardTitle>
       </PopCardContent>
     </PopCardWrapper>
   );
