@@ -171,6 +171,7 @@ export const DownloadAppStore = styled(Link)`
   background-image: url(${appStoreIcon});
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 5px;
   width: 124px;
   height: 36px;
   margin-right: 16px;
@@ -184,6 +185,7 @@ export const DownloadPlayMarket = styled(Link)`
   background-size: cover;
   width: 124px;
   height: 36px;
+  border-radius: 5px;
   &:active {
     transform: translateY(2px);
   }
