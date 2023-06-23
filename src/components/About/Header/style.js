@@ -1,29 +1,9 @@
 import styled from "styled-components";
 import { globalContainer, signUpButton } from "../../../root/global";
 import { ReactComponent as linkIcon } from "../../../assets/icons/more_link_icon.svg";
-import headerBg from "../../../assets/images/header_bg.svg";
 
 export const OuterContainer = styled.div`
   background-color: var(--light-yellow);
-  background-image: url("${headerBg}");
-  background-repeat: no-repeat;
-  background-position: left calc(50% + 477px) bottom calc(-132px);
-  @media (max-width: 1024px) {
-    background-size: 40%;
-    background-position: left calc(50% + 326px) bottom calc(-85px);
-  }
-  @media (max-width: 771px) {
-    background-size: 60%;
-    background-position: left calc(50% + 252px) bottom calc(-83px);
-  }
-  @media (max-width: 600px) {
-    background-size: 55%;
-    background-position: left calc(50% + 100px) bottom calc(30px);
-  }
-  @media (max-width: 376px) {
-    background-size: 65%;
-    background-position: left calc(50% + 54px) bottom calc(46px);
-  }
 `;
 
 export const Container = styled.div`
