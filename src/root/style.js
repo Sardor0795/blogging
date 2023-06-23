@@ -57,6 +57,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   img, svg {
+    -webkit-user-select: none;
     user-select: none;
   }
 

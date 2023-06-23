@@ -94,8 +94,10 @@ export const SignUpButton = styled.button`
   ${signUpButton}
 
   @media screen and (max-width: 700px) {
-    display: ${({ type }) => (type === "desktop" ? "none" : "inline")};
-    text-align: ${({ type }) => (type === "desktop" ? "left" : "center")};
+    display: ${({ style_type }) =>
+      style_type === "desktop" ? "none" : "inline"};
+    text-align: ${({ style_type }) =>
+      style_type === "desktop" ? "left" : "center"};
   }
 `;
 

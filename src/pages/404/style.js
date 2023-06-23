@@ -11,6 +11,7 @@ export const OuterContainer = styled.div`
 
 export const Container = styled.div`
   ${globalContainer};
+  max-width: 1050px;
   margin-inline: auto;
   flex: 1;
   display: flex;

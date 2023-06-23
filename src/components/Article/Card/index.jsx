@@ -61,7 +61,7 @@ function CardArticle() {
               <ReadingTimeIcon />
               <div>3 daqiqa o‘qish</div>
             </Info>
-            <button>
+            <button type="button">
               <FavoritesIcon />
               <div>Keyinroq o‘qish</div>
             </button>

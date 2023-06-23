@@ -49,7 +49,7 @@ function UnauthorizedNavbar() {
         </ForLogo>
         <RightSide>
           <RightSide.Search>
-            <SearchButton onClick={() => setSearchOpened(true)}>
+            <SearchButton onClick={() => setSearchOpened(true)} type="button">
               <SearchIcon />
             </SearchButton>
           </RightSide.Search>
@@ -62,7 +62,7 @@ function UnauthorizedNavbar() {
           <NavbarLink onClick={() => setAuthOpened(true)} type="desktop">
             Kirish
           </NavbarLink>
-          <SignUpButton onClick={() => setAuthOpened(true)} type="desktop">
+          <SignUpButton onClick={() => setAuthOpened(true)} type="button" style_type='desktop'>
             Boshlash
           </SignUpButton>
           <Mobile>
@@ -76,7 +76,7 @@ function UnauthorizedNavbar() {
             </Mobile.Icon>
             <Menu opened={`${opened}`} onClick={() => setOpened(false)}>
               <MenuContainer onClick={(e) => e.stopPropagation()}>
-                <SearchButton onClick={openSearch}>
+                <SearchButton onClick={openSearch} type="button">
                   <SearchIcon />
                 </SearchButton>
                 <SignUpButton onClick={openAuth}>Boshlash</SignUpButton>

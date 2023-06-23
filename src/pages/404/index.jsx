@@ -34,14 +34,18 @@ function NotFoundPage() {
             Bu sahifa mavjud emas yoki olib tashlangan! Bosh sahifaga
             qaytishingizni tavsiya qilamiz.
           </Description>
-          <button onClick={handleClick} type="button">
+          <button
+            onClick={handleClick}
+            type="button"
+            title="Bosh sahifaga qaytish"
+          >
             <Icon />
             <p>Bosh sahifaga qaytish</p>
           </button>
         </Leftside>
         <Rightside>
           <ImageWrapper>
-            <img src={image} alt="not found page" />
+            <img src={image} alt="Sahifa topilmadi" />
           </ImageWrapper>
         </Rightside>
       </Container>
