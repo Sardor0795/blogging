@@ -53,6 +53,23 @@ export const ContentLinks = styled.div`
   margin-bottom: 32px;
 `;
 
+export const ContentLinkWrapper = styled.div`
+  &:not(:last-child) {
+    margin-right: 32px;
+  }
+  @media (max-width: 1136px) {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  @media (max-width: 377px) {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+`;
+
 export const ContentLink = styled(Link)`
   color: #585757;
   text-align: center;
@@ -62,14 +79,6 @@ export const ContentLink = styled(Link)`
   transition: color 0.2s ease;
   &:hover {
     color: var(--blue);
-  }
-  &:not(:last-child) {
-    margin-right: 32px;
-  }
-  @media (max-width: 1136px) {
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
   }
 `;
 

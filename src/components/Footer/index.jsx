@@ -19,6 +19,7 @@ import {
   DownloadPlayMarket,
   LogoLinkWrapper,
   MobileCopyright,
+  ContentLinkWrapper,
 } from "./style";
 
 function Footer() {
@@ -30,10 +31,18 @@ function Footer() {
         </LogoLinkWrapper>
         <Content>
           <ContentLinks>
-            <ContentLink>Loyiha haqida</ContentLink>
-            <ContentLink>Yordam</ContentLink>
-            <ContentLink>Foydalanish shartlari</ContentLink>
-            <ContentLink>Maxfiylik siyosati</ContentLink>
+            <ContentLinkWrapper>
+              <ContentLink>Loyiha haqida</ContentLink>
+            </ContentLinkWrapper>
+            <ContentLinkWrapper>
+              <ContentLink>Yordam</ContentLink>
+            </ContentLinkWrapper>
+            <ContentLinkWrapper>
+              <ContentLink>Foydalanish shartlari</ContentLink>
+            </ContentLinkWrapper>
+            <ContentLinkWrapper>
+              <ContentLink>Maxfiylik siyosati</ContentLink>
+            </ContentLinkWrapper>
           </ContentLinks>
           <ContentText>
             Ushbu loyihaning maqsadi oʻzbek tilida ilmiy maqolalar onlayn chop
