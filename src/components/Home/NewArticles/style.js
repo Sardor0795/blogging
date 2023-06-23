@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { globalContainer } from "../../../root/global";
 
 export const OuterContainer = styled.div`
@@ -11,8 +11,26 @@ export const Container = styled.div`
   margin-inline: auto;
 `;
 
+const gridStyle = css`
+  ${({ type }) =>
+    type === "card"
+      ? css`
+          grid-template-columns: 1fr 1fr 1fr;
+
+          @media screen and (max-width: 1050px) {
+            grid-template-columns: 1fr 1fr;
+          }
+          @media screen and (max-width: 650px) {
+            grid-template-columns: 1fr;
+          }
+        `
+      : css`
+          grid-template-columns: 1fr;
+        `}
+`;
+
 export const Items = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 24px;
+  ${gridStyle}
 `;
