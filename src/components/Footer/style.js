@@ -22,11 +22,14 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
+export const LogoLinkWrapper = styled(Link)`
+  margin-right: 48px;
+`;
+
 export const FooterLogo = styled(Logo)`
   width: 139px;
   height: 37px;
   flex-shrink: 0;
-  margin-right: 48px;
 `;
 
 export const Content = styled.div`
@@ -45,6 +48,10 @@ export const ContentLink = styled(Link)`
   font-size: 16px;
   font-family: Inter;
   line-height: 24px;
+  transition: color 0.2s ease;
+  &:hover {
+    color: var(--blue);
+  }
   &:not(:last-child) {
     margin-right: 32px;
   }
@@ -79,6 +86,7 @@ export const SocialMedias = styled.div`
 
 export const SocialMedia = styled(Link)`
   transition: color 0.2s ease;
+  color: #969696;
   &:hover {
     color: var(--blue);
   }

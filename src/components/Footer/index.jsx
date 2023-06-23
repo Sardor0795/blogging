@@ -17,13 +17,16 @@ import {
   Downloads,
   DownloadAppStore,
   DownloadPlayMarket,
+  LogoLinkWrapper,
 } from "./style";
 
 function Footer() {
   return (
     <OuterContainer>
       <Container>
-        <FooterLogo />
+        <LogoLinkWrapper>
+          <FooterLogo />
+        </LogoLinkWrapper>
         <Content>
           <ContentLinks>
             <ContentLink>Loyiha haqida</ContentLink>
@@ -50,8 +53,8 @@ function Footer() {
             </SocialMedia>
           </SocialMedias>
           <Downloads>
-            <DownloadAppStore/>
-            <DownloadPlayMarket/>
+            <DownloadAppStore />
+            <DownloadPlayMarket />
           </Downloads>
         </Socials>
       </Container>
