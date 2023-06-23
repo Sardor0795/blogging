@@ -49,7 +49,11 @@ function UnauthorizedNavbar() {
         </ForLogo>
         <RightSide>
           <RightSide.Search>
-            <SearchButton onClick={() => setSearchOpened(true)} type="button">
+            <SearchButton
+              onClick={() => setSearchOpened(true)}
+              type="button"
+              title="Qidiruv"
+            >
               <SearchIcon />
             </SearchButton>
           </RightSide.Search>
@@ -62,7 +66,12 @@ function UnauthorizedNavbar() {
           <NavbarLink onClick={() => setAuthOpened(true)} type="desktop">
             Kirish
           </NavbarLink>
-          <SignUpButton onClick={() => setAuthOpened(true)} type="button" style_type='desktop'>
+          <SignUpButton
+            onClick={() => setAuthOpened(true)}
+            type="button"
+            style_type="desktop"
+            title="Roʻyxatdan oʻtish"
+          >
             Boshlash
           </SignUpButton>
           <Mobile>
@@ -76,10 +85,16 @@ function UnauthorizedNavbar() {
             </Mobile.Icon>
             <Menu opened={`${opened}`} onClick={() => setOpened(false)}>
               <MenuContainer onClick={(e) => e.stopPropagation()}>
-                <SearchButton onClick={openSearch} type="button">
+                <SearchButton
+                  onClick={openSearch}
+                  type="button"
+                  title="Qidiruv"
+                >
                   <SearchIcon />
                 </SearchButton>
-                <SignUpButton onClick={openAuth}>Boshlash</SignUpButton>
+                <SignUpButton onClick={openAuth} title="Roʻyxatdan oʻtish">
+                  Boshlash
+                </SignUpButton>
                 <NavbarLink onClick={() => setOpened(false)}>Yozish</NavbarLink>
                 <NavbarLink onClick={openAuth}>Kirish</NavbarLink>
                 <NavbarLink onClick={() => setOpened(false)} to="/about">

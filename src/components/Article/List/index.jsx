@@ -23,7 +23,7 @@ function ListArticle() {
   return (
     <Container>
       <Desktop>
-        <Image url={articleImg}  />
+        <Image url={articleImg} />
         <RightSide>
           <RightSide.Top>
             <Top>
@@ -55,7 +55,7 @@ function ListArticle() {
                 </Profile.Container>
               </Profile>
               <Details>
-                <Details.Button type="button">
+                <Details.Button type="button" title="Keyinroq o‘qish">
                   <FavoritesIcon />
                   <Details.ButtonText>Keyinroq o‘qish</Details.ButtonText>
                 </Details.Button>
@@ -83,13 +83,13 @@ function ListArticle() {
               <Profile.Img url={profileImg} />
               <Profile.Text>Akbarali Khasanov</Profile.Text>
             </Profile.Container>
-            <button type="button">
+            <button type="button" title="Keyinroq o‘qish">
               <FavoritesIcon />
               <Details.ButtonText>Keyinroq o‘qish</Details.ButtonText>
             </button>
           </Profile>
           <Details>
-            <Details.Button type="button">
+            <Details.Button type="button" title="Keyinroq o‘qish">
               <FavoritesIcon />
               <Details.ButtonText>Keyinroq o‘qish</Details.ButtonText>
             </Details.Button>

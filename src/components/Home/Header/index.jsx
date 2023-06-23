@@ -25,7 +25,11 @@ function Header() {
           <HeaderText>
             Bilimingizni maqolalarda ulashing va hamjamiyatni kengaytiring
           </HeaderText>
-          <SignUpButton onClick={() => setAuthOpened(true)} type="button">
+          <SignUpButton
+            onClick={() => setAuthOpened(true)}
+            type="button"
+            title="Hamjamiyatga qo’shiling"
+          >
             Hamjamiyatga qo’shiling
           </SignUpButton>
           <HashTagsWrapper>
