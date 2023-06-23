@@ -59,18 +59,20 @@ function ListArticle() {
                   <FavoritesIcon />
                   <Details.ButtonText>Keyinroq o‘qish</Details.ButtonText>
                 </Details.Button>
-                <div>
-                  <ReadingTimeIcon />
-                  <p>3 daqiqa o‘qish</p>
-                </div>
-                <div>
-                  <CommentCountIcon />
-                  <p>34</p>
-                </div>
-                <div>
-                  <ViewsCountIcon />
-                  <p>8.6K</p>
-                </div>
+                <Details.Rightside>
+                  <div>
+                    <ReadingTimeIcon />
+                    <p>3 daqiqa o‘qish</p>
+                  </div>
+                  <div>
+                    <CommentCountIcon />
+                    <p>34</p>
+                  </div>
+                  <div>
+                    <ViewsCountIcon />
+                    <p>8.6K</p>
+                  </div>
+                </Details.Rightside>
               </Details>
             </Bottom>
           </RightSide.Bottom>
@@ -83,28 +85,26 @@ function ListArticle() {
               <Profile.Img url={profileImg} />
               <Profile.Text>Akbarali Khasanov</Profile.Text>
             </Profile.Container>
-            <button type="button" title="Keyinroq o‘qish">
-              <FavoritesIcon />
-              <Details.ButtonText>Keyinroq o‘qish</Details.ButtonText>
-            </button>
           </Profile>
           <Details>
             <Details.Button type="button" title="Keyinroq o‘qish">
               <FavoritesIcon />
               <Details.ButtonText>Keyinroq o‘qish</Details.ButtonText>
             </Details.Button>
-            <div>
-              <ReadingTimeIcon />
-              <p>3 daqiqa o‘qish</p>
-            </div>
-            <div>
-              <CommentCountIcon />
-              <p>34</p>
-            </div>
-            <div>
-              <ViewsCountIcon />
-              <p>8.6K</p>
-            </div>
+            <Details.Rightside>
+              <div>
+                <ReadingTimeIcon />
+                <p>3 daqiqa o‘qish</p>
+              </div>
+              <div>
+                <CommentCountIcon />
+                <p>34</p>
+              </div>
+              <div>
+                <ViewsCountIcon />
+                <p>8.6K</p>
+              </div>
+            </Details.Rightside>
           </Details>
         </Bottom>
       </Tablet>

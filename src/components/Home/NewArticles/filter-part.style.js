@@ -5,12 +5,6 @@ export const TopPart = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @media screen and (max-width: 450px) {
-    flex-direction: column;
-    align-items: start;
-    gap: 16px;
-  }
 `;
 
 TopPart.Leftside = styled.div`
@@ -31,6 +25,10 @@ TopPart.Rightside = styled.div`
 
 export const Dropdown = styled.div`
   position: relative;
+
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
 `;
 
 export const DropdownHeader = styled.div`

@@ -20,18 +20,8 @@ export const OuterContainer = styled.div`
     `}
 `;
 
-const container = css`
-  @media screen and (max-width: 1500px) {
-    width: 94%;
-  }
-
-  @media screen and (min-width: 1500.01px) {
-    width: 1430px;
-  }
-`;
-
 export const Container = styled.div`
-  ${container};
+  ${globalContainer};
   margin-inline: auto;
   display: flex;
   align-items: center;

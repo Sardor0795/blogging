@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const OuterContainer = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ export const Image = styled(Link)`
 export const Content = styled.div`
   padding: 16px;
 
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1050px) {
     padding: 16px 0;
   }
 `;
@@ -88,15 +88,9 @@ Description.Link = styled(Link)`
   }
 `;
 
-export const Details = styled.div`
-  margin-top: 16px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  justify-content: space-between;
-`;
-
 export const Profile = styled(Link)`
+  text-decoration: none;
+  margin-top: 16px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -121,12 +115,6 @@ Profile.Name = styled.div`
   line-height: 1.1;
 `;
 
-Details.Rightside = styled.div`
-  display: flex;
-  gap: 12px;
-  align-items: center;
-`;
-
 export const Info = styled.div`
   display: flex;
   align-items: center;
@@ -136,7 +124,7 @@ export const Info = styled.div`
   line-height: 1.1;
 `;
 
-export const Bottom = styled.div`
+export const Details = styled.div`
   margin-top: 16px;
   display: flex;
   gap: 5px;
@@ -166,5 +154,20 @@ export const Bottom = styled.div`
     &:active {
       transform: translateY(0);
     }
+
+    @media screen and (max-width: 800px) {
+      padding: 5px;
+      border-radius: 4px;
+
+      div {
+        display: none;
+      }
+    }
   }
+`;
+
+Details.Leftside = styled.div`
+  display: flex;
+  gap: 5px;
+  align-items: center;
 `;

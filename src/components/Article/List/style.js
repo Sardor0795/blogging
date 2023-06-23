@@ -208,14 +208,6 @@ export const Profile = styled.div`
   gap: 10px;
   white-space: nowrap;
 
-  button {
-    ${favoritesButton}
-
-    @media screen and (min-width: 651px) {
-      display: none;
-    }
-  }
-
   @media screen and (max-width: 400px) {
     flex-direction: column;
     align-items: start;
@@ -248,7 +240,18 @@ Profile.Text = styled.div`
 `;
 
 export const Details = styled.div`
-  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @media screen and (max-width: 650px) {
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+`;
+
+Details.Rightside = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
@@ -267,16 +270,21 @@ export const Details = styled.div`
 `;
 
 Details.Button = styled.button`
-  ${favoritesButton}
+  ${favoritesButton};
 
   @media screen and (max-width: 650px) {
-    display: none;
+    padding: 5px;
+    border-radius: 4px;
   }
 `;
 
-Details.ButtonText = styled.div`
+Details.ButtonText = styled.p`
   color: var(--dark-black);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.1;
+
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
 `;

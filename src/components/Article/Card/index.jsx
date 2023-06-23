@@ -10,7 +10,6 @@ import {
   Details,
   Profile,
   Info,
-  Bottom,
 } from "./style";
 import articleImg from "../../../assets/images/article.png";
 import profileImg from "../../../assets/images/profile-img.svg";
@@ -18,6 +17,7 @@ import { ReactComponent as FavoritesIcon } from "../../../assets/icons/add_to_fa
 import { ReactComponent as ReadingTimeIcon } from "../../../assets/icons/reading_time.svg";
 import { ReactComponent as CommentCountIcon } from "../../../assets/icons/comments_number.svg";
 import { ReactComponent as ViewsCountIcon } from "../../../assets/icons/views_number.svg";
+import { Leftside } from "./../../../pages/404/style";
 
 function CardArticle() {
   return (
@@ -40,12 +40,12 @@ function CardArticle() {
               boshlaganimda...
             </Description.Link>
           </Description>
+          <Profile>
+            <Profile.Image url={profileImg} />
+            <Profile.Name>Akbarali Khasanov</Profile.Name>
+          </Profile>
           <Details>
-            <Profile>
-              <Profile.Image url={profileImg} />
-              <Profile.Name>Akbarali Khasanov</Profile.Name>
-            </Profile>
-            <Details.Rightside>
+            <Details.Leftside>
               <Info>
                 <CommentCountIcon />
                 <div>34</div>
@@ -54,18 +54,16 @@ function CardArticle() {
                 <ViewsCountIcon />
                 <div>8.6K</div>
               </Info>
-            </Details.Rightside>
-          </Details>
-          <Bottom>
-            <Info>
-              <ReadingTimeIcon />
-              <div>3 daqiqa o‘qish</div>
-            </Info>
+              <Info>
+                <ReadingTimeIcon />
+                <div>3 daqiqa o‘qish</div>
+              </Info>
+            </Details.Leftside>
             <button type="button" title="Keyinroq o‘qish">
               <FavoritesIcon />
               <div>Keyinroq o‘qish</div>
             </button>
-          </Bottom>
+          </Details>
         </Content>
       </Container>
     </OuterContainer>
