@@ -22,6 +22,7 @@ import {
   ContentLinkWrapper,
   FooterLogoLink,
 } from "./style";
+import { toTop } from "./../../utils/toTop";
 
 function Footer() {
   return (
@@ -35,7 +36,9 @@ function Footer() {
         <Content>
           <ContentLinks>
             <ContentLinkWrapper>
-              <ContentLink>Loyiha haqida</ContentLink>
+              <ContentLink to="/about" onClick={toTop}>
+                Loyiha haqida
+              </ContentLink>
             </ContentLinkWrapper>
             <ContentLinkWrapper>
               <ContentLink>Yordam</ContentLink>
@@ -44,7 +47,9 @@ function Footer() {
               <ContentLink>Foydalanish shartlari</ContentLink>
             </ContentLinkWrapper>
             <ContentLinkWrapper>
-              <ContentLink to='/privacy'>Maxfiylik siyosati</ContentLink>
+              <ContentLink to="/privacy" onClick={toTop}>
+                Maxfiylik siyosati
+              </ContentLink>
             </ContentLinkWrapper>
           </ContentLinks>
           <ContentText>

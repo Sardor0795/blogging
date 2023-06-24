@@ -18,6 +18,7 @@ export const HeaderTitle = styled.h1`
   font-family: Mountella;
   max-width: 824px;
   margin-bottom: 16px;
+
   @media (max-width: 771px) {
     font-size: 48px;
     width: 100%;

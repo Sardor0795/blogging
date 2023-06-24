@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, HeaderText, HeaderTitle, OuterContainer } from "./style";
+import { Container, HeaderTitle, OuterContainer } from "./style";
 import Auth from "../../Auth";
 
 function Header() {

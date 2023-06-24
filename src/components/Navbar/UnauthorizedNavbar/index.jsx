@@ -17,6 +17,7 @@ import { ReactComponent as SearchIcon } from "../../../assets/icons/search.svg";
 import close from "../../../assets/icons/close.png";
 import Search from "../../Search";
 import Auth from "./../../Auth";
+import { toTop } from "./../../../utils/toTop";
 
 function UnauthorizedNavbar({ yellowbg, fixed }) {
   const [opened, setOpened] = useState(false);
@@ -67,10 +68,19 @@ function UnauthorizedNavbar({ yellowbg, fixed }) {
           </RightSide.Search>
           <Search opened={searchOpened} setOpened={setSearchOpened} />
           <Auth opened={authOpened} setOpened={setAuthOpened} />
-          <NavbarLink to="/about" aria-label="Loyiha haqida" type="desktop">
+          <NavbarLink
+            to="/about"
+            onClick={toTop}
+            aria-label="Loyiha haqida"
+            type="desktop"
+          >
             Loyiha haqida
           </NavbarLink>
-          <NavbarLink aria-label="Maqola yozish" type="desktop">
+          <NavbarLink
+            onClick={() => setAuthOpened(true)}
+            aria-label="Maqola yozish"
+            type="desktop"
+          >
             Yozish
           </NavbarLink>
           <NavbarLink

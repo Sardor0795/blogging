@@ -1,7 +1,7 @@
 import React from "react";
 import Topics from "../../components/Topics";
 
-function HomePage() {
+function TopicsPage() {
   return (
     <>
       <Topics />
@@ -9,4 +9,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default TopicsPage;
