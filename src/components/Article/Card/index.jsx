@@ -17,30 +17,32 @@ import { ReactComponent as FavoritesIcon } from "../../../assets/icons/add_to_fa
 import { ReactComponent as ReadingTimeIcon } from "../../../assets/icons/reading_time.svg";
 import { ReactComponent as CommentCountIcon } from "../../../assets/icons/comments_number.svg";
 import { ReactComponent as ViewsCountIcon } from "../../../assets/icons/views_number.svg";
-import { Leftside } from "./../../../pages/404/style";
+import { toTop } from "./../../../utils/toTop";
 
 function CardArticle() {
   return (
     <OuterContainer>
       <Container>
-        <Image url={articleImg} />
+        <Image url={articleImg} to="/posts/99" onClick={toTop} />
         <Content>
           <TopPart>
-            <TopPart.Topic>vizual dizayn</TopPart.Topic>
+            <TopPart.Topic to="/topics/vizual+dizayn" onClick={toTop}>
+              vizual dizayn
+            </TopPart.Topic>
             <TopPart.Date>17 Sep 2023</TopPart.Date>
           </TopPart>
           <Title>
-            <Title.Link>
+            <Title.Link to="/posts/99" onClick={toTop}>
               ChatGPT-dan UI/UX dizayneri sifatida qanday foydalanaman
             </Title.Link>
           </Title>
           <Description>
-            <Description.Link>
+            <Description.Link to="/posts/99" onClick={toTop}>
               Ushbu so'nggi hodisa, ChatGPT haqida ushbu maqolani yozishni
               boshlaganimda...
             </Description.Link>
           </Description>
-          <Profile>
+          <Profile to="/profiles/25" onClick={toTop}>
             <Profile.Image url={profileImg} />
             <Profile.Name>Akbarali Khasanov</Profile.Name>
           </Profile>

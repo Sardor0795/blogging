@@ -10,19 +10,24 @@ import {
   PopCardWrapper,
   TitleLink,
 } from "./style";
+import { toTop } from "./../../../../utils/toTop";
 
 export const PopCard = ({ cardimg, cardDate, cardAuthor, cardTitle }) => {
   return (
     <PopCardWrapper>
-      <PopCardImg cardimg={cardimg} />
+      <PopCardImg cardimg={cardimg} to="/posts/99" onClick={toTop} />
       <PopCardContent>
         <PopCardInfoWrap>
           <PopCardDate>{cardDate}</PopCardDate>
           <PopCardDot />
-          <PopCardAuthor>{cardAuthor}</PopCardAuthor>
+          <PopCardAuthor to="/profiles/25" onClick={toTop}>
+            {cardAuthor}
+          </PopCardAuthor>
         </PopCardInfoWrap>
         <PopCardTitle>
-          <TitleLink>{cardTitle}</TitleLink>
+          <TitleLink to="/posts/99" onClick={toTop}>
+            {cardTitle}
+          </TitleLink>
         </PopCardTitle>
       </PopCardContent>
     </PopCardWrapper>

@@ -2,6 +2,7 @@ import React from "react";
 import { OuterContainer, TopicsContainer, TopicsItem } from "./style";
 import Header from "./Header";
 import { Link } from "react-router-dom";
+import { toTop } from "./../../utils/toTop";
 
 function Topics() {
   return (
@@ -15,16 +16,24 @@ function Topics() {
               <TopicsItem.Header>Title</TopicsItem.Header>
               <TopicsItem.List>
                 <TopicsItem.ListItem>
-                  <Link to="one">List One</Link>
+                  <Link to="one" onClick={toTop}>
+                    List One
+                  </Link>
                 </TopicsItem.ListItem>
                 <TopicsItem.ListItem>
-                  <Link to="two">List Two</Link>
+                  <Link to="two" onClick={toTop}>
+                    List Two
+                  </Link>
                 </TopicsItem.ListItem>
                 <TopicsItem.ListItem>
-                  <Link to="three">List Three</Link>
+                  <Link to="three" onClick={toTop}>
+                    List Three
+                  </Link>
                 </TopicsItem.ListItem>
                 <TopicsItem.ListItem>
-                  <Link to="four">List Four</Link>
+                  <Link to="four" onClick={toTop}>
+                    List Four
+                  </Link>
                 </TopicsItem.ListItem>
               </TopicsItem.List>
             </TopicsItem>

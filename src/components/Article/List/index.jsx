@@ -18,30 +18,33 @@ import { ReactComponent as FavoritesIcon } from "../../../assets/icons/add_to_fa
 import { ReactComponent as ReadingTimeIcon } from "../../../assets/icons/reading_time.svg";
 import { ReactComponent as CommentCountIcon } from "../../../assets/icons/comments_number.svg";
 import { ReactComponent as ViewsCountIcon } from "../../../assets/icons/views_number.svg";
+import { toTop } from "./../../../utils/toTop";
 
 function ListArticle() {
   return (
     <Container>
       <Desktop>
-        <Image url={articleImg} />
+        <Image url={articleImg} to="/posts/99" onClick={toTop} />
         <RightSide>
           <RightSide.Top>
             <Top>
-              <Top.Topic>vizual dizayn</Top.Topic>
+              <Top.Topic to="/topics/vizual+dizayn" onClick={toTop}>
+                vizual dizayn
+              </Top.Topic>
               <Top.Date>17 Sep 2023</Top.Date>
             </Top>
             <Title>
-              <Title.Link>
+              <Title.Link to="/posts/99" onClick={toTop}>
                 ChatGPT-dan UI/UX dizayneri sifatida qanday foydalanaman
               </Title.Link>
             </Title>
             <Description>
-              <Description.Link>
+              <Description.Link to="/posts/99" onClick={toTop}>
                 Ushbu so'nggi hodisa, ChatGPT haqida ushbu maqolani yozishni
                 boshlaganimda, men har qanday kontekstda dunyo e'tiborini
                 tortgan va...
               </Description.Link>
-              <Description.LinkShort>
+              <Description.LinkShort to="/posts/99" onClick={toTop}>
                 Ushbu so'nggi hodisa, ChatGPT haqida ushbu...
               </Description.LinkShort>
             </Description>
@@ -49,7 +52,7 @@ function ListArticle() {
           <RightSide.Bottom>
             <Bottom>
               <Profile>
-                <Profile.Container>
+                <Profile.Container to="/profiles/25" onClick={toTop}>
                   <Profile.Img url={profileImg} />
                   <Profile.Text>Akbarali Khasanov</Profile.Text>
                 </Profile.Container>
@@ -81,7 +84,7 @@ function ListArticle() {
       <Tablet>
         <Bottom>
           <Profile>
-            <Profile.Container>
+            <Profile.Container to="/profiles/25" onClick={toTop}>
               <Profile.Img url={profileImg} />
               <Profile.Text>Akbarali Khasanov</Profile.Text>
             </Profile.Container>
