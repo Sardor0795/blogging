@@ -35,7 +35,7 @@ function About() {
     <>
       <OuterContainer>
         <HeaderBgImgMobile />
-        <Navbar yellowbg="true" />
+        <Navbar yellowbg="true" fixed="true" />
         <Header />
         <Container>
           <UzbMapWrap>

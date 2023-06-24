@@ -3,7 +3,8 @@ import styled, { css } from "styled-components";
 import { globalContainer, signUpButton } from "../../../root/global";
 
 export const OuterContainer = styled.div`
-  position: sticky;
+  position: ${({ fixed }) => (fixed ? "fixed" : "sticky")};
+  width: 100%;
   z-index: 10;
   top: 0;
   left: 0;

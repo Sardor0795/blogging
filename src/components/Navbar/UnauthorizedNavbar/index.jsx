@@ -18,7 +18,7 @@ import close from "../../../assets/icons/close.png";
 import Search from "../../Search";
 import Auth from "./../../Auth";
 
-function UnauthorizedNavbar({ yellowbg }) {
+function UnauthorizedNavbar({ yellowbg, fixed }) {
   const [opened, setOpened] = useState(false);
   const [searchOpened, setSearchOpened] = useState(false);
   const [authOpened, setAuthOpened] = useState(false);
@@ -42,7 +42,11 @@ function UnauthorizedNavbar({ yellowbg }) {
   }, []);
 
   return (
-    <OuterContainer yellowbg={yellowbg} scrolling={`${scrolling}`}>
+    <OuterContainer
+      scrolling={`${scrolling}`}
+      yellowbg={yellowbg}
+      fixed={fixed}
+    >
       <Container>
         <ForLogo
           to="/"

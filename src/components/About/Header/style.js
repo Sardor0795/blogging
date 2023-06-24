@@ -3,14 +3,16 @@ import { globalContainer } from "../../../root/global";
 
 export const OuterContainer = styled.div`
   background-color: var(--light-yellow);
+  padding-top: 40px;
 `;
 
 export const Container = styled.div`
   ${globalContainer};
   margin-inline: auto;
   padding: 85px 0 75px 0;
+
   @media (max-width: 600px) {
-    padding: 48px 0;
+    padding: 85px 0 40px;
   }
 `;
 
