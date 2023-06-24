@@ -7,9 +7,6 @@ import {
   AboutContentBtn,
   AboutContentText,
   AboutContentWrap,
-  CarouselBox,
-  CarouselBoxImg,
-  CarouselBoxTitle,
   CarouserSectionWrapper,
   Container,
   DownBtnApple,
@@ -28,6 +25,8 @@ import {
   UzbMapWrap,
 } from "./style";
 import Navbar from "../Navbar/index";
+import { mockData } from "./mockData";
+import { CarouselSlide } from "./Carousel";
 
 function About() {
   return (
@@ -51,73 +50,41 @@ function About() {
         </Container>
         <HeaderBgImg />
       </OuterContainer>
-          <CarouserSectionWrapper>
-            <Splide
-              options={{
-                rewind: true,
-                gap: "2rem",
-                perPage: 4,
-                perMove: 1,
-                padding: 10,
-                focus  : 'center',
-                arrows: false,
-                pagination: false,
-                autoplay: true,
-                interval: 2000,
-                pauseOnHover: true,
-                pauseOnFocus: true,
-                breakpoints: {
-                  771: {
-                    perPage: 2,
-                  },
-                },
-              }}
-              aria-label="My Favorite Images"
-            >
-              <SplideSlide>
-                <CarouselBox>
-                  <CarouselBoxImg />
-                  <CarouselBoxTitle>Sevara Nizamova</CarouselBoxTitle>
-                </CarouselBox>
-              </SplideSlide>
-              <SplideSlide>
-                <CarouselBox>
-                  <CarouselBoxImg />
-                  <CarouselBoxTitle>Sevara Nizamova</CarouselBoxTitle>
-                </CarouselBox>
-              </SplideSlide>
-              <SplideSlide>
-                <CarouselBox>
-                  <CarouselBoxImg />
-                  <CarouselBoxTitle>Sevara Nizamova</CarouselBoxTitle>
-                </CarouselBox>
-              </SplideSlide>
-              <SplideSlide>
-                <CarouselBox>
-                  <CarouselBoxImg />
-                  <CarouselBoxTitle>Sevara Nizamova</CarouselBoxTitle>
-                </CarouselBox>
-              </SplideSlide>
-              <SplideSlide>
-                <CarouselBox>
-                  <CarouselBoxImg />
-                  <CarouselBoxTitle>Sevara Nizamova</CarouselBoxTitle>
-                </CarouselBox>
-              </SplideSlide>
-              <SplideSlide>
-                <CarouselBox>
-                  <CarouselBoxImg />
-                  <CarouselBoxTitle>Sevara Nizamova</CarouselBoxTitle>
-                </CarouselBox>
-              </SplideSlide>
-              <SplideSlide>
-                <CarouselBox>
-                  <CarouselBoxImg />
-                  <CarouselBoxTitle>Sevara Nizamova</CarouselBoxTitle>
-                </CarouselBox>
-              </SplideSlide>
-            </Splide>
-          </CarouserSectionWrapper>
+      <CarouserSectionWrapper>
+        <Splide
+          options={{
+            rewind: true,
+            gap: "2rem",
+            perPage: 4,
+            perMove: 1,
+            padding: 10,
+            focus: "center",
+            arrows: false,
+            pagination: false,
+            autoplay: true,
+            interval: 3000,
+            pauseOnHover: true,
+            pauseOnFocus: true,
+            easing: "ease",
+            breakpoints: {
+              1024: {
+                perPage: 3,
+              },
+              771: {
+                perPage: 2,
+              },
+              500: {
+                perPage: 1,
+              },
+            },
+          }}
+          aria-label="My Favorite Images"
+        >
+          {mockData.map((v) => (
+            <CarouselSlide key={v.id} img={v.img} title={v.title} />
+          ))}
+        </Splide>
+      </CarouserSectionWrapper>
       <MobileAppWrapper>
         <Container>
           <MobileAppInner>
