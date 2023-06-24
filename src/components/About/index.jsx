@@ -57,7 +57,7 @@ function About() {
           options={{
             rewind: true,
             gap: "2rem",
-            perPage: 4,
+            perPage: 10,
             perMove: 1,
             padding: 10,
             focus: "center",
@@ -69,6 +69,18 @@ function About() {
             pauseOnFocus: true,
             easing: "ease",
             breakpoints: {
+              2500: {
+                perPage: 8,
+              },
+              2240: {
+                perPage: 6,
+              },
+              1860: {
+                perPage: 5,
+              },
+              1440: {
+                perPage: 4,
+              },
               1024: {
                 perPage: 3,
               },
