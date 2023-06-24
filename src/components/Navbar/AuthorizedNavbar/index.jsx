@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, OuterContainer } from "./style";
 
-function AuthorizedNavbar({yellowbg}) {
+function AuthorizedNavbar() {
   return (
-    <OuterContainer yellowbg={yellowbg}>
+    <OuterContainer>
       <Container>auth</Container>
     </OuterContainer>
   );

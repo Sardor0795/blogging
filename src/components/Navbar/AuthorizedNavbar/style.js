@@ -1,26 +1,16 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { globalContainer } from "./../../../root/global";
 
 export const OuterContainer = styled.div`
   position: sticky;
   z-index: 10;
   top: 0;
   left: 0;
-  background-color: ${({ yellowbg }) =>
-    yellowbg ? "var(--light-yellow)" : "var(--light-blue)"};
+  background-color: var(--light-yellow);
   padding-block: 20px;
 `;
 
-const container = css`
-  @media screen and (max-width: 1500px) {
-    width: 94%;
-  }
-
-  @media screen and (min-width: 1500.01px) {
-    width: 1430px;
-  }
-`;
-
 export const Container = styled.div`
-  ${container};
+  ${globalContainer};
   margin-inline: auto;
 `;

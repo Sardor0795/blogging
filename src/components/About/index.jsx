@@ -21,7 +21,7 @@ import {
   UzbMap,
   UzbMapWrap,
 } from "./style";
-import Navbar from "../Navbar/index";
+import Navbar from "../Navbar";
 
 function About() {
   return (

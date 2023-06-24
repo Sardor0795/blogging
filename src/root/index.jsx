@@ -21,13 +21,13 @@ function Root() {
         <Suspense fallback={<Loader />}>
           {/* Routes */}
           <Routes>
-            <Route path="/about" element={<AboutPage />} />
             <Route element={<Navbar />}>
               <Route path="/home" element={<HomePage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/" element={<Navigate to="/home" />} />
               <Route path="/*" element={<NotFoundPage />} />
             </Route>
+            <Route path="/about" element={<AboutPage />} />
           </Routes>
           {/* Routes --end */}
           <Footer />

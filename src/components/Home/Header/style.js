@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { globalContainer, signUpButton } from "../../../root/global";
 import { ReactComponent as linkIcon } from "../../../assets/icons/more_link_icon.svg";
 import headerBg from "../../../assets/images/header_bg.svg";
+import { Link } from "react-router-dom";
 
 export const OuterContainer = styled.div`
   background-color: var(--light-blue);
@@ -84,7 +85,8 @@ export const HashTagsWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-export const HashTag = styled.span`
+export const HashTag = styled(Link)`
+  text-decoration: none;
   color: #1c1c1c;
   font-size: 16px;
   font-family: Inter;
@@ -95,7 +97,8 @@ export const HashTag = styled.span`
   margin-bottom: 32px;
 `;
 
-export const MoreContentLink = styled.a`
+export const MoreContentLink = styled(Link)`
+  text-decoration: none;
   color: #0085ff;
   text-align: center;
   font-size: 16px;

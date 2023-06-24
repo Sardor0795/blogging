@@ -28,19 +28,49 @@ function Header() {
           <SignUpButton
             onClick={() => setAuthOpened(true)}
             type="button"
-            title="Hamjamiyatga qo’shiling"
+            aria-label="Hamjamiyatga qo’shiling"
           >
             Hamjamiyatga qo’shiling
           </SignUpButton>
           <HashTagsWrapper>
-            <HashTag>#dolzarb</HashTag>
-            <HashTag>#ta’lim</HashTag>
-            <HashTag>#iqtisodiyot</HashTag>
-            <HashTag>#madaniyat</HashTag>
-            <HashTag>#texnologiya</HashTag>
-            <HashTag>#san’at</HashTag>
+            <HashTag
+              to="/topics/dolzarb"
+              aria-label="dolzarb mavzusidagi maqolalarni ko‘ring"
+            >
+              #dolzarb
+            </HashTag>
+            <HashTag
+              to="/topics/ta’lim"
+              aria-label="ta’lim mavzusidagi maqolalarni ko‘ring"
+            >
+              #ta’lim
+            </HashTag>
+            <HashTag
+              to="/topics/iqtisodiyot"
+              aria-label="iqtisodiyot mavzusidagi maqolalarni ko‘ring"
+            >
+              #iqtisodiyot
+            </HashTag>
+            <HashTag
+              to="/topics/madaniyat"
+              aria-label="madaniyat mavzusidagi maqolalarni ko‘ring"
+            >
+              #madaniyat
+            </HashTag>
+            <HashTag
+              to="/topics/texnologiya"
+              aria-label="texnologiya mavzusidagi maqolalarni ko‘ring"
+            >
+              #texnologiya
+            </HashTag>
+            <HashTag
+              to="/topics/san’at"
+              aria-label="san’at mavzusidagi maqolalarni ko‘ring"
+            >
+              #san’at
+            </HashTag>
           </HashTagsWrapper>
-          <MoreContentLink href="#">
+          <MoreContentLink to="/topics" aria-label="ko‘proq mavzularni ko‘rish">
             ko‘proq mavzularni ko‘rish
             <MoreLinkIcon />
           </MoreContentLink>

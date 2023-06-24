@@ -18,7 +18,7 @@ import close from "../../../assets/icons/close.png";
 import Search from "../../Search";
 import Auth from "./../../Auth";
 
-function UnauthorizedNavbar({yellowbg}) {
+function UnauthorizedNavbar({ yellowbg }) {
   const [opened, setOpened] = useState(false);
   const [searchOpened, setSearchOpened] = useState(false);
   const [authOpened, setAuthOpened] = useState(false);
@@ -44,7 +44,11 @@ function UnauthorizedNavbar({yellowbg}) {
   return (
     <OuterContainer yellowbg={yellowbg} scrolling={`${scrolling}`}>
       <Container>
-        <ForLogo to="/" onClick={() => setOpened(false)}>
+        <ForLogo
+          to="/"
+          aria-label="Bosh sahifa"
+          onClick={() => setOpened(false)}
+        >
           <Logo />
         </ForLogo>
         <RightSide>
@@ -59,18 +63,24 @@ function UnauthorizedNavbar({yellowbg}) {
           </RightSide.Search>
           <Search opened={searchOpened} setOpened={setSearchOpened} />
           <Auth opened={authOpened} setOpened={setAuthOpened} />
-          <NavbarLink to="/about" type="desktop">
+          <NavbarLink to="/about" aria-label="Loyiha haqida" type="desktop">
             Loyiha haqida
           </NavbarLink>
-          <NavbarLink type="desktop">Yozish</NavbarLink>
-          <NavbarLink onClick={() => setAuthOpened(true)} type="desktop">
+          <NavbarLink aria-label="Maqola yozish" type="desktop">
+            Yozish
+          </NavbarLink>
+          <NavbarLink
+            onClick={() => setAuthOpened(true)}
+            aria-label="Shaxsiy kabinetga kirish"
+            type="desktop"
+          >
             Kirish
           </NavbarLink>
           <SignUpButton
             onClick={() => setAuthOpened(true)}
             type="button"
             style_type="desktop"
-            title="Roʻyxatdan oʻtish"
+            aria-label="Roʻyxatdan oʻtish"
           >
             Boshlash
           </SignUpButton>
@@ -88,16 +98,30 @@ function UnauthorizedNavbar({yellowbg}) {
                 <SearchButton
                   onClick={openSearch}
                   type="button"
-                  title="Qidiruv"
+                  aria-label="Qidiruv"
                 >
                   <SearchIcon />
                 </SearchButton>
-                <SignUpButton onClick={openAuth} title="Roʻyxatdan oʻtish">
+                <SignUpButton onClick={openAuth} aria-label="Roʻyxatdan oʻtish">
                   Boshlash
                 </SignUpButton>
-                <NavbarLink onClick={() => setOpened(false)}>Yozish</NavbarLink>
-                <NavbarLink onClick={openAuth}>Kirish</NavbarLink>
-                <NavbarLink onClick={() => setOpened(false)} to="/about">
+                <NavbarLink
+                  onClick={() => setOpened(false)}
+                  aria-label="Maqola yozish"
+                >
+                  Yozish
+                </NavbarLink>
+                <NavbarLink
+                  onClick={openAuth}
+                  aria-label="Shaxsiy kabinetga kirish"
+                >
+                  Kirish
+                </NavbarLink>
+                <NavbarLink
+                  onClick={() => setOpened(false)}
+                  to="/about"
+                  aria-label="Loyiha haqida"
+                >
                   Loyiha haqida
                 </NavbarLink>
               </MenuContainer>

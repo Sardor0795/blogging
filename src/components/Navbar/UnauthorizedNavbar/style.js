@@ -17,6 +17,7 @@ export const OuterContainer = styled.div`
     css`
       background: rgba(255, 255, 255, 0.8);
       box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.25);
+      -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
     `}
 `;

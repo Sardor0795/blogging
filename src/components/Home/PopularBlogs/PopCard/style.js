@@ -47,7 +47,8 @@ export const PopCardDot = styled.span`
   border-radius: 50%;
   margin: 0 8px;
 `;
-export const PopCardAuthor = styled.div`
+export const PopCardAuthor = styled(Link)`
+  text-decoration: none;
   color: #969696;
   font-size: 13px;
   font-family: Inter;
