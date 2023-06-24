@@ -44,7 +44,7 @@ function Footer() {
               <ContentLink>Foydalanish shartlari</ContentLink>
             </ContentLinkWrapper>
             <ContentLinkWrapper>
-              <ContentLink>Maxfiylik siyosati</ContentLink>
+              <ContentLink to='/privacy'>Maxfiylik siyosati</ContentLink>
             </ContentLinkWrapper>
           </ContentLinks>
           <ContentText>
