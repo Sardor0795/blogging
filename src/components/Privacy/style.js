@@ -74,12 +74,12 @@ export const HeaderBgImgMobile = styled(headerBg)`
     display: block;
   }
   @media (max-width: 600px) {
-    left: 40%;
+    left: 60%;
     width: 260px;
     height: 260px;
   }
   @media (max-width: 500px) {
-    left: 30%;
+    left: 50%;
     width: 230px;
     height: 230px;
   }
