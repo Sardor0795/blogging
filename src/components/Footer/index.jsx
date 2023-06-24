@@ -20,14 +20,17 @@ import {
   LogoLinkWrapper,
   MobileCopyright,
   ContentLinkWrapper,
+  FooterLogoLink,
 } from "./style";
 
 function Footer() {
   return (
     <OuterContainer>
       <Container>
-        <LogoLinkWrapper to="/">
-          <FooterLogo />
+        <LogoLinkWrapper>
+          <FooterLogoLink to="/">
+            <FooterLogo />
+          </FooterLogoLink>
         </LogoLinkWrapper>
         <Content>
           <ContentLinks>

@@ -25,18 +25,25 @@ export const Container = styled.div`
   }
 `;
 
-export const LogoLinkWrapper = styled(Link)`
+export const LogoLinkWrapper = styled.div`
   margin-right: 48px;
+
   @media (max-width: 850px) {
     width: 100%;
     margin-bottom: 32px;
   }
 `;
 
-export const FooterLogo = styled(Logo)`
+export const FooterLogoLink = styled(Link)`
+  text-decoration: none;
+  display: flex;
   width: 139px;
   height: 37px;
   flex-shrink: 0;
+`;
+
+export const FooterLogo = styled(Logo)`
+  width: 100%;
 `;
 
 export const Content = styled.div`
