@@ -21,6 +21,9 @@ import {
   MobileText,
   MobileTitle,
   OuterContainer,
+  SubscribeBtn,
+  SubscribeText,
+  SubscribeWrap,
   UzbMap,
   UzbMapWrap,
 } from "./style";
@@ -62,7 +65,7 @@ function About() {
             arrows: false,
             pagination: false,
             autoplay: true,
-            interval: 3000,
+            interval: 2000,
             pauseOnHover: true,
             pauseOnFocus: true,
             easing: "ease",
@@ -102,6 +105,20 @@ function About() {
           </MobileAppInner>
         </Container>
       </MobileAppWrapper>
+      <Container>
+        <SubscribeWrap>
+          <SubscribeText>
+            Yarim tunda ular yangi yilni kutib olish uchun O'zbekiston
+            madhiyasini kuylaydilar va bayramni davom ettiradilar. bundan
+            tashqari, o'zbeklar uchun eng mashhur bayram Navro'z bo'ladi va u
+            eng tarixiy biri hisoblanadi. Rangli an'anaviy liboslar va
+            dasturxondagi turli xil taomlar bayramning asosiy namunasini oladi.
+            Biroq, bayramning asosiy taomi Sumalak bo'lib, uni butun tun
+            qaynatish kerak.
+          </SubscribeText>
+          <SubscribeBtn>Bizga qo`shiling</SubscribeBtn>
+        </SubscribeWrap>
+      </Container>
     </>
   );
 }
