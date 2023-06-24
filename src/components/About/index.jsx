@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "./Header";
+import { Splide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 import {
   AboutContentBtn,
   AboutContentText,
@@ -18,10 +20,15 @@ import {
   MobileText,
   MobileTitle,
   OuterContainer,
+  SubscribeBtn,
+  SubscribeText,
+  SubscribeWrap,
   UzbMap,
   UzbMapWrap,
 } from "./style";
 import Navbar from "../Navbar";
+import { mockData } from "./mockData";
+import { CarouselSlide } from "./Carousel";
 
 function About() {
   return (
@@ -42,10 +49,44 @@ function About() {
             </AboutContentText>
             <AboutContentBtn>Siz ham bilim ulashing</AboutContentBtn>
           </AboutContentWrap>
-          <CarouserSectionWrapper></CarouserSectionWrapper>
         </Container>
         <HeaderBgImg />
       </OuterContainer>
+      <CarouserSectionWrapper>
+        <Splide
+          options={{
+            rewind: true,
+            gap: "2rem",
+            perPage: 4,
+            perMove: 1,
+            padding: 10,
+            focus: "center",
+            arrows: false,
+            pagination: false,
+            autoplay: true,
+            interval: 2000,
+            pauseOnHover: true,
+            pauseOnFocus: true,
+            easing: "ease",
+            breakpoints: {
+              1024: {
+                perPage: 3,
+              },
+              771: {
+                perPage: 2,
+              },
+              500: {
+                perPage: 1,
+              },
+            },
+          }}
+          aria-label="My Favorite Images"
+        >
+          {mockData.map((v) => (
+            <CarouselSlide key={v.id} img={v.img} title={v.title} />
+          ))}
+        </Splide>
+      </CarouserSectionWrapper>
       <MobileAppWrapper>
         <Container>
           <MobileAppInner>
@@ -63,6 +104,20 @@ function About() {
           </MobileAppInner>
         </Container>
       </MobileAppWrapper>
+      <Container>
+        <SubscribeWrap>
+          <SubscribeText>
+            Yarim tunda ular yangi yilni kutib olish uchun O'zbekiston
+            madhiyasini kuylaydilar va bayramni davom ettiradilar. bundan
+            tashqari, o'zbeklar uchun eng mashhur bayram Navro'z bo'ladi va u
+            eng tarixiy biri hisoblanadi. Rangli an'anaviy liboslar va
+            dasturxondagi turli xil taomlar bayramning asosiy namunasini oladi.
+            Biroq, bayramning asosiy taomi Sumalak bo'lib, uni butun tun
+            qaynatish kerak.
+          </SubscribeText>
+          <SubscribeBtn>Bizga qo`shiling</SubscribeBtn>
+        </SubscribeWrap>
+      </Container>
     </>
   );
 }

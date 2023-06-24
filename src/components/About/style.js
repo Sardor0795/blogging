@@ -120,7 +120,8 @@ export const UzbMap = styled.div`
 export const AboutContentWrap = styled.div`
   padding: 80px 0;
   @media (max-width: 600px) {
-    padding: 48px 0;
+    padding: 0;
+    padding-bottom: 48px;
   }
 `;
 
@@ -163,6 +164,13 @@ export const AboutContentBtn = styled.button`
 
 export const CarouserSectionWrapper = styled.div`
   padding: 80px 0;
+  @media (max-width: 771px) {
+    padding: 70px 0;
+  }
+  @media (max-width: 600px) {
+    padding: 0;
+    padding-bottom: 48px;
+  }
 `;
 
 // Mobile App
@@ -301,5 +309,60 @@ export const MobileAppImg = styled.div`
     margin-bottom: 32px;
     margin-right: auto;
     margin-left: auto;
+  }
+`;
+
+// Subscribe
+
+export const SubscribeWrap = styled.div`
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 771px) {
+    padding: 70px 0;
+  }
+  @media (max-width: 500px) {
+    padding: 50px 0;
+  }
+`;
+
+export const SubscribeText = styled.p`
+  color: #1c1c1c;
+  font-size: 20px;
+  font-family: Inter;
+  line-height: 28px;
+  margin-bottom: 32px;
+  @media (max-width: 771px) {
+    text-align: center;
+  }
+`;
+
+export const SubscribeBtn = styled.button`
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 28px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #0085ff;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.08),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 500px) {
+    font-size: 16px;
+    padding: 10px 12px;
+    line-height: 1.2;
   }
 `;

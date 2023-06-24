@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { globalContainer, signUpButton } from "../../../root/global";
-import { ReactComponent as linkIcon } from "../../../assets/icons/more_link_icon.svg";
+import { globalContainer } from "../../../root/global";
 
 export const OuterContainer = styled.div`
   background-color: var(--light-yellow);
@@ -50,48 +49,4 @@ export const HeaderText = styled.p`
   @media (max-width: 376px) {
     font-size: 16px;
   }
-`;
-
-export const SignUpButton = styled.button`
-  ${signUpButton}
-  margin-bottom: 32px;
-`;
-
-export const HashTagsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
-
-export const HashTag = styled.span`
-  color: #1c1c1c;
-  font-size: 16px;
-  font-family: Inter;
-  line-height: 24px;
-  &:not(:last-child) {
-    margin-right: 24px;
-  }
-  margin-bottom: 32px;
-`;
-
-export const MoreContentLink = styled.a`
-  color: #0085ff;
-  text-align: center;
-  font-size: 16px;
-  font-family: Inter;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  transition: 0.2s linear;
-  &:hover {
-    transform: translateY(-2px);
-  }
-  &:active {
-    transform: translateY(0);
-  }
-`;
-
-export const MoreLinkIcon = styled(linkIcon)`
-  width: 16px;
-  height: 16px;
-  margin-left: 4px;
 `;

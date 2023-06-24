@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import {
   Container,
-  HashTag,
-  HashTagsWrapper,
   HeaderText,
   HeaderTitle,
-  MoreContentLink,
-  MoreLinkIcon,
   OuterContainer,
-  SignUpButton,
 } from "./style";
 import Auth from "../../Auth";
 
