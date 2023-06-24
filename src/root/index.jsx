@@ -7,10 +7,11 @@ import ErrorBoundary from "./../components/ErrorBoundary";
 import Loader from "./../components/Loader";
 import Footer from "../components/Footer";
 // Page imports with lazy loading
+const NotFoundPage = lazy(() => import("./../pages/404"));
 const HomePage = lazy(() => import("./../pages/Home"));
 const AboutPage = lazy(() => import("./../pages/About"));
+const TopicsPage = lazy(() => import("./../pages/Topics"));
 const PrivacyPage = lazy(() => import("./../pages/Privacy"));
-const NotFoundPage = lazy(() => import("./../pages/404"));
 
 function Root() {
   return (
@@ -23,11 +24,14 @@ function Root() {
           <Routes>
             <Route element={<Navbar />}>
               <Route path="/home" element={<HomePage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/" element={<Navigate to="/home" />} />
               <Route path="/*" element={<NotFoundPage />} />
             </Route>
             <Route path="/about" element={<AboutPage />} />
+            <Route element={<Navbar yellowbg="true" />}>
+              <Route path="/topics" element={<TopicsPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+            </Route>
           </Routes>
           {/* Routes --end */}
           <Footer />

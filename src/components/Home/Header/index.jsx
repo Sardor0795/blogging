@@ -11,6 +11,7 @@ import {
   SignUpButton,
 } from "./style";
 import Auth from "../../Auth";
+import { toTop } from "./../../../utils/toTop";
 
 function Header() {
   const [authOpened, setAuthOpened] = useState(false);
@@ -70,7 +71,11 @@ function Header() {
               #san’at
             </HashTag>
           </HashTagsWrapper>
-          <MoreContentLink to="/topics" aria-label="ko‘proq mavzularni ko‘rish">
+          <MoreContentLink
+            onClick={toTop}
+            to="/topics"
+            aria-label="ko‘proq mavzularni ko‘rish"
+          >
             ko‘proq mavzularni ko‘rish
             <MoreLinkIcon />
           </MoreContentLink>
