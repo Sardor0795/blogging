@@ -1,11 +1,10 @@
 import React from "react";
+import PrivacyComponent from "../../components/Privacy";
 import { Container, OuterContainer } from "./style";
 
 function Privacy() {
   return (
-    <OuterContainer>
-      <Container>Privacy</Container>
-    </OuterContainer>
+    <PrivacyComponent/>
   );
 }
 
