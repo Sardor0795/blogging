@@ -12,6 +12,7 @@ const HomePage = lazy(() => import("./../pages/Home"));
 const AboutPage = lazy(() => import("./../pages/About"));
 const TopicsPage = lazy(() => import("./../pages/Topics"));
 const PrivacyPage = lazy(() => import("./../pages/Privacy"));
+const ProfilePage = lazy(() => import("../pages/Profile"));
 
 function Root() {
   return (
@@ -31,6 +32,7 @@ function Root() {
             <Route element={<Navbar yellowbg="true" />}>
               <Route path="/topics/*" element={<TopicsPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/profiles/:id" element={<ProfilePage />} />
             </Route>
           </Routes>
           {/* Routes --end */}
