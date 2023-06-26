@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Banner,
   Container,
@@ -13,8 +13,11 @@ import {
 import bannerImg from "../../../assets/images/profile_banner.png";
 import profileImg from "../../../assets/images/profile-img.png";
 import { ReactComponent as Plus } from "../../../assets/icons/plus.svg";
+import Auth from "./../../Auth";
 
 function Header() {
+  const [opened, setOpened] = useState(false);
+
   return (
     <OuterContainer>
       <Banner url={bannerImg} />
@@ -24,10 +27,11 @@ function Header() {
             <Image url={profileImg} />
             <Rightside>
               <Rightside.Name>Akbarali Khasanov</Rightside.Name>
-              <button>
+              <button onClick={() => setOpened(true)}>
                 <Plus />
                 <span>Obuna bo’lish</span>
               </button>
+              <Auth opened={`${opened}`} setOpened={setOpened} />
             </Rightside>
           </Leftside>
           <Info>
