@@ -37,6 +37,7 @@ function PopularBlogs() {
                   cardDate={v.date}
                   cardAuthor={v.author}
                   cardTitle={v.title}
+                  id={v.id}
                 />
               ))
             : Array(6)

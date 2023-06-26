@@ -44,7 +44,7 @@ export const HeaderBgImg = styled(headerBg)`
     height: 400px;
   }
   @media (max-width: 950px) {
-    left: calc(50% + 100px);
+    left: calc(50% + 90px);
     width: 350px;
     height: 350px;
     top: -80px;
@@ -77,14 +77,36 @@ export const HeaderBgImgMobile = styled(headerBg)`
     display: block;
   }
   @media (max-width: 600px) {
-    left: 60%;
+    left: 50%;
     width: 260px;
     height: 260px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 540px) {
     left: 50%;
     width: 230px;
     height: 230px;
+  }
+  @media (max-width: 480px) {
+    left: 45%;
+    width: 230px;
+    height: 230px;
+  }
+  @media (max-width: 430px) {
+    left: 40%;
+    width: 230px;
+    height: 230px;
+  }
+  @media (max-width: 400px) {
+    left: 40%;
+    top: 10px;
+    width: 210px;
+    height: 210px;
+  }
+  @media (max-width: 366px) {
+    left: 35%;
+    top: 15px;
+    width: 200px;
+    height: 200px;
   }
 `;
 
