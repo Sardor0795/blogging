@@ -19,11 +19,11 @@ import { ReactComponent as CommentCountIcon } from "../../../assets/icons/commen
 import { ReactComponent as ViewsCountIcon } from "../../../assets/icons/views_number.svg";
 import { toTop } from "./../../../utils/toTop";
 
-function CardArticle() {
+function CardArticle({ id }) {
   return (
     <OuterContainer>
       <Container>
-        <Image url={articleImg} to="/posts/99" onClick={toTop} />
+        <Image url={articleImg} to={`/posts/${id}`} onClick={toTop} />
         <Content>
           <TopPart>
             <TopPart.Topic to="/topics/vizual+dizayn" onClick={toTop}>
@@ -32,12 +32,12 @@ function CardArticle() {
             <TopPart.Date>17 Sep 2023</TopPart.Date>
           </TopPart>
           <Title>
-            <Title.Link to="/posts/99" onClick={toTop}>
+            <Title.Link to={`/posts/${id}`} onClick={toTop}>
               ChatGPT-dan UI/UX dizayneri sifatida qanday foydalanaman
             </Title.Link>
           </Title>
           <Description>
-            <Description.Link to="/posts/99" onClick={toTop}>
+            <Description.Link to={`/posts/${id}`} onClick={toTop}>
               Ushbu so'nggi hodisa, ChatGPT haqida ushbu maqolani yozishni
               boshlaganimda...
             </Description.Link>

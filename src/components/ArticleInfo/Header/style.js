@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { globalContainer } from "../../../root/global";
 
 export const OuterContainer = styled.div`
-  background-color: var(--light-yellow);
+  background-color: var(--light-blue);
   padding-top: 40px;
 `;
 

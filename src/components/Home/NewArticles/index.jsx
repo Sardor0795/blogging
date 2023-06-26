@@ -32,7 +32,7 @@ function NewArticles() {
             <>
               {data
                 ? data?.map((item, index) => (
-                    <CardArticle data={item} key={index} />
+                    <CardArticle id={index + 1} data={item} key={index} />
                   ))
                 : Array(6)
                     .fill()
@@ -42,7 +42,7 @@ function NewArticles() {
             <>
               {data
                 ? data?.map((item, index) => (
-                    <ListArticle data={item} key={index} />
+                    <ListArticle id={index + 1} data={item} key={index} />
                   ))
                 : Array(6)
                     .fill()

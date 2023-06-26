@@ -13,7 +13,7 @@ function ArticleInfoComponent() {
     <>
       <OuterContainer>
         <HeaderBgImgMobile />
-        <Navbar yellowbg="true" fixed="true" />
+        <Navbar fixed="true" />
         <Header />
         <Container>asdasdasdasdasd</Container>
         <HeaderBgImg />
