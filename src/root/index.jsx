@@ -29,7 +29,7 @@ function Root() {
             </Route>
             <Route path="/about" element={<AboutPage />} />
             <Route element={<Navbar yellowbg="true" />}>
-              <Route path="/topics" element={<TopicsPage />} />
+              <Route path="/topics/*" element={<TopicsPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
             </Route>
           </Routes>

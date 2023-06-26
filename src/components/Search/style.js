@@ -31,7 +31,7 @@ export const MenuContainer = styled.div`
 
 export const Modal = styled.div`
   width: 100%;
-  max-width: 400px;
+  max-width: 567px;
   padding: 32px 30px;
   background-color: #fff;
   border: 1px solid #e8e8e8;
