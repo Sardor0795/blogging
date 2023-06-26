@@ -7,6 +7,10 @@ import {
   ArticleInfosWrapper,
   ArticleShare,
   Btn,
+  CommentsBlock,
+  CommentsBlockInfo,
+  CommentsBlockText,
+  CommentsCount,
   Container,
   HeaderBgImg,
   HeaderBgImgMobile,
@@ -82,6 +86,16 @@ function ArticleInfoComponent() {
               Shikoyat qilish
             </Btn>
           </ArticleShare>
+          <CommentsBlock>
+            <CommentsBlockInfo>
+              <CommentsCount>6 comments</CommentsCount>
+              <CommentsBlockText>
+                Login or sign up to leave a comment
+              </CommentsBlockText>
+              <Btn>Kirish</Btn>
+              <Btn bgBlack="true">Ro’yhatdan o’tish</Btn>
+            </CommentsBlockInfo>
+          </CommentsBlock>
         </Container>
         <HeaderBgImg />
       </OuterContainer>

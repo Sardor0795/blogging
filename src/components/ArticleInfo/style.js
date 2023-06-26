@@ -249,9 +249,9 @@ export const Btn = styled.button`
   align-items: center;
   border-radius: 8px;
   border: 1px solid #e8e8e8;
-  background: #fff;
+  background: ${({ bgBlack }) => (bgBlack ? "#1C1C1C" : "#fff")};
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.06);
-  color: #1c1c1c;
+  color: ${({ bgBlack }) => (bgBlack ? "#fff" : "#1c1c1c")};
   text-align: center;
   font-size: 13px;
   font-family: Inter;
@@ -269,4 +269,31 @@ export const Btn = styled.button`
   &:not(:last-child) {
     margin-right: 16px;
   }
+`;
+
+// Comments -----------
+
+export const CommentsBlock = styled.div``;
+export const CommentsBlockInfo = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+`;
+export const CommentsCount = styled.div`
+  margin-right: 24px;
+  color: #1c1c1c;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 28px;
+  margin-right: auto;
+`;
+
+export const CommentsBlockText = styled.div`
+  color: #969696;
+  text-align: right;
+  font-size: 13px;
+  font-family: Inter;
+  line-height: 20px;
+  margin-right: 20px;
 `;
