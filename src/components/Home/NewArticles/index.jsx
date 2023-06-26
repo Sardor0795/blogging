@@ -6,7 +6,7 @@ import ListArticle from "../../Article/List";
 import CardArticle from "./../../Article/Card";
 import ListSkeleton from "../../ListSkeleton";
 import CardSkeleton from "../../CardSkeleton";
-import { ReactComponent as LoadMore } from "../../../assets/icons/load_more.svg";
+import LoadMoreButton from "./../../LoadMore";
 
 function NewArticles() {
   const search = useSearch();
@@ -51,10 +51,7 @@ function NewArticles() {
           )}
         </Items>
         <ButtonRow>
-          <button>
-            <LoadMore />
-            <p>Ko’proq yuklash</p>
-          </button>
+          <LoadMoreButton />
         </ButtonRow>
       </Container>
     </OuterContainer>

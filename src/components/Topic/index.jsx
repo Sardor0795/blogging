@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { ButtonRow, OuterContainer, TopicsContainer } from "./style";
 import Header from "./Header";
 import { useParams } from "react-router-dom";
-import { ReactComponent as LoadMore } from "../../assets/icons/load_more.svg";
-import ListArticle from "./../Article/List/index";
-import ListSkeleton from "./../ListSkeleton/index";
+import ListArticle from "./../Article/List";
+import ListSkeleton from "./../ListSkeleton";
+import LoadMoreButton from "../LoadMore";
 
 function Topic() {
   const { id } = useParams();
@@ -28,10 +28,7 @@ function Topic() {
               .map((item, index) => <ListSkeleton key={index} />)}
       </TopicsContainer>
       <ButtonRow>
-        <button>
-          <LoadMore />
-          <p>Ko’proq yuklash</p>
-        </button>
+        <LoadMoreButton />
       </ButtonRow>
     </OuterContainer>
   );
