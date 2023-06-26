@@ -88,6 +88,8 @@ export const HeaderBgImgMobile = styled(headerBg)`
   }
 `;
 
+// User -----------
+
 export const UserWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -130,6 +132,8 @@ export const SubscribeBtn = styled.button`
     transform: translateY(0);
   }
 `;
+
+// Article infos top -----------
 
 export const ArticleInfosWrapper = styled.div`
   padding: 18px 0;
@@ -187,4 +191,29 @@ export const SaveBtn = styled.button`
     transform: translateY(0);
   }
   margin-left: auto;
+`;
+
+// Article content --------
+
+export const ArticleContent = styled.div`
+  padding: 80px 0;
+`;
+
+// Article share ------------
+
+export const ArticleShare = styled.div`
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 32px 0;
+`;
+
+export const ShareText = styled.div`
+  margin-right: 24px;
+  color: #1c1c1c;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 28px;
 `;

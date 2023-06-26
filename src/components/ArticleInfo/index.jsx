@@ -1,14 +1,17 @@
 import React from "react";
 import Header from "./Header";
 import {
+  ArticleContent,
   ArticleInfoBox,
   ArticleInfoIcon,
   ArticleInfosWrapper,
+  ArticleShare,
   Container,
   HeaderBgImg,
   HeaderBgImgMobile,
   OuterContainer,
   SaveBtn,
+  ShareText,
   SubscribeBtn,
   UserImg,
   UserName,
@@ -50,6 +53,12 @@ function ArticleInfoComponent() {
               Saqlash
             </SaveBtn>
           </ArticleInfosWrapper>
+
+          <ArticleContent>Article content</ArticleContent>
+
+          <ArticleShare>
+            <ShareText>Ulashish</ShareText>
+          </ArticleShare>
         </Container>
         <HeaderBgImg />
       </OuterContainer>
