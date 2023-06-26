@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { globalContainer } from "../../root/global";
 import { ReactComponent as headerBg } from "../../assets/images/header_bg.svg";
+import userImg from "../../assets/images/info_post_user_img.jpg";
 
 export const OuterContainer = styled.div`
   background-color: #fff;
@@ -85,4 +86,105 @@ export const HeaderBgImgMobile = styled(headerBg)`
     width: 250px;
     height: 250px;
   }
+`;
+
+export const UserWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+`;
+export const UserImg = styled.div`
+  background-image: url("${userImg}");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+`;
+export const UserName = styled.div`
+  color: #585757;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  margin-right: 32px;
+`;
+export const SubscribeBtn = styled.button`
+  color: #00ba34;
+  text-align: center;
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius: 20px;
+  border: 1px solid #00ba34;
+  background-color: unset;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+`;
+
+export const ArticleInfosWrapper = styled.div`
+  padding: 18px 0;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+  color: #585757;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+`;
+export const ArticleInfoIcon = styled.div`
+  background-image: url("${({ icon }) => icon}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+`;
+export const ArticleInfoBox = styled.div`
+  display: flex;
+  align-items: center;
+  border-left: ${({ border }) => (border ? "1px solid #0085ff" : null)};
+  border-right: ${({ border }) => (border ? "1px solid #0085ff" : null)};
+  padding-left: ${({ border }) => (border ? "16px" : null)};
+  padding-right: ${({ border }) => (border ? "16px" : null)};
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+`;
+
+export const SaveBtn = styled.button`
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.06);
+  color: #1c1c1c;
+  text-align: center;
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+  margin-left: auto;
 `;
