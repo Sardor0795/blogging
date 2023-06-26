@@ -1,11 +1,24 @@
 import React from "react";
-import { Container, OuterContainer } from "./style";
+import Header from "./Header";
+import {
+  Container,
+  HeaderBgImg,
+  HeaderBgImgMobile,
+  OuterContainer,
+} from "./style";
+import Navbar from "../Navbar";
 
 function ArticleInfoComponent() {
   return (
-    <OuterContainer>
-      <Container>ArticleInfoComponent</Container>
-    </OuterContainer>
+    <>
+      <OuterContainer>
+        <HeaderBgImgMobile />
+        <Navbar yellowbg="true" fixed="true" />
+        <Header />
+        <Container>asdasdasdasdasd</Container>
+        <HeaderBgImg />
+      </OuterContainer>
+    </>
   );
 }
 
