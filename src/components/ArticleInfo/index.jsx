@@ -6,11 +6,14 @@ import {
   ArticleInfoIcon,
   ArticleInfosWrapper,
   ArticleShare,
+  Btn,
   Container,
   HeaderBgImg,
   HeaderBgImgMobile,
   OuterContainer,
   SaveBtn,
+  ShareLink,
+  ShareLinksWrapper,
   ShareText,
   SubscribeBtn,
   UserImg,
@@ -23,6 +26,13 @@ import calendarIcon from "../../assets/icons/calendar.png";
 import commentsIcon from "../../assets/icons/comment.png";
 import clockIcon from "../../assets/icons/clock.png";
 import addIcon from "../../assets/icons/add_to_favorites_filled.png";
+
+import facebookIcon from "../../assets/icons/facebook_share.png";
+import telegramIcon from "../../assets/icons/telegram_share.png";
+import twitterIcon from "../../assets/icons/twitter_share.png";
+
+import likeIcon from "../../assets/icons/like_share.png";
+import complaintIcon from "../../assets/icons/complaint_share.png";
 
 function ArticleInfoComponent() {
   return (
@@ -58,6 +68,19 @@ function ArticleInfoComponent() {
 
           <ArticleShare>
             <ShareText>Ulashish</ShareText>
+            <ShareLinksWrapper>
+              <ShareLink icon={facebookIcon} />
+              <ShareLink icon={telegramIcon} />
+              <ShareLink icon={twitterIcon} />
+            </ShareLinksWrapper>
+            <Btn>
+              <ArticleInfoIcon icon={likeIcon} />
+              +5
+            </Btn>
+            <Btn>
+              <ArticleInfoIcon icon={complaintIcon} />
+              Shikoyat qilish
+            </Btn>
           </ArticleShare>
         </Container>
         <HeaderBgImg />
