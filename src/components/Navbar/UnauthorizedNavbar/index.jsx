@@ -119,10 +119,7 @@ function UnauthorizedNavbar({ yellowbg, fixed }) {
                 <SignUpButton onClick={openAuth} aria-label="Roʻyxatdan oʻtish">
                   Boshlash
                 </SignUpButton>
-                <NavbarLink
-                  onClick={() => setOpened(false)}
-                  aria-label="Maqola yozish"
-                >
+                <NavbarLink onClick={openAuth} aria-label="Maqola yozish">
                   Yozish
                 </NavbarLink>
                 <NavbarLink
