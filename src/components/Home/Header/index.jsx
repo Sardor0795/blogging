@@ -36,44 +36,50 @@ function Header() {
           <HashTagsWrapper>
             <HashTag
               to="/topics/dolzarb"
+              onClick={toTop}
               aria-label="dolzarb mavzusidagi maqolalarni ko‘ring"
             >
               #dolzarb
             </HashTag>
             <HashTag
               to="/topics/ta’lim"
+              onClick={toTop}
               aria-label="ta’lim mavzusidagi maqolalarni ko‘ring"
             >
               #ta’lim
             </HashTag>
             <HashTag
               to="/topics/iqtisodiyot"
+              onClick={toTop}
               aria-label="iqtisodiyot mavzusidagi maqolalarni ko‘ring"
             >
               #iqtisodiyot
             </HashTag>
             <HashTag
               to="/topics/madaniyat"
+              onClick={toTop}
               aria-label="madaniyat mavzusidagi maqolalarni ko‘ring"
             >
               #madaniyat
             </HashTag>
             <HashTag
               to="/topics/texnologiya"
+              onClick={toTop}
               aria-label="texnologiya mavzusidagi maqolalarni ko‘ring"
             >
               #texnologiya
             </HashTag>
             <HashTag
               to="/topics/san’at"
+              onClick={toTop}
               aria-label="san’at mavzusidagi maqolalarni ko‘ring"
             >
               #san’at
             </HashTag>
           </HashTagsWrapper>
           <MoreContentLink
-            onClick={toTop}
             to="/topics"
+            onClick={toTop}
             aria-label="ko‘proq mavzularni ko‘rish"
           >
             ko‘proq mavzularni ko‘rish
