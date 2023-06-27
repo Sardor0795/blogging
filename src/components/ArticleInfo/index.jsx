@@ -7,10 +7,21 @@ import {
   ArticleInfosWrapper,
   ArticleShare,
   Btn,
+  CommentAddBtnsWrapper,
+  CommentContent,
+  CommentDate,
+  CommentReplied,
+  CommentReply,
+  CommentReplyDots,
   CommentsBlock,
   CommentsBlockInfo,
   CommentsBlockText,
   CommentsCount,
+  CommentText,
+  CommentUser,
+  CommentUserImg,
+  CommentUserInfos,
+  CommentWrapper,
   Container,
   HeaderBgImg,
   HeaderBgImgMobile,
@@ -23,6 +34,10 @@ import {
   UserImg,
   UserName,
   UserWrapper,
+  WriteCommentContents,
+  WriteCommentText,
+  WriteCommentTextArea,
+  WriteCommentWrapper,
 } from "./style";
 import Navbar from "../Navbar";
 
@@ -38,11 +53,15 @@ import twitterIcon from "../../assets/icons/twitter_share.png";
 import likeIcon from "../../assets/icons/like_share.png";
 import complaintIcon from "../../assets/icons/complaint_share.png";
 
+import commentUserImg from "../../assets/images/comment_user_img.png";
+
+import replyIcon from "../../assets/icons/reply.png";
+import repliedIcon from "../../assets/icons/replyed.png";
+
 function ArticleInfoComponent() {
   return (
     <>
       <OuterContainer>
-        <HeaderBgImgMobile />
         <Navbar fixed="true" />
         <Header />
         <Container>
@@ -77,11 +96,11 @@ function ArticleInfoComponent() {
               <ShareLink icon={telegramIcon} />
               <ShareLink icon={twitterIcon} />
             </ShareLinksWrapper>
-            <Btn>
+            <Btn mb="true">
               <ArticleInfoIcon icon={likeIcon} />
               +5
             </Btn>
-            <Btn>
+            <Btn mb="true">
               <ArticleInfoIcon icon={complaintIcon} />
               Shikoyat qilish
             </Btn>
@@ -92,10 +111,67 @@ function ArticleInfoComponent() {
               <CommentsBlockText>
                 Login or sign up to leave a comment
               </CommentsBlockText>
-              <Btn>Kirish</Btn>
-              <Btn bgBlack="true">Ro’yhatdan o’tish</Btn>
+              <CommentAddBtnsWrapper>
+                <Btn>Kirish</Btn>
+                <Btn bgblack="true">Ro’yhatdan o’tish</Btn>
+              </CommentAddBtnsWrapper>
             </CommentsBlockInfo>
+            <CommentWrapper>
+              <CommentUserImg userimg={commentUserImg} />
+              <CommentContent>
+                <CommentUserInfos>
+                  <CommentUser>Ilhomjon Davlatov</CommentUser>
+                  <CommentDate>17 Sep 2020</CommentDate>
+                </CommentUserInfos>
+                <CommentText>
+                  Yaxshi :) Menga bu kecha juda kerak edi, chunki men bu oyda
+                  ishchi kuchiga qaytaman va hech kimni xafa qilishni
+                  xohlamayman! Endi sizni kuzatib boradi. rahmat :)
+                </CommentText>
+                <CommentReply>
+                  <Btn>
+                    <ArticleInfoIcon icon={replyIcon} />
+                    Reply
+                  </Btn>
+                  <CommentReplyDots />
+                </CommentReply>
+              </CommentContent>
+              <Btn>
+                <ArticleInfoIcon icon={likeIcon} />
+                +5
+              </Btn>
+            </CommentWrapper>
+            <CommentWrapper padding="60">
+              <CommentReplied />
+              <CommentUserImg userimg={commentUserImg} />
+              <CommentContent>
+                <CommentUserInfos>
+                  <CommentUser>Laylo Khakimova</CommentUser>
+                  <CommentDate>17 Sep 2020</CommentDate>
+                </CommentUserInfos>
+                <CommentText>Jinni ursin, rahmat Akbarali!</CommentText>
+                <CommentReply>
+                  <Btn>
+                    <ArticleInfoIcon icon={replyIcon} />
+                    Reply
+                  </Btn>
+                  <CommentReplyDots />
+                </CommentReply>
+              </CommentContent>
+              <Btn>
+                <ArticleInfoIcon icon={likeIcon} />
+                +5
+              </Btn>
+            </CommentWrapper>
           </CommentsBlock>
+          <WriteCommentWrapper>
+            <CommentUserImg userimg={commentUserImg} />
+            <WriteCommentContents>
+              <WriteCommentText>Izoh matni</WriteCommentText>
+              <WriteCommentTextArea placeholder="Izohingiz matni bayon qiling" />
+              <Btn>Chop etish</Btn>
+            </WriteCommentContents>
+          </WriteCommentWrapper>
         </Container>
         <HeaderBgImg />
       </OuterContainer>

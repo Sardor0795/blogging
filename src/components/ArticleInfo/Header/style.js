@@ -1,9 +1,28 @@
 import styled from "styled-components";
 import { globalContainer } from "../../../root/global";
 
+import headerBg from "../../../assets/images/header_bg.svg";
+
 export const OuterContainer = styled.div`
   background-color: var(--light-blue);
   padding-top: 40px;
+
+  background-image: url("${headerBg}");
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 350px) bottom -350px;
+
+  @media (max-width: 1024px) {
+    background-position: left calc(50% + 200px) bottom 10px;
+    background-size: 30%;
+  }
+  @media (max-width: 800px) {
+    background-position: left calc(50% + 200px) bottom 10px;
+    background-size: 40%;
+  }
+  @media (max-width: 600px) {
+    background-position: left calc(50% + 100px) bottom 10px;
+    background-size: 50%;
+  }
 `;
 
 export const Container = styled.div`
