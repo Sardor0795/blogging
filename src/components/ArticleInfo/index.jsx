@@ -7,10 +7,20 @@ import {
   ArticleInfosWrapper,
   ArticleShare,
   Btn,
+  CommentContent,
+  CommentDate,
+  CommentReplied,
+  CommentReply,
+  CommentReplyDots,
   CommentsBlock,
   CommentsBlockInfo,
   CommentsBlockText,
   CommentsCount,
+  CommentText,
+  CommentUser,
+  CommentUserImg,
+  CommentUserInfos,
+  CommentWrapper,
   Container,
   HeaderBgImg,
   HeaderBgImgMobile,
@@ -37,6 +47,11 @@ import twitterIcon from "../../assets/icons/twitter_share.png";
 
 import likeIcon from "../../assets/icons/like_share.png";
 import complaintIcon from "../../assets/icons/complaint_share.png";
+
+import commentUserImg from "../../assets/images/comment_user_img.png";
+
+import replyIcon from "../../assets/icons/reply.png";
+import repliedIcon from "../../assets/icons/replyed.png";
 
 function ArticleInfoComponent() {
   return (
@@ -95,6 +110,53 @@ function ArticleInfoComponent() {
               <Btn>Kirish</Btn>
               <Btn bgBlack="true">Ro’yhatdan o’tish</Btn>
             </CommentsBlockInfo>
+            <CommentWrapper>
+              <CommentUserImg userImg={commentUserImg} />
+              <CommentContent>
+                <CommentUserInfos>
+                  <CommentUser>Ilhomjon Davlatov</CommentUser>
+                  <CommentDate>17 Sep 2020</CommentDate>
+                </CommentUserInfos>
+                <CommentText>
+                  Yaxshi :) Menga bu kecha juda kerak edi, chunki men bu oyda
+                  ishchi kuchiga qaytaman va hech kimni xafa qilishni
+                  xohlamayman! Endi sizni kuzatib boradi. rahmat :)
+                </CommentText>
+                <CommentReply>
+                  <Btn>
+                    <ArticleInfoIcon icon={replyIcon} />
+                    Reply
+                  </Btn>
+                  <CommentReplyDots />
+                </CommentReply>
+              </CommentContent>
+              <Btn>
+                <ArticleInfoIcon icon={likeIcon} />
+                +5
+              </Btn>
+            </CommentWrapper>
+            <CommentWrapper padding="60">
+              <CommentReplied />
+              <CommentUserImg userImg={commentUserImg} />
+              <CommentContent>
+                <CommentUserInfos>
+                  <CommentUser>Laylo Khakimova</CommentUser>
+                  <CommentDate>17 Sep 2020</CommentDate>
+                </CommentUserInfos>
+                <CommentText>Jinni ursin, rahmat Akbarali!</CommentText>
+                <CommentReply>
+                  <Btn>
+                    <ArticleInfoIcon icon={replyIcon} />
+                    Reply
+                  </Btn>
+                  <CommentReplyDots />
+                </CommentReply>
+              </CommentContent>
+              <Btn>
+                <ArticleInfoIcon icon={likeIcon} />
+                +5
+              </Btn>
+            </CommentWrapper>
           </CommentsBlock>
         </Container>
         <HeaderBgImg />

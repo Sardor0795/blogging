@@ -4,6 +4,8 @@ import { ReactComponent as headerBg } from "../../assets/images/header_bg.svg";
 import userImg from "../../assets/images/info_post_user_img.jpg";
 import { Link } from "react-router-dom";
 
+import repliedIcon from "../../assets/icons/replyed.png";
+
 export const OuterContainer = styled.div`
   background-color: #fff;
   min-height: 100vh;
@@ -296,4 +298,102 @@ export const CommentsBlockText = styled.div`
   font-family: Inter;
   line-height: 20px;
   margin-right: 20px;
+`;
+
+export const CommentWrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-left: ${({ padding }) => `${padding}px`};
+`;
+export const CommentUserImg = styled.div`
+  width: 100%;
+  max-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url("${({ userImg }) => userImg}");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-right: 16px;
+`;
+export const CommentContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+`;
+export const CommentUserInfos = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+`;
+export const CommentUser = styled.div`
+  color: #1c1c1c;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  margin-right: 12px;
+`;
+export const CommentDate = styled.div`
+  color: #969696;
+  font-size: 12px;
+  font-family: Inter;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+`;
+export const CommentText = styled.div`
+  color: #585757;
+  font-size: 16px;
+  font-family: Inter;
+  line-height: 24px;
+  margin-bottom: 12px;
+`;
+export const CommentReply = styled.div`
+  display: flex;
+  align-items: center;
+  position: relative;
+`;
+export const CommentReplyDots = styled.div`
+  width: 7px;
+  height: 7px;
+  background-color: #969696;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 15px;
+  &::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: #969696;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+  }
+  &::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: #969696;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+  }
+`;
+
+export const CommentBtn = styled.div`
+  display: flex;
+`;
+export const Comment = styled.div`
+  display: flex;
+`;
+
+export const CommentReplied = styled.div`
+  width: 24px;
+  height: 24px;
+  background-image: url("${repliedIcon}");
+  background-size: cover;
+  background-position: center center;
+  margin-right: 16px;
 `;
