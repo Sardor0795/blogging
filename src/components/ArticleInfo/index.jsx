@@ -33,6 +33,10 @@ import {
   UserImg,
   UserName,
   UserWrapper,
+  WriteCommentContents,
+  WriteCommentText,
+  WriteCommentTextArea,
+  WriteCommentWrapper,
 } from "./style";
 import Navbar from "../Navbar";
 
@@ -158,6 +162,14 @@ function ArticleInfoComponent() {
               </Btn>
             </CommentWrapper>
           </CommentsBlock>
+          <WriteCommentWrapper>
+            <CommentUserImg userImg={commentUserImg} />
+            <WriteCommentContents>
+              <WriteCommentText>Izoh matni</WriteCommentText>
+              <WriteCommentTextArea placeholder="Izohingiz matni bayon qiling" />
+              <Btn>Chop etish</Btn>
+            </WriteCommentContents>
+          </WriteCommentWrapper>
         </Container>
         <HeaderBgImg />
       </OuterContainer>

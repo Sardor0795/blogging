@@ -259,7 +259,7 @@ export const Btn = styled.button`
   font-family: Inter;
   font-weight: 500;
   line-height: 20px;
-  padding: 8px 12px;
+  padding: 5px 12px;
   cursor: pointer;
   transition: transform 0.2s ease;
   &:hover {
@@ -396,4 +396,37 @@ export const CommentReplied = styled.div`
   background-size: cover;
   background-position: center center;
   margin-right: 16px;
+`;
+
+// Write comment ---------
+
+export const WriteCommentWrapper = styled.div`
+  padding-top: 32px;
+  border-top: 1px solid #e8e8e8;
+  display: flex;
+  align-items: flex-start;
+`;
+export const WriteCommentContents = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+export const WriteCommentText = styled.div`
+  color: #585757;
+  font-size: 16px;
+  font-family: Inter;
+  line-height: 24px;
+  margin-bottom: 8px;
+`;
+export const WriteCommentTextArea = styled.textarea`
+  width: 100%;
+  min-height: 80px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 16px;
+  display: inline-block;
+  resize: vertical;
+  outline: none;
 `;
