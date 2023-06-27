@@ -7,6 +7,7 @@ import {
   ArticleInfosWrapper,
   ArticleShare,
   Btn,
+  CommentAddBtnsWrapper,
   CommentContent,
   CommentDate,
   CommentReplied,
@@ -95,11 +96,11 @@ function ArticleInfoComponent() {
               <ShareLink icon={telegramIcon} />
               <ShareLink icon={twitterIcon} />
             </ShareLinksWrapper>
-            <Btn>
+            <Btn mb="true">
               <ArticleInfoIcon icon={likeIcon} />
               +5
             </Btn>
-            <Btn>
+            <Btn mb="true">
               <ArticleInfoIcon icon={complaintIcon} />
               Shikoyat qilish
             </Btn>
@@ -110,8 +111,10 @@ function ArticleInfoComponent() {
               <CommentsBlockText>
                 Login or sign up to leave a comment
               </CommentsBlockText>
-              <Btn>Kirish</Btn>
-              <Btn bgblack="true">Ro’yhatdan o’tish</Btn>
+              <CommentAddBtnsWrapper>
+                <Btn>Kirish</Btn>
+                <Btn bgblack="true">Ro’yhatdan o’tish</Btn>
+              </CommentAddBtnsWrapper>
             </CommentsBlockInfo>
             <CommentWrapper>
               <CommentUserImg userimg={commentUserImg} />

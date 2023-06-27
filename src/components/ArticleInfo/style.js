@@ -37,7 +37,6 @@ export const HeaderBgImg = styled(headerBg)`
   }
 `;
 
-
 // User -----------
 
 export const UserWrapper = styled.div`
@@ -53,6 +52,10 @@ export const UserImg = styled.div`
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  @media (max-width: 460px) {
+    width: 35px;
+    height: 35px;
+  }
 `;
 export const UserName = styled.div`
   color: #585757;
@@ -61,6 +64,13 @@ export const UserName = styled.div`
   font-weight: 500;
   line-height: 24px;
   margin-right: 32px;
+  @media (max-width: 460px) {
+    font-size: 16px;
+    margin-right: auto;
+  }
+  @media (max-width: 350px) {
+    font-size: 14px;
+  }
 `;
 export const SubscribeBtn = styled.button`
   color: #00ba34;
@@ -81,6 +91,9 @@ export const SubscribeBtn = styled.button`
   &:active {
     transform: translateY(0);
   }
+  @media (max-width: 350px) {
+    padding: 2px 5px;
+  }
 `;
 
 // Article infos top -----------
@@ -96,6 +109,10 @@ export const ArticleInfosWrapper = styled.div`
   line-height: 24px;
   display: flex;
   align-items: center;
+  @media (max-width: 550px) {
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
 `;
 export const ArticleInfoIcon = styled.div`
   background-image: url("${({ icon }) => icon}");
@@ -115,6 +132,9 @@ export const ArticleInfoBox = styled.div`
   padding-right: ${({ border }) => (border ? "16px" : null)};
   &:not(:last-child) {
     margin-right: 16px;
+  }
+  @media (max-width: 550px) {
+    margin-bottom: 18px;
   }
 `;
 
@@ -141,6 +161,9 @@ export const SaveBtn = styled.button`
     transform: translateY(0);
   }
   margin-left: auto;
+  @media (max-width: 550px) {
+    display: none;
+  }
 `;
 
 // Article content --------
@@ -157,6 +180,10 @@ export const ArticleShare = styled.div`
   border-top: 1px solid #d6d6d6;
   border-bottom: 1px solid #d6d6d6;
   padding: 32px 0;
+  @media (max-width: 550px) {
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
 `;
 
 export const ShareText = styled.div`
@@ -166,12 +193,19 @@ export const ShareText = styled.div`
   font-family: Inter;
   font-weight: 500;
   line-height: 28px;
+  @media (max-width: 550px) {
+    margin-bottom: 32px;
+  }
 `;
 
 export const ShareLinksWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-right: auto;
+  @media (max-width: 550px) {
+    margin-right: 20px;
+    margin-bottom: 32px;
+  }
 `;
 
 export const ShareLink = styled(Link)`
@@ -218,6 +252,10 @@ export const Btn = styled.button`
   &:not(:last-child) {
     margin-right: 16px;
   }
+
+  @media (max-width: 550px) {
+    margin-bottom: ${({ mb }) => (mb ? "32px" : null)};
+  }
 `;
 
 // Comments -----------
@@ -227,6 +265,10 @@ export const CommentsBlockInfo = styled.div`
   display: flex;
   align-items: center;
   padding: 32px 0;
+  @media (max-width: 640px) {
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
 `;
 export const CommentsCount = styled.div`
   margin-right: 24px;
@@ -236,6 +278,14 @@ export const CommentsCount = styled.div`
   font-weight: 500;
   line-height: 28px;
   margin-right: auto;
+  @media (max-width: 640px) {
+    margin-bottom: 32px;
+    margin-right: 20px;
+  }
+  @media (max-width: 410px) {
+    order: 4;
+    width: 100%;
+  }
 `;
 
 export const CommentsBlockText = styled.div`
@@ -245,6 +295,16 @@ export const CommentsBlockText = styled.div`
   font-family: Inter;
   line-height: 20px;
   margin-right: 20px;
+  @media (max-width: 640px) {
+    margin-bottom: 32px;
+  }
+`;
+
+export const CommentAddBtnsWrapper = styled.div`
+  display: flex;
+  @media (max-width: 640px) {
+    margin-bottom: 32px;
+  }
 `;
 
 export const CommentWrapper = styled.div`
@@ -252,6 +312,9 @@ export const CommentWrapper = styled.div`
   align-items: flex-start;
   margin-bottom: 24px;
   padding-left: ${({ padding }) => `${padding}px`};
+  @media (max-width: 400px) {
+    flex-wrap: wrap;
+  }
 `;
 export const CommentUserImg = styled.div`
   width: 100%;
@@ -273,6 +336,9 @@ export const CommentUserInfos = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 8px;
+  @media (max-width: 520px) {
+    flex-wrap: wrap;
+  }
 `;
 export const CommentUser = styled.div`
   color: #1c1c1c;
@@ -301,6 +367,9 @@ export const CommentReply = styled.div`
   display: flex;
   align-items: center;
   position: relative;
+  @media (max-width: 400px) {
+    margin-bottom: 12px;
+  }
 `;
 export const CommentReplyDots = styled.div`
   width: 7px;
