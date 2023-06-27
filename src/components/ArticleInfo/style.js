@@ -25,71 +25,18 @@ export const HeaderBgImg = styled(headerBg)`
   width: 500px;
   height: 500px;
   position: absolute;
-  top: -120px;
-  left: calc(50% + 355px);
+  top: -420px;
+  left: calc(50% + 5px);
   z-index: 10;
   pointer-events: none;
   @media (max-width: 1450px) {
-    left: calc(50% + 300px);
-  }
-  @media (max-width: 1300px) {
-    left: calc(50% + 200px);
-  }
-  @media (max-width: 1200px) {
-    left: calc(50% + 200px);
-    top: 0px;
+    left: calc(50% + 100px);
   }
   @media (max-width: 1024px) {
-    left: calc(50% + 200px);
-    top: 60px;
-    width: 400px;
-    height: 400px;
-  }
-  @media (max-width: 950px) {
-    left: calc(50% + 100px);
-    top: 80px;
-    width: 350px;
-    height: 350px;
-  }
-  @media (max-width: 700px) {
     display: none;
   }
 `;
 
-export const HeaderBgImgMobile = styled(headerBg)`
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  top: -120px;
-  left: calc(50% + 355px);
-  z-index: 10;
-  pointer-events: none;
-  display: none;
-  @media (max-width: 700px) {
-    left: calc(50% + 100px);
-    top: 80px;
-    width: 350px;
-    height: 350px;
-    display: block;
-  }
-  @media (max-width: 655px) {
-    left: calc(50% + 50px);
-    width: 350px;
-    height: 350px;
-  }
-  @media (max-width: 600px) {
-    left: 40%;
-    width: 300px;
-    height: 300px;
-  }
-  @media (max-width: 500px) {
-    left: 30%;
-  }
-  @media (max-width: 400px) {
-    width: 250px;
-    height: 250px;
-  }
-`;
 
 // User -----------
 
@@ -251,9 +198,9 @@ export const Btn = styled.button`
   align-items: center;
   border-radius: 8px;
   border: 1px solid #e8e8e8;
-  background: ${({ bgBlack }) => (bgBlack ? "#1C1C1C" : "#fff")};
+  background: ${({ bgblack }) => (bgblack ? "#1C1C1C" : "#fff")};
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.06);
-  color: ${({ bgBlack }) => (bgBlack ? "#fff" : "#1c1c1c")};
+  color: ${({ bgblack }) => (bgblack ? "#fff" : "#1c1c1c")};
   text-align: center;
   font-size: 13px;
   font-family: Inter;
@@ -311,7 +258,7 @@ export const CommentUserImg = styled.div`
   max-width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-image: url("${({ userImg }) => userImg}");
+  background-image: url("${({ userimg }) => userimg}");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

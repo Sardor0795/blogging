@@ -61,7 +61,6 @@ function ArticleInfoComponent() {
   return (
     <>
       <OuterContainer>
-        <HeaderBgImgMobile />
         <Navbar fixed="true" />
         <Header />
         <Container>
@@ -112,10 +111,10 @@ function ArticleInfoComponent() {
                 Login or sign up to leave a comment
               </CommentsBlockText>
               <Btn>Kirish</Btn>
-              <Btn bgBlack="true">Ro’yhatdan o’tish</Btn>
+              <Btn bgblack="true">Ro’yhatdan o’tish</Btn>
             </CommentsBlockInfo>
             <CommentWrapper>
-              <CommentUserImg userImg={commentUserImg} />
+              <CommentUserImg userimg={commentUserImg} />
               <CommentContent>
                 <CommentUserInfos>
                   <CommentUser>Ilhomjon Davlatov</CommentUser>
@@ -141,7 +140,7 @@ function ArticleInfoComponent() {
             </CommentWrapper>
             <CommentWrapper padding="60">
               <CommentReplied />
-              <CommentUserImg userImg={commentUserImg} />
+              <CommentUserImg userimg={commentUserImg} />
               <CommentContent>
                 <CommentUserInfos>
                   <CommentUser>Laylo Khakimova</CommentUser>
@@ -163,7 +162,7 @@ function ArticleInfoComponent() {
             </CommentWrapper>
           </CommentsBlock>
           <WriteCommentWrapper>
-            <CommentUserImg userImg={commentUserImg} />
+            <CommentUserImg userimg={commentUserImg} />
             <WriteCommentContents>
               <WriteCommentText>Izoh matni</WriteCommentText>
               <WriteCommentTextArea placeholder="Izohingiz matni bayon qiling" />
