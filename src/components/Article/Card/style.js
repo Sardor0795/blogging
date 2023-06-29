@@ -88,11 +88,13 @@ Description.Link = styled(Link)`
   }
 `;
 
-export const Profile = styled(Link)`
+export const Profile = styled.div``;
+
+export const ProfileLink = styled(Link)`
   text-decoration: none;
   margin-top: 16px;
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 5px;
 `;

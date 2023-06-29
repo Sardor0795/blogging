@@ -10,6 +10,7 @@ import {
   Details,
   Profile,
   Info,
+  ProfileLink,
 } from "./style";
 import articleImg from "../../../assets/images/article.png";
 import profileImg from "../../../assets/images/profile-img.svg";
@@ -42,9 +43,11 @@ function CardArticle({ id }) {
               boshlaganimda...
             </Description.Link>
           </Description>
-          <Profile to="/profiles/25" onClick={toTop}>
-            <Profile.Image url={profileImg} />
-            <Profile.Name>Akbarali Khasanov</Profile.Name>
+          <Profile>
+            <ProfileLink to="/profiles/25" onClick={toTop}>
+              <Profile.Image url={profileImg} />
+              <Profile.Name>Akbarali Khasanov</Profile.Name>
+            </ProfileLink>
           </Profile>
           <Details>
             <Details.Leftside>
