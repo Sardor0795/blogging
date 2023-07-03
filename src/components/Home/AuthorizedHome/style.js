@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export const OuterContainer = styled.div`
   background-color: #fff;
   min-height: 100vh;
+  padding-bottom: 80px;
 `;
 
 export const FilterPart = styled.div`
