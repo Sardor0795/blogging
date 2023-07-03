@@ -62,7 +62,6 @@ function ArticleInfoComponent() {
   return (
     <>
       <OuterContainer>
-        <Navbar fixed="true" />
         <Header />
         <Container>
           <UserWrapper>

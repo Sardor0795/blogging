@@ -40,10 +40,6 @@ export const ForLogo = styled(Link)`
   svg {
     width: 100%;
   }
-
-  /* @media screen and (max-width: 400px) {
-    width: 110px;
-  } */
 `;
 
 export const RightSide = styled.div`

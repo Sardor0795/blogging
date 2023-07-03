@@ -4,7 +4,7 @@ import AuthorizedNavbar from "./AuthorizedNavbar";
 import UnauthorizedNavbar from "./UnauthorizedNavbar";
 
 function Navbar({ yellowbg, fixed }) {
-  const [auth] = useState(false);
+  const [auth] = useState(true);
 
   return (
     <>
