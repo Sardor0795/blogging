@@ -189,7 +189,7 @@ export const ProfileLink = styled(Link)`
   }
 `;
 
-ProfileLink.Icon = styled.div`
+ProfileLink.Icon = styled.span`
   width: 20px;
   height: 20px;
   display: flex;
