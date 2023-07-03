@@ -89,7 +89,6 @@ export const HashTag = styled(Link)`
   text-decoration: none;
   color: #1c1c1c;
   font-size: 16px;
-  font-family: Inter;
   line-height: 24px;
   &:not(:last-child) {
     margin-right: 24px;
@@ -102,11 +101,11 @@ export const MoreContentLink = styled(Link)`
   color: #0085ff;
   text-align: center;
   font-size: 16px;
-  font-family: Inter;
   line-height: 24px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   transition: 0.2s linear;
+
   &:hover {
     transform: translateY(-2px);
   }

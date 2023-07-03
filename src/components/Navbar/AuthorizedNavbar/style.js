@@ -121,11 +121,31 @@ ProfileHeader.Icon = styled.div`
   }
 `;
 
+export const ProfileArrow = styled.div`
+  position: absolute;
+  z-index: 12;
+  top: calc(100% + 3px);
+  right: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  transition: 0.2s linear;
+
+  visibility: ${({ opened }) => (opened === "true" ? "visible" : "hidden")};
+  opacity: ${({ opened }) => (opened === "true" ? 1 : 0)};
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+`;
+
 export const ProfileBody = styled.div`
   position: absolute;
   z-index: 12;
   top: calc(100% + 10px);
-  right: 0;
+  right: -14px;
   height: 20px;
   border-radius: 8px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.06);
@@ -143,6 +163,10 @@ export const ProfileBody = styled.div`
   div:last-child {
     padding: 0 0 8px;
     border-radius: 0 0 8px 8px;
+  }
+
+  @media screen and (max-width: 700px) {
+    right: 0;
   }
 `;
 

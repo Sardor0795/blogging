@@ -6,6 +6,7 @@ import {
   NavbarLink,
   OuterContainer,
   Profile,
+  ProfileArrow,
   ProfileBody,
   ProfileHeader,
   ProfileLink,
@@ -62,6 +63,7 @@ function AuthorizedNavbar() {
                 <img src={arrow} alt="profile" />
               </ProfileHeader.Icon>
             </ProfileHeader>
+            <ProfileArrow opened={`${profileOpened}`} />
             <ProfileBody opened={`${profileOpened}`}>
               <ProfileLinkCon>
                 <ProfileLink
