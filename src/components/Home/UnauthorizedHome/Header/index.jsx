@@ -10,8 +10,8 @@ import {
   OuterContainer,
   SignUpButton,
 } from "./style";
-import Auth from "../../Auth";
-import { toTop } from "./../../../utils/toTop";
+import Auth from "../../../Auth";
+import { toTop } from "../../../../utils/toTop";
 
 function Header() {
   const [authOpened, setAuthOpened] = useState(false);

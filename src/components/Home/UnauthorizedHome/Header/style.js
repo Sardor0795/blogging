@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { globalContainer, signUpButton } from "../../../root/global";
-import { ReactComponent as linkIcon } from "../../../assets/icons/more_link_icon.svg";
-import headerBg from "../../../assets/images/header_bg.svg";
+import { globalContainer, signUpButton } from "../../../../root/global";
+import { ReactComponent as linkIcon } from "../../../../assets/icons/more_link_icon.svg";
+import headerBg from "../../../../assets/images/header_bg.svg";
 import { Link } from "react-router-dom";
 
 export const OuterContainer = styled.div`

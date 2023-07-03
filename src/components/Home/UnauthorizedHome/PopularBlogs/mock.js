@@ -1,4 +1,4 @@
-import PopBlogImg from "../../../assets/images/pop-blog-sample-img.jpg";
+import PopBlogImg from "../../../../assets/images/pop-blog-sample-img.jpg";
 
 export const mockData = [
   {

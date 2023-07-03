@@ -8,14 +8,14 @@ import {
   ListCard,
   TopPart,
 } from "./style";
-import { useSearch } from "./../../../../hooks/useSearch";
-import { replaceUrl } from "./../../../../utils/replaceUrl";
-import { ReactComponent as NewArticlesIcon } from "../../../../assets/icons/new_articles.svg";
-import { ReactComponent as DropdownIcon } from "../../../../assets/icons/new_articles_dropdown.svg";
-import { ReactComponent as ListIcon } from "../../../../assets/icons/new_articles_list.svg";
-import { ReactComponent as CardIcon } from "../../../../assets/icons/new_articles_card.svg";
+import { useSearch } from "../../../../../hooks/useSearch";
+import { replaceUrl } from "../../../../../utils/replaceUrl";
+import { ReactComponent as NewArticlesIcon } from "../../../../../assets/icons/new_articles.svg";
+import { ReactComponent as DropdownIcon } from "../../../../../assets/icons/new_articles_dropdown.svg";
+import { ReactComponent as ListIcon } from "../../../../../assets/icons/new_articles_list.svg";
+import { ReactComponent as CardIcon } from "../../../../../assets/icons/new_articles_card.svg";
 
-function FilterPart() {
+function FilterPart({ auth }) {
   // Toggle List Card  --Start
   const search = useSearch();
   const navigate = useNavigate();
@@ -67,28 +67,30 @@ function FilterPart() {
         <div>Yangi maqolalar</div>
       </TopPart.Leftside>
       <TopPart.Rightside>
-        <Dropdown>
-          <DropdownHeader
-            opened={`${opened}`}
-            onClick={() => setOpened((p) => !p)}
-          >
-            <div>{topicActive}</div>
-            <DropdownIcon />
-          </DropdownHeader>
-          <DropdownBody opened={`${opened}`}>
-            {topics
-              .filter((item) => item !== topicActive)
-              .map((item, index) => (
-                <DropdownBody.Item
-                  onClick={() => handleTopicChange(item)}
-                  key={index}
-                >
-                  {item}
-                </DropdownBody.Item>
-              ))}
-          </DropdownBody>
-          {opened && <Layer onClick={() => setOpened(false)} />}
-        </Dropdown>
+        {!auth && (
+          <Dropdown>
+            <DropdownHeader
+              opened={`${opened}`}
+              onClick={() => setOpened((p) => !p)}
+            >
+              <div>{topicActive}</div>
+              <DropdownIcon />
+            </DropdownHeader>
+            <DropdownBody opened={`${opened}`}>
+              {topics
+                .filter((item) => item !== topicActive)
+                .map((item, index) => (
+                  <DropdownBody.Item
+                    onClick={() => handleTopicChange(item)}
+                    key={index}
+                  >
+                    {item}
+                  </DropdownBody.Item>
+                ))}
+            </DropdownBody>
+            {opened && <Layer onClick={() => setOpened(false)} />}
+          </Dropdown>
+        )}
         <ListCard>
           <ListCard.Item
             active={`${listActive}`}

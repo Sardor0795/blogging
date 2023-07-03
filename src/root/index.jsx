@@ -6,15 +6,16 @@ import Navbar from "./../components/Navbar";
 import ErrorBoundary from "./../components/ErrorBoundary";
 import Loader from "./../components/Loader";
 import Footer from "../components/Footer";
+import AuthDetector from "./../components/AuthDetector";
 // Page imports with lazy loading
 const NotFoundPage = lazy(() => import("./../pages/404"));
-const HomePage = lazy(() => import("./../pages/Home"));
+const AuthHomePage = lazy(() => import("./../pages/Home/AuthorizedHome"));
+const NoAuthHomePage = lazy(() => import("./../pages/Home/UnauthorizedHome"));
 const AboutPage = lazy(() => import("./../pages/About"));
 const TopicsPage = lazy(() => import("./../pages/Topics"));
 const PrivacyPage = lazy(() => import("./../pages/Privacy"));
 const ProfilePage = lazy(() => import("../pages/Profile"));
 const ArticleInfoPage = lazy(() => import("./../pages/ArticleInfo"));
-
 
 function Root() {
   return (
@@ -26,7 +27,15 @@ function Root() {
           {/* Routes */}
           <Routes>
             <Route element={<Navbar />}>
-              <Route path="/home" element={<HomePage />} />
+              <Route
+                path="/home"
+                element={
+                  <AuthDetector
+                    auth={<AuthHomePage />}
+                    noauth={<NoAuthHomePage />}
+                  />
+                }
+              />
               <Route path="/posts/:id" element={<ArticleInfoPage />} />
               <Route path="/" element={<Navigate to="/home" />} />
               <Route path="/*" element={<NotFoundPage />} />

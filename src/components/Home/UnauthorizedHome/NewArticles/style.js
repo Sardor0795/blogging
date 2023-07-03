@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { globalContainer } from "../../../root/global";
+import { globalContainer } from "../../../../root/global";
 
 export const OuterContainer = styled.div`
   background-color: #fff;

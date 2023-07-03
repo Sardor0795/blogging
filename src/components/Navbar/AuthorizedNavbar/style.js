@@ -146,7 +146,6 @@ export const ProfileBody = styled.div`
   z-index: 12;
   top: calc(100% + 10px);
   right: -14px;
-  height: 20px;
   border-radius: 8px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.06);
   display: flex;
@@ -157,11 +156,11 @@ export const ProfileBody = styled.div`
   opacity: ${({ opened }) => (opened === "true" ? 1 : 0)};
 
   div:first-child {
-    padding: 8px 0 0;
+    padding: 6px 0 0;
     border-radius: 8px 8px 0 0;
   }
   div:last-child {
-    padding: 0 0 8px;
+    padding: 0 0 6px;
     border-radius: 0 0 8px 8px;
   }
 

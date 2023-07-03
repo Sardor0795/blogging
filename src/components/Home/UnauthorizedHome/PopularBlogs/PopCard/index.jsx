@@ -10,7 +10,7 @@ import {
   PopCardWrapper,
   TitleLink,
 } from "./style";
-import { toTop } from "./../../../../utils/toTop";
+import { toTop } from "../../../../../utils/toTop";
 
 export const PopCard = ({ cardimg, cardDate, cardAuthor, cardTitle, id }) => {
   return (

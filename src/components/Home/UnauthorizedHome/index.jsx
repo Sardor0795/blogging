@@ -1,10 +1,10 @@
 import React from "react";
+import { OuterContainer } from "./style";
 import PopularBlogs from "./PopularBlogs";
 import Header from "./Header";
-import { OuterContainer } from "./style";
 import NewArticles from "./NewArticles";
 
-function HomeComponent() {
+function NoAuthHomeComponent() {
   return (
     <OuterContainer>
       <Header />
@@ -14,4 +14,4 @@ function HomeComponent() {
   );
 }
 
-export default HomeComponent;
+export default NoAuthHomeComponent;

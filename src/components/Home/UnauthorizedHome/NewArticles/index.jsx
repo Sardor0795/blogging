@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import useSearch from "../../../hooks/useSearch";
+import useSearch from "../../../../hooks/useSearch";
 import { OuterContainer, Container, Items, ButtonRow } from "./style";
 import FilterPart from "./Filter";
-import ListArticle from "../../Article/List";
-import CardArticle from "./../../Article/Card";
-import ListSkeleton from "../../ListSkeleton";
-import CardSkeleton from "../../CardSkeleton";
-import LoadMoreButton from "./../../LoadMore";
+import ListArticle from "../../../Article/List";
+import CardArticle from "../../../Article/Card";
+import ListSkeleton from "../../../ListSkeleton";
+import CardSkeleton from "../../../CardSkeleton";
+import LoadMoreButton from "../../../LoadMore";
 
-function NewArticles() {
+function NewArticles({auth}) {
   const search = useSearch();
   const [type, setType] = useState(search.get("type"));
   const [data, setData] = useState(null);
@@ -26,7 +26,7 @@ function NewArticles() {
   return (
     <OuterContainer>
       <Container>
-        <FilterPart />
+        <FilterPart auth={auth} />
         <Items type={type}>
           {type === "card" ? (
             <>
