@@ -16,10 +16,7 @@ function AuthHomeComponent() {
       <FilterPart>
         <Container>
           <AddTopic>
-            <span>
-              <Plus />
-            </span>
-            <span>Bo‘lim qo‘shish</span>
+            <Plus />
           </AddTopic>
           <Row>
             <TopicLink active="true">Siz uchun</TopicLink>

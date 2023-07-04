@@ -35,20 +35,14 @@ export const AddTopic = styled.button`
   border: 1px solid #e8e8e8;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.06);
   display: flex;
-  gap: 8px;
+  justify-content: center;
   align-items: center;
   color: var(--dark-black);
-  text-align: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.1;
   cursor: pointer;
   transition: 0.2s linear;
-
-  span {
-    display: flex;
-    align-items: center;
-  }
 
   &:hover {
     transform: translateY(-2px);

@@ -30,24 +30,20 @@ function NewArticles({ auth }) {
         <Items type={type}>
           {data
             ? data?.map((item, index) => (
-                <>
+                <React.Fragment key={index}>
                   {type === "card" ? (
-                    <CardArticle id={index + 1} data={item} key={index} />
+                    <CardArticle id={index + 1} data={item} />
                   ) : (
-                    <ListArticle id={index + 1} data={item} key={index} />
+                    <ListArticle id={index + 1} data={item} />
                   )}
-                </>
+                </React.Fragment>
               ))
             : Array(6)
                 .fill()
                 .map((item, index) => (
-                  <>
-                    {type === "card" ? (
-                      <CardSkeleton key={index} />
-                    ) : (
-                      <ListSkeleton key={index} />
-                    )}
-                  </>
+                  <React.Fragment key={index}>
+                    {type === "card" ? <CardSkeleton /> : <ListSkeleton />}
+                  </React.Fragment>
                 ))}
         </Items>
         <ButtonRow>
