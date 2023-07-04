@@ -8,7 +8,7 @@ import ListSkeleton from "../../../ListSkeleton";
 import CardSkeleton from "../../../CardSkeleton";
 import LoadMoreButton from "../../../LoadMore";
 
-function NewArticles({auth}) {
+function NewArticles({ auth }) {
   const search = useSearch();
   const [type, setType] = useState(search.get("type"));
   const [data, setData] = useState(null);
@@ -28,27 +28,27 @@ function NewArticles({auth}) {
       <Container>
         <FilterPart auth={auth} />
         <Items type={type}>
-          {type === "card" ? (
-            <>
-              {data
-                ? data?.map((item, index) => (
+          {data
+            ? data?.map((item, index) => (
+                <>
+                  {type === "card" ? (
                     <CardArticle id={index + 1} data={item} key={index} />
-                  ))
-                : Array(6)
-                    .fill()
-                    .map((item, index) => <CardSkeleton key={index} />)}
-            </>
-          ) : (
-            <>
-              {data
-                ? data?.map((item, index) => (
+                  ) : (
                     <ListArticle id={index + 1} data={item} key={index} />
-                  ))
-                : Array(6)
-                    .fill()
-                    .map((item, index) => <ListSkeleton key={index} />)}
-            </>
-          )}
+                  )}
+                </>
+              ))
+            : Array(6)
+                .fill()
+                .map((item, index) => (
+                  <>
+                    {type === "card" ? (
+                      <CardSkeleton key={index} />
+                    ) : (
+                      <ListSkeleton key={index} />
+                    )}
+                  </>
+                ))}
         </Items>
         <ButtonRow>
           <LoadMoreButton />
