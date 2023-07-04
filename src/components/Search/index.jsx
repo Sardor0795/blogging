@@ -12,6 +12,7 @@ import {
   SearchImg,
   SearchInputMobile,
   SearchResultInfo,
+  SearchResultNotInfo,
   SearchResultsWrapper,
   SearchWrapper,
 } from "./style";
@@ -31,9 +32,12 @@ function Search({ opened, setOpened }) {
               <CloseBtn onClick={(e) => setOpened(false)} />
               <SearchInputMobile placeholder="Kalit so’zni kiriting" />
             </SearchWrapper>
-              <SearchResultInfo>
-                “ChatGPT” so’rovi bo’yicha <b>16ta</b> natija topildi
-              </SearchResultInfo>
+            <SearchResultInfo>
+              “ChatGPT” so’rovi bo’yicha <b>16ta</b> natija topildi
+            </SearchResultInfo>
+            <SearchResultNotInfo>
+              “ChatGPT” so’rovi bo’yicha maqola topilmadi
+            </SearchResultNotInfo>
             <SearchResultsWrapper>
               {/* Search result box */}
               <SearchResultComp />

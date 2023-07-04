@@ -168,3 +168,17 @@ export const SearchResultInfo = styled.div`
     ),
     #0085ff;
 `;
+
+export const SearchResultNotInfo = styled.div`
+  color: #000;
+  font-size: 16px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 16px;
+  background: var(--light-yellow);
+  display: none;
+`;
