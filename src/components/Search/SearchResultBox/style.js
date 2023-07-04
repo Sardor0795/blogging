@@ -6,9 +6,6 @@ export const SearchResultBox = styled.div`
   &:not(:last-child) {
     margin-bottom: 16px;
   }
-  /* @media (max-width: 570px) {
-    flex-wrap: wrap;
-  } */
 
   @media (max-width: 410px) {
     align-items: center;
@@ -32,7 +29,7 @@ export const SearchResultBoxTitle = styled(Link)`
   &:hover {
     color: var(--blue);
   }
-  @media (max-width: 355px) {
+  @media (max-width: 375px) {
     font-size: 14px;
     line-height: 1.1;
   }
@@ -63,8 +60,6 @@ export const SearchResultBoxImg = styled(Link)`
 
   @media (max-width: 570px) {
     order: -1;
-    /* max-width: 100%;
-    height: 176px; */
     max-width: 80px;
     height: 80px;
     margin-right: 8px;

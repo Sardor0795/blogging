@@ -43,7 +43,7 @@ export const Modal = styled.div`
     0px 6px 10px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   overflow: hidden;
-  @media(max-width: 450px){
+  @media (max-width: 450px) {
     padding: 20px;
   }
 `;
@@ -172,6 +172,11 @@ export const SearchResultInfo = styled.div`
       rgba(255, 255, 255, 0.9) 100%
     ),
     #0085ff;
+
+  @media (max-width: 375px) {
+    font-size: 14px;
+    line-height: 1.1;
+  }
 `;
 
 export const SearchResultNotInfo = styled.div`
@@ -186,4 +191,8 @@ export const SearchResultNotInfo = styled.div`
   margin-top: 16px;
   background: var(--light-yellow);
   display: none;
+  @media (max-width: 375px) {
+    font-size: 14px;
+    line-height: 1.1;
+  }
 `;
