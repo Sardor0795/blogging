@@ -40,11 +40,17 @@ function Search({ opened, setOpened }) {
             </SearchResultNotInfo>
             <SearchResultsWrapper>
               {/* Search result box */}
-              <SearchResultComp />
-              <SearchResultComp />
-              <SearchResultComp />
-              <SearchResultComp />
-              <SearchResultComp />
+              <SearchResultComp setOpened={setOpened}/>
+              <SearchResultComp setOpened={setOpened}/>
+              <SearchResultComp setOpened={setOpened}/>
+              <SearchResultComp setOpened={setOpened}/>
+              <SearchResultComp setOpened={setOpened}/>
+              <SearchResultComp setOpened={setOpened}/>
+              <SearchResultComp setOpened={setOpened}/>
+              <SearchResultComp setOpened={setOpened}/>
+              <SearchResultComp setOpened={setOpened}/>
+              <SearchResultComp setOpened={setOpened}/>
+              <SearchResultComp setOpened={setOpened}/>
             </SearchResultsWrapper>
           </Modal>
         </MenuContainer>
