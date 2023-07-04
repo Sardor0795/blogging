@@ -9,6 +9,7 @@ import {
   SearchContentInput,
   SearchContentText,
   SearchImg,
+  SearchInputMobile,
   SearchWrapper,
 } from "./style";
 
@@ -25,6 +26,7 @@ function Search({ opened, setOpened }) {
                 <SearchContentInput placeholder="Kalit so’zni kiriting" />
               </SearchContent>
               <CloseBtn onClick={(e) => setOpened(false)} />
+              <SearchInputMobile placeholder="Kalit so’zni kiriting" />
             </SearchWrapper>
           </Modal>
         </MenuContainer>
