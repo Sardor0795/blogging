@@ -1,12 +1,32 @@
 import React from "react";
-import { Layer, Menu, MenuContainer, Modal } from "./style";
+import {
+  CloseBtn,
+  Layer,
+  Menu,
+  MenuContainer,
+  Modal,
+  SearchContent,
+  SearchContentInput,
+  SearchContentText,
+  SearchImg,
+  SearchWrapper,
+} from "./style";
 
 function Search({ opened, setOpened }) {
   return (
     <Layer opened={`${opened}`} onClick={(e) => setOpened(false)}>
       <Menu opened={`${opened}`}>
         <MenuContainer>
-          <Modal onClick={(e) => e.stopPropagation()}>search</Modal>
+          <Modal onClick={(e) => e.stopPropagation()}>
+            <SearchWrapper>
+              <SearchImg />
+              <SearchContent>
+                <SearchContentText>Saytda qidiruv</SearchContentText>
+                <SearchContentInput placeholder="Kalit so’zni kiriting" />
+              </SearchContent>
+              <CloseBtn onClick={(e) => setOpened(false)} />
+            </SearchWrapper>
+          </Modal>
         </MenuContainer>
       </Menu>
     </Layer>
