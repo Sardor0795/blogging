@@ -53,8 +53,8 @@ export const SearchWrapper = styled.div`
 export const SearchImg = styled.div`
   background-image: url("${searchImg}");
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-position: center top;
+  background-size: contain;
   width: 48px;
   height: 48px;
   margin-right: 20px;
@@ -137,4 +137,34 @@ export const CloseBtn = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
+`;
+
+// Search results ------------
+
+export const SearchResultsWrapper = styled.div`
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 16px;
+  max-height: 40vh;
+  overflow-y: auto;
+  padding: 5px;
+`;
+
+export const SearchResultInfo = styled.div`
+  color: #000;
+  font-size: 16px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 16px;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.9) 100%
+    ),
+    #0085ff;
 `;
