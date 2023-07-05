@@ -34,6 +34,27 @@ export const SearchResultBoxTitle = styled(Link)`
     line-height: 1.1;
   }
 `;
+
+export const SearchResultBoxUserLink = styled(Link)`
+  color: #969696;
+  font-size: 12px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  margin-left: 5px;
+  &:hover {
+    color: var(--blue);
+  }
+  @media (max-width: 410px) {
+    line-height: unset;
+    font-size: 10px;
+  }
+`;
+
 export const SearchResultBoxText = styled.div`
   color: #969696;
   font-size: 12px;
