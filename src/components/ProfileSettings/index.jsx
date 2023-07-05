@@ -3,7 +3,6 @@ import {
   Banner,
   BannerContainer,
   BannerInside,
-  Input,
   Container,
   Form,
   FormGroup,
@@ -29,7 +28,7 @@ function ProfileSettings() {
         <BannerContainer>
           <BannerAbsolute>
             <Button position="right">
-              <input type="file" id="banner-image" />
+              <input type="file" id="banner-image" accept="image/*" />
               <label htmlFor="banner-image">
                 <Upload />
                 <span>Yangilash</span>
@@ -45,7 +44,7 @@ function ProfileSettings() {
             <Rightside>
               <Rightside.Name>Akbarali Khasanov</Rightside.Name>
               <Button position="left">
-                <input type="file" id="profile-image" />
+                <input type="file" id="profile-image" accept="image/*" />
                 <label htmlFor="profile-image">
                   <Upload />
                   <span>Rasmni yangilash</span>
