@@ -16,6 +16,7 @@ const TopicsPage = lazy(() => import("./../pages/Topics"));
 const PrivacyPage = lazy(() => import("./../pages/Privacy"));
 const ProfilePage = lazy(() => import("../pages/Profile"));
 const ArticleInfoPage = lazy(() => import("./../pages/ArticleInfo"));
+const ProfileSettings = lazy(() => import("../pages/ProfileSettings"));
 
 function Root() {
   return (
@@ -37,6 +38,15 @@ function Root() {
                 }
               />
               <Route path="/posts/:id" element={<ArticleInfoPage />} />
+              <Route
+                path="/profile-settings"
+                element={
+                  <AuthDetector
+                    auth={<ProfileSettings />}
+                    noauth={<NotFoundPage />}
+                  />
+                }
+              />
               <Route path="/" element={<Navigate to="/home" />} />
               <Route path="/*" element={<NotFoundPage />} />
             </Route>
