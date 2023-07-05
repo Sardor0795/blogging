@@ -5,6 +5,7 @@ import {
   SearchResultBoxText,
   SearchResultBoxTitle,
   SearchResultBox,
+  SearchResultBoxUserLink,
 } from "./style";
 
 export const SearchResultComp = ({ setOpened }) => {
@@ -15,7 +16,13 @@ export const SearchResultComp = ({ setOpened }) => {
           ChatGPT-dan UI/UX dizayneri sifatida qanday foydalanaman
         </SearchResultBoxTitle>
         <SearchResultBoxText>
-          17 sentabr 2020 • AKBARALI KHASANOV
+          17 sentabr 2020 •
+          <SearchResultBoxUserLink
+            onClick={(e) => setOpened(false)}
+            to={"/profiles/25"}
+          >
+            AKBARALI KHASANOV
+          </SearchResultBoxUserLink>
         </SearchResultBoxText>
       </SearchResultBoxContent>
       <SearchResultBoxImg onClick={(e) => setOpened(false)} to={`/posts/5`} />
