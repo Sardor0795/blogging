@@ -15,7 +15,9 @@ export const Layer = styled.div`
   background-color: rgba(22, 0, 0, 0.5);
   visibility: ${({ opened }) => (opened === "true" ? "visible" : "hidden")};
   opacity: ${({ opened }) => (opened === "true" ? 1 : 0)};
-  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Menu = styled.div`
@@ -35,7 +37,7 @@ export const MenuContainer = styled.div`
 export const Modal = styled.div`
   width: 100%;
   max-width: 567px;
-  height: calc(100vh - 40px);
+  max-height: calc(100vh - 40px);
   padding: 32px 30px;
   background-color: #fff;
   border: 1px solid #e8e8e8;
