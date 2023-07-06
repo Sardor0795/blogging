@@ -23,6 +23,7 @@ import {
   FooterLogoLink,
 } from "./style";
 import { toTop } from "./../../utils/toTop";
+import logo from "../../assets/images/logo.png";
 
 function Footer() {
   return (
@@ -30,7 +31,7 @@ function Footer() {
       <Container>
         <LogoLinkWrapper>
           <FooterLogoLink to="/">
-            <FooterLogo />
+            <FooterLogo src={logo} alt="BossBlog" />
           </FooterLogoLink>
         </LogoLinkWrapper>
         <Content>

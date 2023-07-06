@@ -16,7 +16,7 @@ import {
 } from "./style";
 import Search from "../../Search";
 import { toTop } from "./../../../utils/toTop";
-import { ReactComponent as Logo } from "../../../assets/images/logo.svg";
+import logo from "../../../assets/images/logo.png";
 import { ReactComponent as SearchIcon } from "../../../assets/icons/search.svg";
 import arrow from "../../../assets/icons/profile-arrow.png";
 import { ReactComponent as ProfileSettings } from "../../../assets/icons/profile-settings.svg";
@@ -40,7 +40,7 @@ function AuthorizedNavbar() {
     <OuterContainer scrolling={`${scrolling}`}>
       <Container>
         <ForLogo to="/" aria-label="Bosh sahifa">
-          <Logo />
+          <img src={logo} alt="BossBlog" />
         </ForLogo>
         <RightSide>
           <RightSide.Search>

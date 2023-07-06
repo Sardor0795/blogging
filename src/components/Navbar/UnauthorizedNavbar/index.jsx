@@ -11,7 +11,7 @@ import {
   SignUpButton,
   SearchButton,
 } from "./style";
-import { ReactComponent as Logo } from "../../../assets/images/logo.svg";
+import logo from "../../../assets/images/logo.png";
 import { ReactComponent as Hamburger } from "../../../assets/icons/hamburger.svg";
 import { ReactComponent as SearchIcon } from "../../../assets/icons/search.svg";
 import close from "../../../assets/icons/close.png";
@@ -54,7 +54,7 @@ function UnauthorizedNavbar({ yellowbg, fixed }) {
           aria-label="Bosh sahifa"
           onClick={() => setOpened(false)}
         >
-          <Logo />
+          <img src={logo} alt="BossBlog" />
         </ForLogo>
         <RightSide>
           <RightSide.Search>

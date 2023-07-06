@@ -10,7 +10,7 @@ export const OuterContainer = styled.div`
   left: 0;
   background-color: ${({ yellowbg }) =>
     yellowbg ? "var(--light-yellow)" : "var(--light-blue)"};
-  padding-block: 18px;
+  padding-block: 13px;
   transition: 0.2s linear;
 
   ${({ scrolling }) =>
@@ -33,11 +33,11 @@ export const Container = styled.div`
 
 export const ForLogo = styled(Link)`
   text-decoration: none;
-  width: 139px;
+  width: 50px;
   display: flex;
   align-items: center;
 
-  svg {
+  img {
     width: 100%;
   }
 `;

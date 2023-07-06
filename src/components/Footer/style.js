@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { globalContainer } from "../../root/global";
-import { ReactComponent as Logo } from "../../assets/images/footer_logo.svg";
 import { Link } from "react-router-dom";
 
 import { ReactComponent as faceBookIcon } from "../../assets/icons/facebook.svg";
@@ -37,12 +36,11 @@ export const LogoLinkWrapper = styled.div`
 export const FooterLogoLink = styled(Link)`
   text-decoration: none;
   display: flex;
-  width: 139px;
-  height: 37px;
+  width: 50px;
   flex-shrink: 0;
 `;
 
-export const FooterLogo = styled(Logo)`
+export const FooterLogo = styled.img`
   width: 100%;
 `;
 
