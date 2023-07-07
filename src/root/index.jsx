@@ -14,12 +14,13 @@ const NoAuthHomePage = lazy(() => import("./../pages/Home/UnauthorizedHome"));
 const AboutPage = lazy(() => import("./../pages/About"));
 const TopicsPage = lazy(() => import("./../pages/Topics"));
 const PrivacyPage = lazy(() => import("./../pages/Privacy"));
+const TermsOfUsePage = lazy(() => import("./../pages/TermsOfUse"));
 const ProfilePage = lazy(() => import("../pages/Profile"));
 const ArticleInfoPage = lazy(() => import("./../pages/ArticleInfo"));
 const ProfileSettings = lazy(() => import("../pages/ProfileSettings"));
 const ProfileFavourites = lazy(() => import("../pages/ProfileFavourites"));
 const ProfileArticles = lazy(() => import("../pages/ProfileArticles"));
-const ProfileStatic = lazy(() => import("../pages/ProfileStatic"));
+const ProfileStatistics = lazy(() => import("../pages/ProfileStatistics"));
 
 function Root() {
   return (
@@ -72,7 +73,7 @@ function Root() {
                 path="/profile-statistics"
                 element={
                   <AuthDetector
-                    auth={<ProfileStatic />}
+                    auth={<ProfileStatistics />}
                     noauth={<NotFoundPage />}
                   />
                 }
@@ -84,6 +85,7 @@ function Root() {
             <Route element={<Navbar yellowbg="true" />}>
               <Route path="/topics/*" element={<TopicsPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms-of-use" element={<TermsOfUsePage />} />
               <Route path="/profiles/:id" element={<ProfilePage />} />
             </Route>
           </Routes>

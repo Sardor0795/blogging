@@ -36,7 +36,7 @@ export const LogoLinkWrapper = styled.div`
 export const FooterLogoLink = styled(Link)`
   text-decoration: none;
   display: flex;
-  width: 50px;
+  width: 35px;
   flex-shrink: 0;
 `;
 

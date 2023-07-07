@@ -45,7 +45,7 @@ export const AddTopic = styled.button`
   transition: 0.2s linear;
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
   &:active {
     transform: translateY(0);
@@ -74,4 +74,12 @@ export const TopicLink = styled(Link)`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.1;
+  transition: 0.2s linear;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
 `;

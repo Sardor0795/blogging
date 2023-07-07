@@ -9,7 +9,7 @@ export const OuterContainer = styled.div`
   top: 0;
   left: 0;
   background-color: var(--light-yellow);
-  padding-block: 13px;
+  padding-block: 16px;
   transition: 0.2s linear;
 
   ${({ scrolling }) =>
@@ -32,7 +32,7 @@ export const Container = styled.div`
 
 export const ForLogo = styled(Link)`
   text-decoration: none;
-  width: 50px;
+  width: 35px;
   display: flex;
   align-items: center;
 

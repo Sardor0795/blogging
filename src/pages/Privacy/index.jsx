@@ -1,10 +1,10 @@
 import React from "react";
 import PrivacyComponent from "../../components/Privacy";
 
-function Privacy() {
+function PrivacyPage() {
   return (
     <PrivacyComponent/>
   );
 }
 
-export default Privacy;
+export default PrivacyPage;
