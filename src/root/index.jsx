@@ -17,10 +17,12 @@ const PrivacyPage = lazy(() => import("./../pages/Privacy"));
 const TermsOfUsePage = lazy(() => import("./../pages/TermsOfUse"));
 const ProfilePage = lazy(() => import("../pages/Profile"));
 const ArticleInfoPage = lazy(() => import("./../pages/ArticleInfo"));
-const ProfileSettings = lazy(() => import("../pages/ProfileSettings"));
-const ProfileFavourites = lazy(() => import("../pages/ProfileFavourites"));
-const ProfileArticles = lazy(() => import("../pages/ProfileArticles"));
-const ProfileStatistics = lazy(() => import("../pages/ProfileStatistics"));
+const ProfileSettingsPage = lazy(() => import("../pages/ProfileSettings"));
+const ProfileFavouritesPage = lazy(() => import("../pages/ProfileFavourites"));
+const ProfileArticlesPage = lazy(() => import("../pages/ProfileArticles"));
+const ProfileStatisticsPage = lazy(() => import("../pages/ProfileStatistics"));
+const WriteArticlePage = lazy(() => import("../pages/WriteArticle"));
+const EditArticlePage = lazy(() => import("../pages/EditArticle"));
 
 function Root() {
   return (
@@ -31,6 +33,7 @@ function Root() {
         <Suspense fallback={<Loader />}>
           {/* Routes */}
           <Routes>
+            {/* Routes with Navbar Start--- */}
             <Route element={<Navbar />}>
               <Route
                 path="/home"
@@ -46,7 +49,7 @@ function Root() {
                 path="/profile-settings"
                 element={
                   <AuthDetector
-                    auth={<ProfileSettings />}
+                    auth={<ProfileSettingsPage />}
                     noauth={<NotFoundPage />}
                   />
                 }
@@ -55,7 +58,7 @@ function Root() {
                 path="/profile-favorites"
                 element={
                   <AuthDetector
-                    auth={<ProfileFavourites />}
+                    auth={<ProfileFavouritesPage />}
                     noauth={<NotFoundPage />}
                   />
                 }
@@ -64,7 +67,7 @@ function Root() {
                 path="/profile-articles"
                 element={
                   <AuthDetector
-                    auth={<ProfileArticles />}
+                    auth={<ProfileArticlesPage />}
                     noauth={<NotFoundPage />}
                   />
                 }
@@ -73,21 +76,46 @@ function Root() {
                 path="/profile-statistics"
                 element={
                   <AuthDetector
-                    auth={<ProfileStatistics />}
+                    auth={<ProfileStatisticsPage />}
                     noauth={<NotFoundPage />}
                   />
                 }
               />
-              <Route path="/" element={<Navigate to="/home" />} />
+              <Route
+                path="/write"
+                element={
+                  <AuthDetector
+                    auth={<WriteArticlePage />}
+                    noauth={<NotFoundPage />}
+                  />
+                }
+              />
+              <Route
+                path="/edit/:id"
+                element={
+                  <AuthDetector
+                    auth={<EditArticlePage />}
+                    noauth={<NotFoundPage />}
+                  />
+                }
+              />
               <Route path="/*" element={<NotFoundPage />} />
             </Route>
+            {/* Routes with Navbar End--- */}
+
+            {/* Outside Start--- */}
+            <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/about" element={<AboutPage />} />
+            {/* Outside End--- */}
+
+            {/* Routes with Yellow Navbar Start--- */}
             <Route element={<Navbar yellowbg="true" />}>
               <Route path="/topics/*" element={<TopicsPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms-of-use" element={<TermsOfUsePage />} />
               <Route path="/profiles/:id" element={<ProfilePage />} />
             </Route>
+            {/* Routes with Yellow Navbar End--- */}
           </Routes>
           {/* Routes --end */}
           <Footer />
