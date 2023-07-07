@@ -45,7 +45,9 @@ function Footer() {
               <ContentLink>Yordam</ContentLink>
             </ContentLinkWrapper>
             <ContentLinkWrapper>
-              <ContentLink>Foydalanish shartlari</ContentLink>
+              <ContentLink to="/terms-of-use" onClick={toTop}>
+                Foydalanish shartlari
+              </ContentLink>
             </ContentLinkWrapper>
             <ContentLinkWrapper>
               <ContentLink to="/privacy" onClick={toTop}>
