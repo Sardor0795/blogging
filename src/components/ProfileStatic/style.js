@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { globalContainer } from "../../root/global";
 
+import selectIcon from "../../assets/icons/select_icon.png";
+
 export const OuterContainer = styled.div``;
 
 export const Container = styled.div`
@@ -37,6 +39,8 @@ export const FilterBtn = styled.button`
   font-weight: 500;
   line-height: 24px;
   padding: 8px 12px;
+  display: flex;
+  align-items: center;
   margin-bottom: 48px;
   border-radius: 8px;
   border: 1px solid #e8e8e8;
@@ -62,4 +66,16 @@ export const FilterBtn = styled.button`
     font-size: 15px;
     padding: 6px 10px;
   }
+`;
+
+export const SelectIcon = styled.div`
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("${selectIcon}");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  transition: transform 0.3s ease;
+  transform: ${({ open }) => (open ? "rotate(-180deg)" : "rotate(0deg)")};
 `;
