@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LoadMoreButton from "../LoadMore";
 import ListArticle from "./List";
 import {
   AddArticle,
   BtnsWrapper,
   Container,
+  Items,
   ListArticleWrapper,
   MoreBtnWrapper,
   OuterContainer,
@@ -13,8 +14,15 @@ import {
 } from "./style";
 
 import { ReactComponent as Plus } from "../../assets/icons/plus-gray.svg";
+import ListSkeleton from "../ListSkeleton";
 
 function ProfileArticles() {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    setTimeout(() => {
+      setData([1, 2, 3, 4, 5, 6]);
+    }, 1000);
+  }, []);
   return (
     <OuterContainer>
       <Container>
@@ -29,7 +37,21 @@ function ProfileArticles() {
           <SavedBtn>Moderatsiyaga yuborilganlar</SavedBtn>
         </BtnsWrapper>
         <ListArticleWrapper>
-          <ListArticle />
+          <Items>
+            {data
+              ? data?.map((item, index) => (
+                  <React.Fragment key={index}>
+                    <ListArticle id={index + 1} data={item} />
+                  </React.Fragment>
+                ))
+              : Array(6)
+                  .fill()
+                  .map((item, index) => (
+                    <React.Fragment key={index}>
+                      <ListSkeleton />
+                    </React.Fragment>
+                  ))}
+          </Items>
         </ListArticleWrapper>
         <MoreBtnWrapper>
           <LoadMoreButton />

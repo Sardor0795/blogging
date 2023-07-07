@@ -109,3 +109,8 @@ export const AddArticle = styled.button`
     transform: translateY(0);
   }
 `;
+
+export const Items = styled.div`
+  display: grid;
+  gap: 24px;
+`;
