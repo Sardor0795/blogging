@@ -9,6 +9,16 @@ export const Container = styled.div`
   min-height: 100vh;
 `;
 
+export const PageTitle = styled.div`
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  padding-top: 48px;
+`;
+
 export const BtnsWrapper = styled.div`
   padding-top: 48px;
   display: flex;
