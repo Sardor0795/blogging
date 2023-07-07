@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
+import editIcon from "../../../assets/icons/edit_icon.png";
+import deleteIcon from "../../../assets/icons/delete_icon.png";
+
 export const Container = styled.div``;
 
 export const Desktop = styled.div`
@@ -200,7 +203,7 @@ const favoritesButton = css`
   }
 `;
 
-export const Profile = styled.div`
+export const ProfileSettings = styled.div`
   width: auto;
   display: flex;
   align-items: center;
@@ -208,35 +211,16 @@ export const Profile = styled.div`
   gap: 10px;
   white-space: nowrap;
 
-  @media screen and (max-width: 400px) {
-    flex-direction: column;
-    align-items: start;
+  @media screen and (max-width: 650px) {
+    width: 100%;
+    justify-content: flex-end;
   }
-`;
 
-Profile.Container = styled(Link)`
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-`;
-
-Profile.Img = styled.div`
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #e8e8e8;
-  background-image: url(${({ url }) => url});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-`;
-
-Profile.Text = styled.div`
-  color: var(--dark-black);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.1;
+  /* @media screen and (max-width: 400px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+  } */
 `;
 
 export const Details = styled.div`
@@ -286,5 +270,36 @@ Details.ButtonText = styled.p`
 
   @media screen and (max-width: 650px) {
     display: none;
+  }
+`;
+
+// Btns ---
+
+export const SettingBtn = styled(Link)`
+  color: ${({ edit }) => (edit ? "#00BA34" : "#E92C2C")};
+  text-align: center;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius: 8px;
+  border: 1px solid ${({ edit }) => (edit ? "#00BA34" : "#E92C2C")};
+  background: #fff;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.06);
+  padding: 4px 8px 4px 28px;
+  cursor: pointer;
+  transition: 0.2s linear;
+
+  background-image: url("${({ edit }) => (edit ? editIcon : deleteIcon)}");
+
+  background-repeat: no-repeat;
+  background-position: 8px center;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &:active {
+    transform: translateY(0);
   }
 `;

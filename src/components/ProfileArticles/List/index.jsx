@@ -6,14 +6,14 @@ import {
   Desktop,
   Details,
   Image,
-  Profile,
+  ProfileSettings,
   RightSide,
+  SettingBtn,
   Tablet,
   Title,
   Top,
 } from "./style";
 import articleImg from "../../../assets/images/article.png";
-import profileImg from "../../../assets/images/profile-img.svg";
 import { ReactComponent as FavoritesIcon } from "../../../assets/icons/add_to_favorites.svg";
 import { ReactComponent as ReadingTimeIcon } from "../../../assets/icons/reading_time.svg";
 import { ReactComponent as CommentCountIcon } from "../../../assets/icons/comments_number.svg";
@@ -21,6 +21,10 @@ import { ReactComponent as ViewsCountIcon } from "../../../assets/icons/views_nu
 import { toTop } from "../../../utils/toTop";
 
 function ListArticle({ id }) {
+  const areYouSure = () => {
+    alert("Maqolani o'chirish");
+  };
+
   return (
     <Container>
       <Desktop>
@@ -51,12 +55,6 @@ function ListArticle({ id }) {
           </RightSide.Top>
           <RightSide.Bottom>
             <Bottom>
-              <Profile>
-                <Profile.Container to="/profiles/25" onClick={toTop}>
-                  <Profile.Img url={profileImg} />
-                  <Profile.Text>Akbarali Khasanov</Profile.Text>
-                </Profile.Container>
-              </Profile>
               <Details>
                 <Details.Button type="button" title="Keyinroq o‘qish">
                   <FavoritesIcon />
@@ -77,18 +75,18 @@ function ListArticle({ id }) {
                   </div>
                 </Details.Rightside>
               </Details>
+              <ProfileSettings>
+                <SettingBtn to="/edit-article/5" edit="true">
+                  Tahrirlash
+                </SettingBtn>
+                <SettingBtn onClick={areYouSure}>O‘chirish</SettingBtn>
+              </ProfileSettings>
             </Bottom>
           </RightSide.Bottom>
         </RightSide>
       </Desktop>
       <Tablet>
         <Bottom>
-          <Profile>
-            <Profile.Container to="/profiles/25" onClick={toTop}>
-              <Profile.Img url={profileImg} />
-              <Profile.Text>Akbarali Khasanov</Profile.Text>
-            </Profile.Container>
-          </Profile>
           <Details>
             <Details.Button type="button" title="Keyinroq o‘qish">
               <FavoritesIcon />
@@ -109,6 +107,12 @@ function ListArticle({ id }) {
               </div>
             </Details.Rightside>
           </Details>
+          <ProfileSettings>
+            <SettingBtn to="/edit-article/5" edit="true">
+              Tahrirlash
+            </SettingBtn>
+            <SettingBtn onClick={areYouSure}>O‘chirish</SettingBtn>
+          </ProfileSettings>
         </Bottom>
       </Tablet>
     </Container>
