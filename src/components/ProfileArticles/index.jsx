@@ -8,6 +8,7 @@ import {
   ListArticleWrapper,
   MoreBtnWrapper,
   OuterContainer,
+  PageTitle,
   SavedBtn,
 } from "./style";
 
@@ -17,6 +18,7 @@ function ProfileArticles() {
   return (
     <OuterContainer>
       <Container>
+        <PageTitle>Maqolalar</PageTitle>
         <BtnsWrapper>
           <AddArticle>
             <Plus style={{ marginRight: "8px" }} />
