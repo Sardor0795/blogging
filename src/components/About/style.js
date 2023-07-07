@@ -10,7 +10,6 @@ import mobileImg from "../../assets/images/mobile-img.png";
 export const OuterContainer = styled.div`
   background-color: #fff;
   min-height: 100vh;
-  padding-bottom: ${({ pb }) => (pb === "true" ? "100px" : 0)};
   position: relative;
 `;
 

@@ -32,7 +32,7 @@ import { CarouselSlide } from "./Carousel";
 
 function About() {
   return (
-    <OuterContainer pb="true">
+    <>
       <OuterContainer>
         <HeaderBgImgMobile />
         <Navbar yellowbg="true" fixed="true" />
@@ -130,7 +130,7 @@ function About() {
           <SubscribeBtn>Bizga qo`shiling</SubscribeBtn>
         </SubscribeWrap>
       </Container>
-    </OuterContainer>
+    </>
   );
 }
 
