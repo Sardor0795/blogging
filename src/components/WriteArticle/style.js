@@ -10,3 +10,9 @@ export const Container = styled.div`
   ${globalContainer};
   margin-inline: auto;
 `;
+
+export const Editor = styled.div`
+  .codex-editor__redactor {
+    padding-bottom: 50px !important;
+  }
+`;
