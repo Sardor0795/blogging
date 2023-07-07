@@ -27,7 +27,9 @@ export const SavedBtn = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
-  margin-right: 16px;
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
   transition: 0.2s linear;
 
   &:hover {
@@ -35,6 +37,10 @@ export const SavedBtn = styled.button`
   }
   &:active {
     transform: translateY(0);
+  }
+  @media (max-width: 340px) {
+    font-size: 15px;
+    padding: 6px 10px;
   }
 `;
 
