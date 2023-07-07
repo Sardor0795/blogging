@@ -9,7 +9,7 @@ import {
   SelectIcon,
 } from "./style";
 
-function ProfileStatic() {
+function ProfileStatistics() {
   const [open, setOpen] = useState(false);
 
   const selectToogler = () => {
@@ -31,4 +31,4 @@ function ProfileStatic() {
   );
 }
 
-export default ProfileStatic;
+export default ProfileStatistics;
