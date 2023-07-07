@@ -76,7 +76,7 @@ function ListArticle({ id }) {
                 </Details.Rightside>
               </Details>
               <ProfileSettings>
-                <SettingBtn to="/edit-article/5" edit="true">
+                <SettingBtn to="/edit/5" edit="true">
                   Tahrirlash
                 </SettingBtn>
                 <SettingBtn onClick={areYouSure}>O‘chirish</SettingBtn>
