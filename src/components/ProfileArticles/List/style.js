@@ -215,12 +215,6 @@ export const ProfileSettings = styled.div`
     width: 100%;
     justify-content: flex-end;
   }
-
-  /* @media screen and (max-width: 400px) {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-end;
-  } */
 `;
 
 export const Details = styled.div`
