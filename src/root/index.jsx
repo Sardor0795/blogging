@@ -18,6 +18,7 @@ const ProfilePage = lazy(() => import("../pages/Profile"));
 const ArticleInfoPage = lazy(() => import("./../pages/ArticleInfo"));
 const ProfileSettings = lazy(() => import("../pages/ProfileSettings"));
 const ProfileFavourites = lazy(() => import("../pages/ProfileFavourites"));
+const ProfileArticles = lazy(() => import("../pages/ProfileArticles"));
 
 function Root() {
   return (
@@ -53,6 +54,15 @@ function Root() {
                 element={
                   <AuthDetector
                     auth={<ProfileFavourites />}
+                    noauth={<NotFoundPage />}
+                  />
+                }
+              />
+              <Route
+                path="/profile-articles"
+                element={
+                  <AuthDetector
+                    auth={<ProfileArticles />}
                     noauth={<NotFoundPage />}
                   />
                 }
