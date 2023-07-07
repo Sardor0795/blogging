@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import LoadMoreButton from "../LoadMore";
 import ListArticle from "./List";
 import {
-  AddArticle,
   BtnsWrapper,
   Container,
   Items,
@@ -13,7 +12,6 @@ import {
   SavedBtn,
 } from "./style";
 
-import { ReactComponent as Plus } from "../../assets/icons/plus-gray.svg";
 import ListSkeleton from "../ListSkeleton";
 
 function ProfileArticles() {
@@ -28,12 +26,8 @@ function ProfileArticles() {
       <Container>
         <PageTitle>Maqolalar</PageTitle>
         <BtnsWrapper>
-          <AddArticle>
-            <Plus style={{ marginRight: "8px" }} />
-            Yangi maqola chop etish
-          </AddArticle>
-          <SavedBtn active="true">Saqlanganlar</SavedBtn>
-          <SavedBtn>Oxirgi o’qilganlar</SavedBtn>
+          <SavedBtn active="true">Chop etilganlar</SavedBtn>
+          <SavedBtn>Qoralamalar</SavedBtn>
           <SavedBtn>Moderatsiyaga yuborilganlar</SavedBtn>
         </BtnsWrapper>
         <ListArticleWrapper>

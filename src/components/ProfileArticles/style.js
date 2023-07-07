@@ -79,37 +79,6 @@ export const MoreBtnWrapper = styled.div`
   }
 `;
 
-export const AddArticle = styled.button`
-  background: #fff;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid #e8e8e8;
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.06);
-  display: flex;
-  align-items: center;
-  color: var(--dark-black);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.1;
-  margin-right: 16px;
-  cursor: pointer;
-  margin-bottom: 48px;
-  transition: 0.2s linear;
-  @media (max-width: 880px) {
-    margin-bottom: 30px;
-  }
-  @media (max-width: 340px) {
-    font-size: 15px;
-    padding: 6px 10px;
-  }
-  &:hover {
-    transform: translateY(-2px);
-  }
-  &:active {
-    transform: translateY(0);
-  }
-`;
-
 export const Items = styled.div`
   display: grid;
   gap: 24px;
