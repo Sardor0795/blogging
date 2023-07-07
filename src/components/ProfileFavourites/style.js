@@ -59,3 +59,8 @@ export const MoreBtnWrapper = styled.div`
     padding-bottom: 40px;
   }
 `;
+
+export const Items = styled.div`
+  display: grid;
+  gap: 24px;
+`;
