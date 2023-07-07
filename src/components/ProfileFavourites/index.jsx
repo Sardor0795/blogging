@@ -1,9 +1,11 @@
 import React from "react";
+import LoadMoreButton from "../LoadMore";
 import ListArticle from "./List";
 import {
   BtnsWrapper,
   Container,
   ListArticleWrapper,
+  MoreBtnWrapper,
   OuterContainer,
   SavedBtn,
 } from "./style";
@@ -19,6 +21,9 @@ function ProfileFavourites() {
         <ListArticleWrapper>
           <ListArticle />
         </ListArticleWrapper>
+        <MoreBtnWrapper>
+          <LoadMoreButton />
+        </MoreBtnWrapper>
       </Container>
     </OuterContainer>
   );

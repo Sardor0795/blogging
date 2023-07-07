@@ -41,3 +41,8 @@ export const SavedBtn = styled.button`
 export const ListArticleWrapper = styled.div`
   padding-bottom: 80px;
 `;
+
+export const MoreBtnWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
