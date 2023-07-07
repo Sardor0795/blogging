@@ -40,9 +40,16 @@ export const SavedBtn = styled.button`
 
 export const ListArticleWrapper = styled.div`
   padding-bottom: 80px;
+  @media (max-width: 600px) {
+    padding-bottom: 40px;
+  }
 `;
 
 export const MoreBtnWrapper = styled.div`
   display: flex;
   justify-content: center;
+  padding-bottom: 80px;
+  @media (max-width: 600px) {
+    padding-bottom: 40px;
+  }
 `;
