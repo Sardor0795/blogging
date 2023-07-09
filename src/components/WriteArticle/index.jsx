@@ -1,41 +1,54 @@
-import React from "react";
-import { Container, Editor, OuterContainer } from "./style";
-import EditorJs from "@editorjs/editorjs";
+import React, { useEffect, useRef, useState } from "react";
+import { Button, Container, Editor, Input, OuterContainer, Row } from "./style";
+import EditorJS from "@editorjs/editorjs";
 import { EDITOR_JS_TOOLS } from "./../../editor.js/tools";
 
 function WriteArticle() {
-  const editor = new EditorJs({
-    holder: "editorjs-write",
-    tools: EDITOR_JS_TOOLS,
-    autofocus: true,
-    // data: {}
-  });
+  const ejInstance = useRef();
+  let [editorForSaving] = useState(null);
 
-  const getData = () => {
-    editor.isReady.then(() => {
-      editor
-        .save()
-        .then((outputData) => {
-          console.log("Article data: ", outputData);
-        })
-        .catch((error) => {
-          console.log("Saving failed: ", error);
-        });
+  const initEditor = () => {
+    const editor = new EditorJS({
+      holder: "editorjs-write",
+      onReady: () => {
+        ejInstance.current = editor;
+      },
+      tools: EDITOR_JS_TOOLS,
+      placeholder: "Shu yerga yozing",
     });
+    editorForSaving = editor;
   };
 
-  const clear = () => {
-    editor.isReady.then(() => {
-      editor.clear();
-    });
+  useEffect(() => {
+    initEditor();
+
+    return () => {
+      ejInstance?.current?.destroy();
+      ejInstance.current = null;
+    };
+  }, []);
+
+  const getData = () => {
+    editorForSaving
+      .save()
+      .then((outputData) => {
+        console.log("Article data: ", outputData);
+      })
+      .catch((error) => {
+        console.log("Saving failed: ", error);
+      });
   };
 
   return (
     <OuterContainer>
       <Container>
-        <Editor id="editorjs-write"></Editor>
-        <button onClick={getData}>get data</button>
-        <button onClick={clear}>clear</button>
+        <Row>
+          <Input placeholder="Sarlavhani kiriting" />
+        </Row>
+        <Editor id="editorjs-write" />
+        <Row>
+          <Button onClick={getData}>Chop etish</Button>
+        </Row>
       </Container>
     </OuterContainer>
   );

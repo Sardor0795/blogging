@@ -45,10 +45,6 @@ export const EDITOR_JS_TOOLS = {
   },
   image: {
     class: Image,
-    endpoints: {
-      byFile: "http://localhost:8008/uploadFile", // Your backend file uploader endpoint
-      byUrl: "http://localhost:8008/fetchUrl", // Your endpoint that provides uploading by Url
-    },
   },
   raw: {
     class: Raw,
