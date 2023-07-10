@@ -15,6 +15,7 @@ import CheckList from "@editorjs/checklist";
 import Delimiter from "@editorjs/delimiter";
 import InlineCode from "@editorjs/inline-code";
 import SimpleImage from "@editorjs/simple-image";
+import uploader from "@ajite/editorjs-image-base64";
 
 export const EDITOR_JS_TOOLS = {
   // NOTE: Paragraph is default tool. Declare only when you want to change paragraph option.
@@ -45,6 +46,9 @@ export const EDITOR_JS_TOOLS = {
   },
   image: {
     class: Image,
+    config: {
+      uploader,
+    },
   },
   raw: {
     class: Raw,

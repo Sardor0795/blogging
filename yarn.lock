@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@adobe/css-tools/-/css-tools-4.2.0.tgz#e1a84fca468f4b337816fcb7f0964beb620ba855"
   integrity sha512-E09FiIft46CmH5Qnjb0wsW54/YQd69LsxeKUOWawmws1XWvyFGURnAChH0mlr7YPFR1ofwvUQfcL0J3lMxXqPA==
 
+"@ajite/editorjs-image-base64@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@ajite/editorjs-image-base64/-/editorjs-image-base64-0.0.2.tgz#5061a455ab022158803efa12893dbb0a0b13ea07"
+  integrity sha512-eO5+LN952wak8kllw5rajMLtPLcFjk44U54MO+UEOPHW67ybckvWVUBkX5z/1Y11JTVhc1Z3FRpFk8U0Vb907Q==
+
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"

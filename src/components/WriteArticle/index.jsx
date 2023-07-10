@@ -20,7 +20,7 @@ function WriteArticle() {
   };
 
   useEffect(() => {
-    initEditor();
+    if (!ejInstance.current) initEditor();
 
     return () => {
       ejInstance?.current?.destroy();

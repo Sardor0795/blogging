@@ -4,6 +4,7 @@ import { globalContainer } from "../../root/global";
 export const OuterContainer = styled.div`
   min-height: 100vh;
   background-color: #fff;
+  padding-bottom: 200px;
 `;
 
 export const Container = styled.div`
