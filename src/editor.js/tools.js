@@ -15,7 +15,8 @@ import CheckList from "@editorjs/checklist";
 import Delimiter from "@editorjs/delimiter";
 import InlineCode from "@editorjs/inline-code";
 import SimpleImage from "@editorjs/simple-image";
-import uploader from "@ajite/editorjs-image-base64";
+import axios from "axios";
+// import uploader from "@ajite/editorjs-image-base64";
 
 export const EDITOR_JS_TOOLS = {
   // NOTE: Paragraph is default tool. Declare only when you want to change paragraph option.
@@ -47,8 +48,33 @@ export const EDITOR_JS_TOOLS = {
   image: {
     class: Image,
     config: {
-      uploader,
-    },
+      uploader: {
+        async uploadByFile(file) {
+          const formData = new FormData();
+          formData.append("image", file);
+          const response = await axios.post(
+            `https://api.bossblog.uz/api/v1/upload/image`,
+            formData,
+            {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }
+          );
+          console.log(response);
+          return JSON.stringify(response?.data);
+        },
+        async uploadByUrl(url) {
+          const response = await axios.post(
+            `https://api.bossblog.uz/api/v1/upload/upload-by-url`,
+            {
+              url,
+            }
+          );
+          console.log(response);
+        },
+      },
+    }
   },
   raw: {
     class: Raw,

@@ -29,14 +29,15 @@ function WriteArticle() {
   }, []);
 
   const getData = () => {
-    editorForSaving
-      .save()
-      .then((outputData) => {
-        console.log("Article data: ", outputData);
-      })
-      .catch((error) => {
-        console.log("Saving failed: ", error);
-      });
+    if (editorForSaving !== null)
+      editorForSaving
+        .save()
+        .then((outputData) => {
+          console.log("Article data: ", outputData);
+        })
+        .catch((error) => {
+          console.log("Saving failed: ", error);
+        });
   };
 
   return (
