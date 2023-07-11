@@ -46,7 +46,7 @@ function WriteArticle() {
         <Row>
           <Input placeholder="Sarlavhani kiriting" />
         </Row>
-        <Editor id="editorjs-write" />
+        <Editor id="editorjs-write" onMouseOver={() => {}} />
         <Row>
           <Button onClick={getData}>Chop etish</Button>
         </Row>

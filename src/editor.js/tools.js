@@ -59,10 +59,10 @@ export const EDITOR_JS_TOOLS = {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
+              withCredentials: false,
             }
           );
-          console.log(response);
-          return JSON.stringify(response?.data);
+          return response.data;
         },
         async uploadByUrl(url) {
           const response = await axios.post(
@@ -71,10 +71,10 @@ export const EDITOR_JS_TOOLS = {
               url,
             }
           );
-          console.log(response);
+          return response.data;
         },
       },
-    }
+    },
   },
   raw: {
     class: Raw,
