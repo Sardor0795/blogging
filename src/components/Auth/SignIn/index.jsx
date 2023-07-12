@@ -10,12 +10,17 @@ import {
   InputText,
   InputTitle,
   ParolInput,
+  PrivacyCheckBox,
+  PrivacyLink,
+  PrivacyText,
+  PrivacyWrap,
   TypeChanger,
   UserImg,
 } from "./style";
 
 export const SignIn = ({ setOpened }) => {
   const [type, setType] = useState("text");
+  const [checked, setChecked] = useState(false);
 
   const typeChange = () => {
     if (type === "text") {
@@ -46,6 +51,14 @@ export const SignIn = ({ setOpened }) => {
           <TypeChanger type={type} onClick={typeChange} />
           <InputText type={type} placeholder="password" />
         </ParolInput>
+        <PrivacyWrap>
+          <PrivacyCheckBox checked={checked}  />
+          <PrivacyText>
+            Ro’yhatdan o’tish tugmasini bosish orqali men
+            <PrivacyLink to="/privacy">sayt maxfiylik</PrivacyLink>
+            siyosatiga rozilik bildiraman.
+          </PrivacyText>
+        </PrivacyWrap>
       </Form>
     </Container>
   );

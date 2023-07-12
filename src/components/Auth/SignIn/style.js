@@ -4,6 +4,8 @@ import userImg from "../../../assets/images/user_img.png";
 import closeImg from "../../../assets/icons/close_icon.png";
 import eyeimg from "../../../assets/icons/eye.png";
 import eyeHideimg from "../../../assets/icons/eye_hide.svg";
+import { Link } from "react-router-dom";
+import checkedImg from '../../../assets/icons/checked.png'
 
 export const Container = styled.div`
   display: flex;
@@ -55,7 +57,7 @@ export const CloseBtn = styled.button`
 `;
 
 export const Form = styled.form`
-  max-width: 370px;
+  max-width: 407px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -92,10 +94,11 @@ export const InputText = styled.input`
 export const ParolInput = styled.div`
   position: relative;
   height: 40px;
+  margin-bottom: 16px;
 `;
 
 export const TypeChanger = styled.div`
-  background-image: url("${({type}) => type === 'text' ? eyeimg : eyeHideimg }");
+  background-image: url("${({ type }) => type === "text" ? eyeimg : eyeHideimg}");
   background-repeat: no-repeat;
   background-position: center center;
   width: 20px;
@@ -104,4 +107,39 @@ export const TypeChanger = styled.div`
   right: 12px;
   top: 0;
   cursor: pointer;
+`;
+
+export const PrivacyWrap = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+`;
+
+export const PrivacyCheckBox = styled.div`
+  max-width: 20px;
+  width: 100%;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  background-image: url('${checkedImg}');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+`;
+
+export const PrivacyText = styled.div`
+  color: #585757;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+`;
+
+export const PrivacyLink = styled(Link)`
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #0085FF;
 `;
