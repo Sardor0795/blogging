@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LoadMoreButton from "../LoadMore";
 import ListArticle from "./List";
+import ListSkeleton from "../ListSkeleton";
 import {
   BtnsWrapper,
   Container,
@@ -12,15 +13,15 @@ import {
   SavedBtn,
 } from "./style";
 
-import ListSkeleton from "../ListSkeleton";
-
 function ProfileArticles() {
   const [data, setData] = useState(null);
+
   useEffect(() => {
     setTimeout(() => {
       setData([1, 2, 3, 4, 5, 6]);
     }, 1000);
   }, []);
+
   return (
     <OuterContainer>
       <Container>

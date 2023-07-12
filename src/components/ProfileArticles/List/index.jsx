@@ -22,7 +22,7 @@ import { toTop } from "../../../utils/toTop";
 
 function ListArticle({ id }) {
   const areYouSure = () => {
-    alert("Maqolani o'chirish");
+    window.confirm("Maqolani o'chirish");
   };
 
   return (
