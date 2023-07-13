@@ -4,16 +4,21 @@ import {
   CloseBtn,
   Container,
   Form,
+  GoogleIcon,
   HeaderText,
   HeaderTitle,
   HeaderTitleWrap,
   InputText,
   InputTitle,
+  Line,
   ParolInput,
   PrivacyCheckBox,
   PrivacyLink,
   PrivacyText,
   PrivacyWrap,
+  SignInBtn,
+  SignUpLink,
+  Text,
   TypeChanger,
   UserImg,
 } from "./style";
@@ -52,13 +57,21 @@ export const SignIn = ({ setOpened }) => {
           <InputText type={type} placeholder="password" />
         </ParolInput>
         <PrivacyWrap>
-          <PrivacyCheckBox onClick={()=> setChecked(!checked)} checked={checked}  />
+          <PrivacyCheckBox
+            onClick={() => setChecked(!checked)}
+            checked={checked}
+          />
           <PrivacyText>
             Ro’yhatdan o’tish tugmasini bosish orqali men
             <PrivacyLink to="/privacy">sayt maxfiylik</PrivacyLink>
             siyosatiga rozilik bildiraman.
           </PrivacyText>
         </PrivacyWrap>
+        <SignInBtn> <GoogleIcon/> Kirish</SignInBtn>
+        <SignInBtn bgblack="true">Kirish</SignInBtn>
+        <Line/>
+        <Text>Sizda hisob mavjud emasmi?</Text>
+        <SignUpLink>Ro‘yxatdan o‘tish</SignUpLink>
       </Form>
     </Container>
   );
