@@ -123,7 +123,7 @@ export const PrivacyCheckBox = styled.div`
   border-radius: 5px;
   border: 1px solid #e8e8e8;
   cursor: pointer;
-  background-image: url('${checkedImg}');
+  background-image: url('${({checked}) => checked ? checkedImg : null}');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;

@@ -52,7 +52,7 @@ export const SignIn = ({ setOpened }) => {
           <InputText type={type} placeholder="password" />
         </ParolInput>
         <PrivacyWrap>
-          <PrivacyCheckBox checked={checked}  />
+          <PrivacyCheckBox onClick={()=> setChecked(!checked)} checked={checked}  />
           <PrivacyText>
             Ro’yhatdan o’tish tugmasini bosish orqali men
             <PrivacyLink to="/privacy">sayt maxfiylik</PrivacyLink>
