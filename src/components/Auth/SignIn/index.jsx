@@ -67,9 +67,11 @@ export const SignIn = ({ setOpened }) => {
             siyosatiga rozilik bildiraman.
           </PrivacyText>
         </PrivacyWrap>
-        <SignInBtn> <GoogleIcon/> Kirish</SignInBtn>
+        <SignInBtn>
+          <GoogleIcon /> Kirish
+        </SignInBtn>
         <SignInBtn bgblack="true">Kirish</SignInBtn>
-        <Line/>
+        <Line />
         <Text>Sizda hisob mavjud emasmi?</Text>
         <SignUpLink>Ro‘yxatdan o‘tish</SignUpLink>
       </Form>
