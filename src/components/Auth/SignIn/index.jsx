@@ -68,7 +68,8 @@ export const SignIn = ({ setOpened }) => {
           </PrivacyText>
         </PrivacyWrap>
         <SignInBtn>
-          <GoogleIcon /> Kirish
+          <GoogleIcon />
+          Kirish
         </SignInBtn>
         <SignInBtn bgblack="true">Kirish</SignInBtn>
         <Line />
