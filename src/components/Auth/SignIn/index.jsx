@@ -50,7 +50,7 @@ export const SignIn = ({ setOpened }) => {
       </Container.Header>
       <Form>
         <InputTitle>Email</InputTitle>
-        <InputText type="email" placeholder="akbaralikhasanov2000@gmail.com" />
+        <InputText type="email" placeholder="akbarali2000@gmail.com" />
         <InputTitle>Parol</InputTitle>
         <ParolInput>
           <TypeChanger type={type} onClick={typeChange} />

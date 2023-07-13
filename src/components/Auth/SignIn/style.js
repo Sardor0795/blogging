@@ -13,11 +13,13 @@ export const Container = styled.div`
   flex-direction: column;
   overflow-y: auto;
   max-height: 100%;
+  padding: 0 5px;
 `;
 
 Container.Header = styled.div`
   display: flex;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 `;
 
 export const UserImg = styled.div`
@@ -29,7 +31,14 @@ export const UserImg = styled.div`
   margin-right: 20px;
 `;
 
-export const HeaderTitleWrap = styled.div``;
+export const HeaderTitleWrap = styled.div`
+  @media(max-width: 410px) {
+   width: 100%;
+   order: 2;
+   margin-top: 16px;
+  }
+`;
+
 export const HeaderTitle = styled.div`
   color: #1c1c1c;
   font-family: Inter;
