@@ -161,7 +161,7 @@ export const PrivacyLink = styled(Link)`
   color: #0085ff;
 `;
 
-export const SignInBtn = styled.div`
+export const SignInBtn = styled.button`
   margin-bottom: 16px;
   color: ${({ bgblack }) => (bgblack ? "#FFF" : "#1C1C1C")};
   text-align: center;

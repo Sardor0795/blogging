@@ -2,10 +2,6 @@ import styled from "styled-components";
 
 import userImg from "../../../assets/images/user_img.png";
 import closeImg from "../../../assets/icons/close_icon.png";
-import { Link } from "react-router-dom";
-import checkedImg from "../../../assets/icons/checked.png";
-import googleImg from "../../../assets/icons/google.png";
-import errorIcon from "../../../assets/icons/error_icon.png";
 
 export const Container = styled.div`
   display: flex;
@@ -13,6 +9,7 @@ export const Container = styled.div`
   overflow-y: auto;
   max-height: 100%;
   padding: 0 5px;
+  position: relative;
 `;
 
 Container.Header = styled.div`
@@ -34,6 +31,7 @@ export const UserImg = styled.div`
 `;
 
 export const HeaderTitleWrap = styled.div`
+  max-width: calc(100% - 78px);
   @media (max-width: 410px) {
     width: 100%;
     order: 2;
@@ -59,6 +57,9 @@ export const HeaderText = styled.div`
   line-height: 24px;
 `;
 export const CloseBtn = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 24px;
   height: 24px;
   background-image: url("${closeImg}");
@@ -90,12 +91,10 @@ export const InputTitle = styled.div`
 `;
 
 export const InputText = styled.input`
-  color: #969696;
+  color: var(--dark-black);
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
   padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid #e8e8e8;
@@ -103,41 +102,6 @@ export const InputText = styled.input`
   margin-bottom: 16px;
   outline: none;
   height: 40px;
-`;
-
-export const PrivacyWrap = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-`;
-
-export const PrivacyCheckBox = styled.div`
-  max-width: 20px;
-  width: 100%;
-  height: 20px;
-  margin-right: 8px;
-  border-radius: 5px;
-  border: 1px solid #e8e8e8;
-  cursor: pointer;
-  background-image: url("${({ checked }) => (checked ? checkedImg : null)}");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-`;
-
-export const PrivacyText = styled.div`
-  color: #585757;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-`;
-
-export const PrivacyLink = styled(Link)`
-  margin-right: 5px;
-  margin-left: 5px;
-  color: #0085ff;
 `;
 
 export const SignInBtn = styled.button`
@@ -167,66 +131,4 @@ export const SignInBtn = styled.button`
   &:active {
     transform: translateY(0);
   }
-`;
-
-export const GoogleIcon = styled.div`
-  background-image: url("${googleImg}");
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
-`;
-
-export const Line = styled.div`
-  width: 100%;
-  border-top: 1px solid #e8e8e8;
-  margin-bottom: 16px;
-`;
-
-export const Text = styled.div`
-  color: #585757;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-  text-align: center;
-  margin-bottom: 8px;
-`;
-
-export const SignUpLink = styled(Link)`
-  color: #0085ff;
-  text-align: center;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  display: inline-block;
-  margin: 0 auto;
-`;
-
-export const ErrorWrap = styled.div`
-  display: ${({ display }) => (display === "none" ? "none" : "flex")};
-  align-items: center;
-  margin-top: -8px;
-  margin-bottom: 16px;
-`;
-export const ErrorText = styled.div`
-  color: #e92c2c;
-  font-family: Inter;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 153.846% */
-`;
-export const ErrorIcon = styled.div`
-  width: 16px;
-  height: 16px;
-  background-image: url("${errorIcon}");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  margin-right: 4px;
 `;

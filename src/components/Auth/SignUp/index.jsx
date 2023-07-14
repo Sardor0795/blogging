@@ -44,17 +44,17 @@ export const SignUp = ({ setOpened }) => {
         <InputText type="text" placeholder="F.I.O kiriting" />
         <InputTitle>F.I.O</InputTitle>
         <InputText type="text" placeholder="F.I.O kiriting" />
-        <PasswordInput/>
+        <PasswordInput />
 
         <ErrorWrap display="none">
-          <ErrorIcon/>
+          <ErrorIcon />
           <ErrorText>Error Alert</ErrorText>
         </ErrorWrap>
 
-        <PasswordInput error='true'/>
+        <PasswordInput error="true" />
 
         <ErrorWrap>
-          <ErrorIcon/>
+          <ErrorIcon />
           <ErrorText>Error Alert</ErrorText>
         </ErrorWrap>
         <PrivacyWrap>
@@ -68,11 +68,13 @@ export const SignUp = ({ setOpened }) => {
             siyosatiga rozilik bildiraman.
           </PrivacyText>
         </PrivacyWrap>
-        <SignInBtn>
+        <SignInBtn type="button">
           <GoogleIcon />
           Kirish
         </SignInBtn>
-        <SignInBtn bgblack="true">Kirish</SignInBtn>
+        <SignInBtn bgblack="true" type="button">
+          Kirish
+        </SignInBtn>
         <Line />
         <Text>Sizda hisob mavjud emasmi?</Text>
         <SignUpLink>Ro‘yxatdan o‘tish</SignUpLink>
