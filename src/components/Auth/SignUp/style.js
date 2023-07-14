@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 import userImg from "../../../assets/images/user_img.png";
 import closeImg from "../../../assets/icons/close_icon.png";
-import eyeimg from "../../../assets/icons/eye_open.svg";
-import eyeHideimg from "../../../assets/icons/eye_hide.svg";
 import { Link } from "react-router-dom";
 import checkedImg from "../../../assets/icons/checked.png";
 import googleImg from "../../../assets/icons/google.png";
-
+import errorIcon from "../../../assets/icons/error_icon.png";
 
 export const Container = styled.div`
   display: flex;
@@ -102,26 +100,6 @@ export const InputText = styled.input`
   margin-bottom: 16px;
   outline: none;
   height: 40px;
-`;
-
-// ParolInput ------
-
-export const ParolInput = styled.div`
-  position: relative;
-  height: 40px;
-  margin-bottom: 16px;
-`;
-
-export const TypeChanger = styled.div`
-  background-image: url("${({ type }) => type === "text" ? eyeHideimg : eyeimg}");
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 20px;
-  height: 100%;
-  position: absolute;
-  right: 12px;
-  top: 0;
-  cursor: pointer;
 `;
 
 export const PrivacyWrap = styled.div`
@@ -224,4 +202,28 @@ export const SignUpLink = styled(Link)`
   line-height: 24px;
   display: inline-block;
   margin: 0 auto;
+`;
+
+export const ErrorWrap = styled.div`
+  display: ${({ display }) => (display === "none" ? "none" : "flex")};
+  align-items: center;
+  margin-top: -8px;
+  margin-bottom: 16px;
+`;
+export const ErrorText = styled.div`
+  color: #e92c2c;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 153.846% */
+`;
+export const ErrorIcon = styled.div`
+  width: 16px;
+  height: 16px;
+  background-image: url("${errorIcon}");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-right: 4px;
 `;
