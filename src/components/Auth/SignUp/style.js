@@ -19,6 +19,9 @@ Container.Header = styled.div`
   display: flex;
   margin-bottom: 16px;
   flex-wrap: wrap;
+  @media (max-width: 410px) {
+    align-items: center;
+  }
 `;
 
 export const UserImg = styled.div`

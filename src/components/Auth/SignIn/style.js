@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import checkedImg from "../../../assets/icons/checked.png";
 import googleImg from "../../../assets/icons/google.png";
 
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,6 +20,9 @@ Container.Header = styled.div`
   display: flex;
   margin-bottom: 16px;
   flex-wrap: wrap;
+  @media (max-width: 410px) {
+    align-items: center;
+  }
 `;
 
 export const UserImg = styled.div`
