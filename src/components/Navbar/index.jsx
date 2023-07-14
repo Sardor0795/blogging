@@ -4,21 +4,19 @@ import AuthorizedNavbar from "./AuthorizedNavbar";
 import UnauthorizedNavbar from "./UnauthorizedNavbar";
 
 function Navbar({ yellowbg, fixed }) {
-  const [auth, setAuth] = useState(null);
+  const [auth, setAuth] = useState("loading");
 
   useEffect(() => {
-    setAuth(true);
+    setAuth(false);
   }, []);
 
   return (
     <>
-      {auth === true ? (
+      {auth === "loading" ? null : auth === true ? (
         <AuthorizedNavbar />
       ) : auth === false ? (
         <UnauthorizedNavbar yellowbg={yellowbg} fixed={fixed} />
-      ) : (
-        <></>
-      )}
+      ) : null}
       <Outlet />
     </>
   );

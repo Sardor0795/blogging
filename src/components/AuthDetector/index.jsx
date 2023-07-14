@@ -2,13 +2,19 @@ import React, { useState, useEffect } from "react";
 import Loader from "../Loader";
 
 function AuthDetector({ auth: authCom, noauth: noAuthCom }) {
-  const [auth, setAuth] = useState(null);
+  const [auth, setAuth] = useState("loading");
 
   useEffect(() => {
-    setAuth(true);
+    setAuth(false);
   }, []);
 
-  return auth === true ? authCom : auth === false ? noAuthCom : <Loader />;
+  return auth === "loading" ? (
+    <Loader />
+  ) : auth === true ? (
+    authCom
+  ) : auth === false ? (
+    noAuthCom
+  ) : null;
 }
 
 export default AuthDetector;

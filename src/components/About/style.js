@@ -24,7 +24,7 @@ export const HeaderBgImg = styled(headerBg)`
   position: absolute;
   top: -120px;
   left: calc(50% + 355px);
-  z-index: 10;
+  z-index: 9;
   pointer-events: none;
   @media (max-width: 1450px) {
     left: calc(50% + 300px);
