@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import userImg from "../../../assets/images/user_img.png";
 import closeImg from "../../../assets/icons/close_icon.png";
 
@@ -16,8 +15,10 @@ Container.Header = styled.div`
   display: flex;
   margin-bottom: 16px;
   flex-wrap: wrap;
-  @media (max-width: 410px) {
-    align-items: center;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    gap: 16px;
   }
 `;
 
@@ -32,10 +33,9 @@ export const UserImg = styled.div`
 
 export const HeaderTitleWrap = styled.div`
   max-width: calc(100% - 78px);
-  @media (max-width: 410px) {
-    width: 100%;
-    order: 2;
-    margin-top: 16px;
+
+  @media screen and (max-width: 500px) {
+    max-width: 100%;
   }
 `;
 
@@ -45,7 +45,7 @@ export const HeaderTitle = styled.div`
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 1.2;
   margin-bottom: 4px;
 `;
 export const HeaderText = styled.div`
@@ -54,7 +54,7 @@ export const HeaderText = styled.div`
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.2;
 `;
 export const CloseBtn = styled.button`
   position: absolute;
@@ -69,6 +69,10 @@ export const CloseBtn = styled.button`
   background-color: #fff;
   cursor: pointer;
   margin-left: auto;
+
+  @media screen and (max-width: 500px) {
+    top: 10px;
+  }
 `;
 
 export const Form = styled.form`

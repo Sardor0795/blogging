@@ -6,7 +6,7 @@ import ConfirmEmail from "./ConfirmEmail";
 
 function Auth({ opened, setOpened }) {
   return (
-    <Layer opened={`${opened}`} onClick={(e) => setOpened(false)}>
+    <Layer opened={`${opened}`} onClick={() => setOpened(false)}>
       <Menu opened={`${opened}`}>
         <MenuContainer>
           <Modal onClick={(e) => e.stopPropagation()}>
