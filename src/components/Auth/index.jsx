@@ -1,9 +1,10 @@
 import React from "react";
+import { PasswordChSuccess } from "./PasswordChSuccess";
 import { Layer, Menu, MenuContainer, Modal } from "./style";
 // import { SignIn } from "./SignIn";
 // import { SignUp } from "./SignUp";
 // import ConfirmEmail from "./ConfirmEmail";
-import { ChangePassword } from "./ChangePassword";
+// import { ChangePassword } from "./ChangePassword";
 
 function Auth({ opened, setOpened }) {
   return (
@@ -14,7 +15,8 @@ function Auth({ opened, setOpened }) {
             {/* <SignIn setOpened={setOpened} /> */}
             {/* <SignUp setOpened={setOpened}/> */}
             {/* <ConfirmEmail setOpened={setOpened} /> */}
-            <ChangePassword setOpened={setOpened}/>
+            {/* <ChangePassword setOpened={setOpened}/> */}
+            <PasswordChSuccess setOpened={setOpened} />
           </Modal>
         </MenuContainer>
       </Menu>

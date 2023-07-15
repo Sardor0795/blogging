@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import closeImg from "../../../assets/icons/close_icon.png";
 import { Link } from "react-router-dom";
-import errorIcon from "../../../assets/icons/error_icon.png";
+import successIcon from "../../../assets/icons/success_icon.png";
 
 export const Container = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 Container.Header = styled.div`
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
   @media (max-width: 410px) {
     align-items: center;
@@ -136,30 +136,6 @@ export const SignInBtn = styled.button`
   }
 `;
 
-export const ErrorWrap = styled.div`
-  display: ${({ display }) => (display === "none" ? "none" : "flex")};
-  align-items: center;
-  margin-top: -8px;
-  margin-bottom: 16px;
-`;
-export const ErrorText = styled.div`
-  color: #e92c2c;
-  font-family: Inter;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 153.846% */
-`;
-export const ErrorIcon = styled.div`
-  width: 16px;
-  height: 16px;
-  background-image: url("${errorIcon}");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  margin-right: 4px;
-`;
-
 export const PasswordRule = styled.div`
   color: #424e54;
   font-family: Inter;
@@ -167,5 +143,25 @@ export const PasswordRule = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
-  margin-bottom: 16px;
+  margin-bottom: 150px;
+`;
+
+export const SuccessIconWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+`;
+
+export const SuccessIcon = styled.div`
+  width: 96px;
+  height: 96px;
+  background-image: url("${successIcon}");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+`;
+
+export const Line = styled.div`
+  width: 100%;
+  border-top: 1px solid #e8e8e8;
 `;
