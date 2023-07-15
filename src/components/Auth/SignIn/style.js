@@ -128,8 +128,13 @@ export const TypeChanger = styled.div`
 
 export const PrivacyWrap = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+  @media (max-width: 370px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 export const PrivacyCheckBox = styled.div`
@@ -144,6 +149,7 @@ export const PrivacyCheckBox = styled.div`
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  flex-shrink: 0;
 `;
 
 export const PrivacyText = styled.div`
@@ -153,12 +159,25 @@ export const PrivacyText = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  width: 110px;
+`;
+
+export const PrivacyLabel = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
 `;
 
 export const PrivacyLink = styled(Link)`
-  margin-right: 5px;
-  margin-left: 5px;
+  padding-left: 10px;
   color: #0085ff;
+  user-select: none;
+
+  @media (max-width: 370px) {
+    /* width: 100%; */
+    margin-top: 16px;
+  }
 `;
 
 export const SignInBtn = styled.button`

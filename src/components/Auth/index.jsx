@@ -10,9 +10,9 @@ function Auth({ opened, setOpened }) {
       <Menu opened={`${opened}`}>
         <MenuContainer>
           <Modal onClick={(e) => e.stopPropagation()}>
-            {/* <SignIn setOpened={setOpened} /> */}
+            <SignIn setOpened={setOpened} />
             {/* <SignUp setOpened={setOpened}/> */}
-            <ConfirmEmail setOpened={setOpened} />
+            {/* <ConfirmEmail setOpened={setOpened} /> */}
           </Modal>
         </MenuContainer>
       </Menu>

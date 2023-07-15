@@ -13,6 +13,7 @@ import {
   Line,
   ParolInput,
   PrivacyCheckBox,
+  PrivacyLabel,
   PrivacyLink,
   PrivacyText,
   PrivacyWrap,
@@ -57,15 +58,11 @@ export const SignIn = ({ setOpened }) => {
           <InputText type={type} placeholder="password" />
         </ParolInput>
         <PrivacyWrap>
-          <PrivacyCheckBox
-            onClick={() => setChecked(!checked)}
-            checked={checked}
-          />
-          <PrivacyText>
-            Ro’yhatdan o’tish tugmasini bosish orqali men
-            <PrivacyLink to="/privacy">sayt maxfiylik</PrivacyLink>
-            siyosatiga rozilik bildiraman.
-          </PrivacyText>
+          <PrivacyLabel onClick={() => setChecked(!checked)}>
+            <PrivacyCheckBox checked={checked} />
+            <PrivacyText>Eslab qolish</PrivacyText>
+          </PrivacyLabel>
+          <PrivacyLink>Parolni unutdingizmi?</PrivacyLink>
         </PrivacyWrap>
         <SignInBtn type="button">
           <GoogleIcon />
