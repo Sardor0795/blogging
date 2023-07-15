@@ -30,14 +30,14 @@ export const ChangePassword = ({ setOpened }) => {
       </PasswordRule>
 
       <Form>
-        <PasswordInput />
+        <PasswordInput title="Parol" />
 
         <ErrorWrap display="none">
           <ErrorIcon />
           <ErrorText>Error Alert</ErrorText>
         </ErrorWrap>
 
-        <PasswordInput /* error="true" */ />
+        <PasswordInput title="Parolni tasdiqlang" /* error="true" */ />
 
         <ErrorWrap display="none">
           <ErrorIcon />

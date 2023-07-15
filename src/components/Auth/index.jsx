@@ -14,7 +14,7 @@ function Auth({ opened, setOpened }) {
             {/* <SignIn setOpened={setOpened} /> */}
             {/* <SignUp setOpened={setOpened}/> */}
             {/* <ConfirmEmail setOpened={setOpened} /> */}
-            <ChangePassword/>
+            <ChangePassword setOpened={setOpened}/>
           </Modal>
         </MenuContainer>
       </Menu>

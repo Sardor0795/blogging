@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
-import userImg from "../../../assets/images/user_img.png";
 import closeImg from "../../../assets/icons/close_icon.png";
 import { Link } from "react-router-dom";
-import checkedImg from "../../../assets/icons/checked.png";
-import googleImg from "../../../assets/icons/google.png";
 import errorIcon from "../../../assets/icons/error_icon.png";
 
 export const Container = styled.div`
@@ -22,15 +19,6 @@ Container.Header = styled.div`
   @media (max-width: 410px) {
     align-items: center;
   }
-`;
-
-export const UserImg = styled.div`
-  background-image: url("${userImg}");
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 48px;
-  height: 48px;
-  margin-right: 20px;
 `;
 
 export const HeaderTitleWrap = styled.div`
@@ -110,20 +98,6 @@ export const PrivacyWrap = styled.div`
   margin-bottom: 16px;
 `;
 
-export const PrivacyCheckBox = styled.div`
-  max-width: 20px;
-  width: 100%;
-  height: 20px;
-  margin-right: 8px;
-  border-radius: 5px;
-  border: 1px solid #e8e8e8;
-  cursor: pointer;
-  background-image: url("${({ checked }) => (checked ? checkedImg : null)}");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-`;
-
 export const PrivacyText = styled.div`
   color: #585757;
   font-family: Inter;
@@ -166,44 +140,6 @@ export const SignInBtn = styled.button`
   &:active {
     transform: translateY(0);
   }
-`;
-
-export const GoogleIcon = styled.div`
-  background-image: url("${googleImg}");
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
-`;
-
-export const Line = styled.div`
-  width: 100%;
-  border-top: 1px solid #e8e8e8;
-  margin-bottom: 16px;
-`;
-
-export const Text = styled.div`
-  color: #585757;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-  text-align: center;
-  margin-bottom: 8px;
-`;
-
-export const SignUpLink = styled(Link)`
-  color: #0085ff;
-  text-align: center;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  display: inline-block;
-  margin: 0 auto;
 `;
 
 export const ErrorWrap = styled.div`
