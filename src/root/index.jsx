@@ -6,6 +6,7 @@ import Navbar from "./../components/Navbar";
 import ErrorBoundary from "./../components/ErrorBoundary";
 import Loader from "./../components/Loader";
 import Footer from "../components/Footer";
+import ToTopButton from './../components/ToTopButton';
 import AuthDetector from "./../components/AuthDetector";
 // Page imports with lazy loading
 const NotFoundPage = lazy(() => import("./../pages/404"));
@@ -29,6 +30,7 @@ function Root() {
     <>
       <GlobalStyles />
       <Helmet />
+      <ToTopButton/>
       <ErrorBoundary>
         <Suspense fallback={<Loader />}>
           {/* Routes */}

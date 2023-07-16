@@ -1,6 +1,6 @@
 import React from "react";
-import { PasswordChSuccess } from "./PasswordChSuccess";
 import { Layer, Menu, MenuContainer, Modal } from "./style";
+import { PasswordChSuccess } from "./PasswordChSuccess";
 // import { SignIn } from "./SignIn";
 // import { SignUp } from "./SignUp";
 // import ConfirmEmail from "./ConfirmEmail";
