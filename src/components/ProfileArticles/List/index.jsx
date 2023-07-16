@@ -20,11 +20,7 @@ import { ReactComponent as CommentCountIcon } from "../../../assets/icons/commen
 import { ReactComponent as ViewsCountIcon } from "../../../assets/icons/views_number.svg";
 import { toTop } from "../../../utils/toTop";
 
-function ListArticle({ id }) {
-  const areYouSure = () => {
-    window.confirm("Maqolani o'chirish");
-  };
-
+function ListArticle({ id, setopened }) {
   return (
     <Container>
       <Desktop>
@@ -79,7 +75,9 @@ function ListArticle({ id }) {
                 <SettingBtn to="/edit/5" edit="true">
                   Tahrirlash
                 </SettingBtn>
-                <SettingBtn onClick={areYouSure}>O‘chirish</SettingBtn>
+                <SettingBtn onClick={() => setopened(true)}>
+                  O‘chirish
+                </SettingBtn>
               </ProfileSettings>
             </Bottom>
           </RightSide.Bottom>
@@ -111,7 +109,7 @@ function ListArticle({ id }) {
             <SettingBtn to="/edit-article/5" edit="true">
               Tahrirlash
             </SettingBtn>
-            <SettingBtn onClick={areYouSure}>O‘chirish</SettingBtn>
+            <SettingBtn onClick={() => setopened(true)}>O‘chirish</SettingBtn>
           </ProfileSettings>
         </Bottom>
       </Tablet>
