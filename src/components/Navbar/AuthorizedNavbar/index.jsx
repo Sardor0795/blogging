@@ -23,6 +23,7 @@ import { ReactComponent as ProfileSettings } from "../../../assets/icons/profile
 import { ReactComponent as ProfileFavorites } from "../../../assets/icons/profile-favorites.svg";
 import { ReactComponent as ProfileMyArticles } from "../../../assets/icons/profile-my-articles.svg";
 import { ReactComponent as ProfileStatistics } from "../../../assets/icons/profile-statistics.svg";
+import { ReactComponent as Exit } from "../../../assets/icons/exit.svg";
 
 function AuthorizedNavbar() {
   const [scrolling, setScrolling] = useState(false);
@@ -119,6 +120,19 @@ function AuthorizedNavbar() {
                     <ProfileStatistics />
                   </ProfileLink.Icon>
                   <ProfileLink.Text>Statistika</ProfileLink.Text>
+                </ProfileLink>
+              </ProfileLinkCon>
+              <ProfileLinkCon>
+                <ProfileLink
+                  onClick={() => {
+                    toTop();
+                    setProfileOpened(false);
+                  }}
+                >
+                  <ProfileLink.Icon>
+                    <Exit />
+                  </ProfileLink.Icon>
+                  <ProfileLink.Text>Chiqish</ProfileLink.Text>
                 </ProfileLink>
               </ProfileLinkCon>
             </ProfileBody>
