@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 import {
+  AlertBtn,
+  AlertBtns,
+  AlertContent,
+  AlertModal,
+  AlertText,
   Container,
   ForLogo,
   Layer,
@@ -29,6 +34,7 @@ function AuthorizedNavbar() {
   const [scrolling, setScrolling] = useState(false);
   const [searchOpened, setSearchOpened] = useState(false);
   const [profileOpened, setProfileOpened] = useState(false);
+  const [alertOpened, setAlertOpened] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -127,6 +133,7 @@ function AuthorizedNavbar() {
                   onClick={() => {
                     toTop();
                     setProfileOpened(false);
+                    setAlertOpened(true);
                   }}
                 >
                   <ProfileLink.Icon>
@@ -143,6 +150,20 @@ function AuthorizedNavbar() {
           />
         </RightSide>
       </Container>
+      <AlertModal
+        opened={`${alertOpened}`}
+        onClick={() => setAlertOpened(!alertOpened)}
+      >
+        <AlertContent onClick={(e) => e.stopPropagation()}>
+          <AlertText>Rostan chiqmoqchisizmi?</AlertText>
+          <AlertBtns>
+            <AlertBtn onClick={() => setAlertOpened(!alertOpened)}>Ha</AlertBtn>
+            <AlertBtn onClick={() => setAlertOpened(!alertOpened)}>
+              Yo'q
+            </AlertBtn>
+          </AlertBtns>
+        </AlertContent>
+      </AlertModal>
     </OuterContainer>
   );
 }
