@@ -3,6 +3,11 @@ import LoadMoreButton from "../LoadMore";
 import ListArticle from "./List";
 import ListSkeleton from "../ListSkeleton";
 import {
+  AlertBtn,
+  AlertBtns,
+  AlertContent,
+  AlertModal,
+  AlertText,
   BtnsWrapper,
   Container,
   Items,
@@ -15,7 +20,7 @@ import {
 
 function ProfileArticles() {
   const [data, setData] = useState(null);
-
+  const [alertOpened, setAlertOpened] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setData([1, 2, 3, 4, 5, 6]);
@@ -36,7 +41,11 @@ function ProfileArticles() {
             {data
               ? data?.map((item, index) => (
                   <React.Fragment key={index}>
-                    <ListArticle id={index + 1} data={item} />
+                    <ListArticle
+                      setopened={setAlertOpened}
+                      id={index + 1}
+                      data={item}
+                    />
                   </React.Fragment>
                 ))
               : Array(6)
@@ -52,6 +61,20 @@ function ProfileArticles() {
           <LoadMoreButton />
         </MoreBtnWrapper>
       </Container>
+      <AlertModal
+        opened={`${alertOpened}`}
+        onClick={() => setAlertOpened(!alertOpened)}
+      >
+        <AlertContent onClick={(e) => e.stopPropagation()}>
+          <AlertText>Rostan o'chirmoqchimisiz?</AlertText>
+          <AlertBtns>
+            <AlertBtn onClick={() => setAlertOpened(!alertOpened)}>Ha</AlertBtn>
+            <AlertBtn onClick={() => setAlertOpened(!alertOpened)}>
+              Yo'q
+            </AlertBtn>
+          </AlertBtns>
+        </AlertContent>
+      </AlertModal>
     </OuterContainer>
   );
 }

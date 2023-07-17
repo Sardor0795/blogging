@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 import {
+  AlertBtn,
+  AlertBtns,
+  AlertContent,
+  AlertModal,
+  AlertText,
   Container,
   ForLogo,
   Layer,
@@ -23,11 +28,13 @@ import { ReactComponent as ProfileSettings } from "../../../assets/icons/profile
 import { ReactComponent as ProfileFavorites } from "../../../assets/icons/profile-favorites.svg";
 import { ReactComponent as ProfileMyArticles } from "../../../assets/icons/profile-my-articles.svg";
 import { ReactComponent as ProfileStatistics } from "../../../assets/icons/profile-statistics.svg";
+import { ReactComponent as Exit } from "../../../assets/icons/exit.svg";
 
 function AuthorizedNavbar() {
   const [scrolling, setScrolling] = useState(false);
   const [searchOpened, setSearchOpened] = useState(false);
   const [profileOpened, setProfileOpened] = useState(false);
+  const [alertOpened, setAlertOpened] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -121,6 +128,20 @@ function AuthorizedNavbar() {
                   <ProfileLink.Text>Statistika</ProfileLink.Text>
                 </ProfileLink>
               </ProfileLinkCon>
+              <ProfileLinkCon>
+                <ProfileLink
+                  onClick={() => {
+                    toTop();
+                    setProfileOpened(false);
+                    setAlertOpened(true);
+                  }}
+                >
+                  <ProfileLink.Icon>
+                    <Exit />
+                  </ProfileLink.Icon>
+                  <ProfileLink.Text>Chiqish</ProfileLink.Text>
+                </ProfileLink>
+              </ProfileLinkCon>
             </ProfileBody>
           </Profile>
           <Layer
@@ -129,6 +150,20 @@ function AuthorizedNavbar() {
           />
         </RightSide>
       </Container>
+      <AlertModal
+        opened={`${alertOpened}`}
+        onClick={() => setAlertOpened(!alertOpened)}
+      >
+        <AlertContent onClick={(e) => e.stopPropagation()}>
+          <AlertText>Rostan chiqmoqchisizmi?</AlertText>
+          <AlertBtns>
+            <AlertBtn onClick={() => setAlertOpened(!alertOpened)}>Ha</AlertBtn>
+            <AlertBtn onClick={() => setAlertOpened(!alertOpened)}>
+              Yo'q
+            </AlertBtn>
+          </AlertBtns>
+        </AlertContent>
+      </AlertModal>
     </OuterContainer>
   );
 }
