@@ -5,7 +5,7 @@ function AuthDetector({ auth: authCom, noauth: noAuthCom }) {
   const [auth, setAuth] = useState("loading");
 
   useEffect(() => {
-    setAuth(true);
+    setAuth(false);
   }, []);
 
   return auth === "loading" ? (
