@@ -39,10 +39,3 @@ export const PopCardsWrapper = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-
-export const PopCardSkeleton = styled.div`
-  svg {
-    width: 100%;
-    height: 100%;
-  }
-`;

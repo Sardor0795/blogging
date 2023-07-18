@@ -13,6 +13,7 @@ export const PasswordInput = ({error}) => {
       setType("text");
     }
   };
+  
   return (
     <>
       <InputTitle>Confirm password</InputTitle>

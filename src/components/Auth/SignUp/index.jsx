@@ -40,10 +40,12 @@ export const SignUp = ({ setOpened }) => {
         />
       </Container.Header>
       <Form>
-        <InputTitle>F.I.O</InputTitle>
-        <InputText type="text" placeholder="F.I.O kiriting" />
-        <InputTitle>F.I.O</InputTitle>
-        <InputText type="text" placeholder="F.I.O kiriting" />
+        <InputTitle>Ism</InputTitle>
+        <InputText type="text" placeholder="Ismingizni kiriting" />
+        <InputTitle>Familiya</InputTitle>
+        <InputText type="text" placeholder="Familiyangizni kiriting" />
+        <InputTitle>Email</InputTitle>
+        <InputText type="text" placeholder="Email kiriting" />
         <PasswordInput />
 
         <ErrorWrap display="none">
@@ -51,9 +53,9 @@ export const SignUp = ({ setOpened }) => {
           <ErrorText>Error Alert</ErrorText>
         </ErrorWrap>
 
-        <PasswordInput error="true" />
+        <PasswordInput error="false" />
 
-        <ErrorWrap>
+        <ErrorWrap display="none">
           <ErrorIcon />
           <ErrorText>Error Alert</ErrorText>
         </ErrorWrap>

@@ -2,10 +2,10 @@ import React from "react";
 import { Layer, Menu, MenuContainer, Modal } from "./style";
 // import { PasswordChSuccess } from "./PasswordChSuccess";
 // import { SignIn } from "./SignIn";
-// import { SignUp } from "./SignUp";
+import { SignUp } from "./SignUp";
 // import ConfirmEmail from "./ConfirmEmail";
 // import { ChangePassword } from "./ChangePassword";
-import EnterCode from "./EnterCode";
+// import EnterCode from "./EnterCode";
 
 function Auth({ opened, setOpened }) {
   return (
@@ -14,11 +14,11 @@ function Auth({ opened, setOpened }) {
         <MenuContainer>
           <Modal onClick={(e) => e.stopPropagation()}>
             {/* <SignIn setOpened={setOpened} /> */}
-            {/* <SignUp setOpened={setOpened}/> */}
+            <SignUp setOpened={setOpened} />
             {/* <ConfirmEmail setOpened={setOpened} /> */}
             {/* <ChangePassword setOpened={setOpened}/> */}
             {/* <PasswordChSuccess setOpened={setOpened} /> */}
-            <EnterCode setOpened={setOpened} />
+            {/* <EnterCode setOpened={setOpened} /> */}
           </Modal>
         </MenuContainer>
       </Menu>
