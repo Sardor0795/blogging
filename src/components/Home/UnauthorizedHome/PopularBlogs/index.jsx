@@ -16,7 +16,6 @@ function PopularBlogs() {
 
   useEffect(() => {
     axios.get(`${mainUrl}/posts/tranding`).then((res) => {
-      console.log(res.data.data);
       if (res.status === 200) setData(res.data.data);
     });
   }, []);
