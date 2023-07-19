@@ -8,15 +8,17 @@ import {
 } from "./style";
 import PopCardSkeletonComponent from "./PopCardSkeleton";
 import { PopCard } from "./PopCard";
-import { mockData } from "./mock";
+import axios from "axios";
+import { mainUrl } from "./../../../../utils/api";
 
 function PopularBlogs() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      setData(mockData);
-    }, 4000);
+    axios.get(`${mainUrl}/posts/tranding`).then((res) => {
+      console.log(res.data.data);
+      if (res.status === 200) setData(res.data.data);
+    });
   }, []);
 
   return (
@@ -32,9 +34,10 @@ function PopularBlogs() {
             ? data?.map((v) => (
                 <PopCard
                   key={v.id}
-                  cardimg={v.img}
-                  cardDate={v.date}
-                  cardAuthor={v.author}
+                  cardimg={v.image}
+                  cardDate={v.createdAt}
+                  cardAuthor={v.fullname}
+                  cardAuthorUsername={v.username}
                   cardTitle={v.title}
                   id={v.id}
                 />
