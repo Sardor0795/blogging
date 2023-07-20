@@ -17,7 +17,7 @@ function ProfileFavourites() {
   useEffect(() => {
     setTimeout(() => {
       setData([1, 2, 3, 4, 5, 6]);
-    }, 1000);
+    }, 500);
   }, []);
   return (
     <OuterContainer>
