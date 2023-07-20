@@ -7,7 +7,7 @@ function Navbar({ yellowbg, fixed }) {
   const [auth, setAuth] = useState("loading");
 
   useEffect(() => {
-    setAuth(false);
+    setAuth(true);
   }, []);
 
   return (
