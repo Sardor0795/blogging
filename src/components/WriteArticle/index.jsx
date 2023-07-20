@@ -5,6 +5,8 @@ import { EDITOR_JS_TOOLS } from "./../../editor.js/tools";
 
 function WriteArticle() {
   const ejInstance = useRef();
+  const titleRef = useRef();
+  const definitionRef = useRef();
   let [editorForSaving] = useState(null);
 
   const initEditor = () => {
@@ -29,11 +31,16 @@ function WriteArticle() {
   }, []);
 
   const getData = () => {
+    let data = {
+      title: titleRef.current.value,
+      definition: definitionRef.current.value,
+    };
     if (editorForSaving !== null)
       editorForSaving
         .save()
         .then((outputData) => {
-          console.log("Article data: ", outputData);
+          data.articleData = outputData;
+          console.log("Sending data: ", data);
         })
         .catch((error) => {
           console.log("Saving failed: ", error);
@@ -44,7 +51,10 @@ function WriteArticle() {
     <OuterContainer>
       <Container>
         <Row>
-          <Input placeholder="Sarlavhani kiriting" />
+          <Input ref={titleRef} placeholder="Sarlavhani kiriting" top="true" />
+        </Row>
+        <Row>
+          <Input ref={definitionRef} placeholder="Tavsifini kiriting" />
         </Row>
         <Editor id="editorjs-write" onMouseOver={() => {}} />
         <Row>

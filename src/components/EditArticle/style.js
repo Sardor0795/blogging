@@ -49,7 +49,7 @@ export const Button = styled.button`
 `;
 
 export const Input = styled.input`
-  margin-block: 20px 30px;
+  margin-block: ${({ top }) => (top ? "20px" : "0 30px")};
   width: 100%;
   max-width: 1000px;
   border: none;
