@@ -46,14 +46,14 @@ export const SignUp = ({ setOpened }) => {
         <InputText type="text" placeholder="Familiyangizni kiriting" />
         <InputTitle>Email</InputTitle>
         <InputText type="text" placeholder="Email kiriting" />
-        <PasswordInput />
+        <PasswordInput text="Parol yarating"/>
 
         <ErrorWrap display="none">
           <ErrorIcon />
           <ErrorText>Error Alert</ErrorText>
         </ErrorWrap>
 
-        <PasswordInput error="false" />
+        <PasswordInput text="Parolni tasdiqlash" error="false" />
 
         <ErrorWrap display="none">
           <ErrorIcon />
@@ -72,10 +72,10 @@ export const SignUp = ({ setOpened }) => {
         </PrivacyWrap>
         <SignInBtn type="button">
           <GoogleIcon />
-          Kirish
+          Ro‘yhatdan o‘tish
         </SignInBtn>
         <SignInBtn bgblack="true" type="button">
-          Kirish
+          Ro‘yhatdan o‘tish
         </SignInBtn>
         <Line />
         <Text>Sizda hisob mavjud emasmi?</Text>

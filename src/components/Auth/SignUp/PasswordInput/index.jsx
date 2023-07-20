@@ -3,7 +3,7 @@ import { useState } from "react";
 import { InputText, InputTitle, TypeChanger } from "./style";
 import { ParolInput } from "./style";
 
-export const PasswordInput = ({error}) => {
+export const PasswordInput = ({error, text}) => {
   const [type, setType] = useState("text");
 
   const typeChange = () => {
@@ -13,13 +13,13 @@ export const PasswordInput = ({error}) => {
       setType("text");
     }
   };
-  
+
   return (
     <>
-      <InputTitle>Confirm password</InputTitle>
+      <InputTitle>{text}</InputTitle>
       <ParolInput>
         <TypeChanger type={type} onClick={typeChange} />
-        <InputText error={error} type={type} placeholder="password" />
+        <InputText error={error} type={type} placeholder="parol" />
       </ParolInput>
     </>
   );
