@@ -12,8 +12,8 @@ import {
   Info,
   ProfileLink,
 } from "./style";
-import articleImg from "../../../assets/images/article.png";
-import profileImg from "../../../assets/images/profile-img.svg";
+// import articleImg from "../../../assets/images/article.png";
+// import profileImg from "../../../assets/images/profile-img.svg";
 import { ReactComponent as FavoritesIcon } from "../../../assets/icons/add_to_favorites.svg";
 import { ReactComponent as ReadingTimeIcon } from "../../../assets/icons/reading_time.svg";
 import { ReactComponent as CommentCountIcon } from "../../../assets/icons/comments_number.svg";
@@ -21,13 +21,12 @@ import { ReactComponent as ViewsCountIcon } from "../../../assets/icons/views_nu
 import { toTop } from "./../../../utils/toTop";
 import { useState } from "react";
 
-function CardArticle({ id, data }) {
-  console.log(data);
+function CardArticle({ data }) {
   const [createdDate, setCreatedDate] = useState(null);
   useEffect(() => {
     let d = String(new Date(data.createdAt)).split(" ");
     setCreatedDate([d[2], d[1], d[3]].join(" "));
-  }, []);
+  }, [data]);
 
   return (
     <OuterContainer>

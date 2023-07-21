@@ -20,12 +20,8 @@ function NewArticles({ auth }) {
   }, [search]);
 
   useEffect(() => {
-    // setTimeout(() => {
-    //   setData([1, 2, 3, 4, 5, 6]);
-    // }, 500);
     axios.get(`${mainUrl}/posts?page=1&limit=6`).then((res) => {
       if (res.status === 200) setData(res.data.posts);
-      console.log(data);
     });
   }, []);
 
