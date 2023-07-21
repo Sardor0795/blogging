@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Bottom,
   Container,
@@ -12,7 +12,7 @@ import {
   Title,
   Top,
 } from "./style";
-import articleImg from "../../../assets/images/article.png";
+// import articleImg from "../../../assets/images/article.png";
 import profileImg from "../../../assets/images/profile-img.svg";
 import { ReactComponent as FavoritesIcon } from "../../../assets/icons/add_to_favorites.svg";
 import { ReactComponent as ReadingTimeIcon } from "../../../assets/icons/reading_time.svg";
@@ -20,29 +20,33 @@ import { ReactComponent as CommentCountIcon } from "../../../assets/icons/commen
 import { ReactComponent as ViewsCountIcon } from "../../../assets/icons/views_number.svg";
 import { toTop } from "./../../../utils/toTop";
 
-function ListArticle({ id }) {
+function ListArticle({ data }) {
+  const [createdDate, setCreatedDate] = useState(null);
+  useEffect(() => {
+    let d = String(new Date(data.createdAt)).split(" ");
+    setCreatedDate([d[2], d[1], d[3]].join(" "));
+  }, [data]);
+
   return (
     <Container>
       <Desktop>
-        <Image url={articleImg} to={`/posts/${id}`} onClick={toTop} />
+        <Image url={data.image} to={`/posts/${data.id}`} onClick={toTop} />
         <RightSide>
           <RightSide.Top>
             <Top>
               <Top.Topic to="/topics/vizual+dizayn" onClick={toTop}>
-                vizual dizayn
+                {data.postTopics[0]}
               </Top.Topic>
-              <Top.Date>17 Sep 2023</Top.Date>
+              <Top.Date>{createdDate}</Top.Date>
             </Top>
             <Title>
-              <Title.Link to={`/posts/${id}`} onClick={toTop}>
-                ChatGPT-dan UI/UX dizayneri sifatida qanday foydalanaman
+              <Title.Link to={`/posts/${data.id}`} onClick={toTop}>
+                {data.title}
               </Title.Link>
             </Title>
             <Description>
-              <Description.Link to={`/posts/${id}`} onClick={toTop}>
-                Ushbu so'nggi hodisa, ChatGPT haqida ushbu maqolani yozishni
-                boshlaganimda, men har qanday kontekstda dunyo e'tiborini
-                tortgan va...
+              <Description.Link to={`/posts/${data.id}`} onClick={toTop}>
+                {data.sub_title}
               </Description.Link>
               <Description.LinkShort to="/posts/99" onClick={toTop}>
                 Ushbu so'nggi hodisa, ChatGPT haqida ushbu...
@@ -53,8 +57,8 @@ function ListArticle({ id }) {
             <Bottom>
               <Profile>
                 <Profile.Container to="/profiles/25" onClick={toTop}>
-                  <Profile.Img url={profileImg} />
-                  <Profile.Text>Akbarali Khasanov</Profile.Text>
+                  <Profile.Img url={data.user.user_img} />
+                  <Profile.Text>{data.user.username}</Profile.Text>
                 </Profile.Container>
               </Profile>
               <Details>
@@ -65,15 +69,15 @@ function ListArticle({ id }) {
                 <Details.Rightside>
                   <div>
                     <ReadingTimeIcon />
-                    <p>3 daqiqa o‘qish</p>
+                    <p>{data.body.readingTimes}</p>
                   </div>
                   <div>
                     <CommentCountIcon />
-                    <p>34</p>
+                    <p>{data.body.comments}</p>
                   </div>
                   <div>
                     <ViewsCountIcon />
-                    <p>8.6K</p>
+                    <p>{data.body.views}</p>
                   </div>
                 </Details.Rightside>
               </Details>
@@ -86,7 +90,7 @@ function ListArticle({ id }) {
           <Profile>
             <Profile.Container to="/profiles/25" onClick={toTop}>
               <Profile.Img url={profileImg} />
-              <Profile.Text>Akbarali Khasanov</Profile.Text>
+              <Profile.Text>{data.user.username}</Profile.Text>
             </Profile.Container>
           </Profile>
           <Details>
@@ -97,15 +101,15 @@ function ListArticle({ id }) {
             <Details.Rightside>
               <div>
                 <ReadingTimeIcon />
-                <p>3 daqiqa o‘qish</p>
+                <p>{data.body.readingTimes}</p>
               </div>
               <div>
                 <CommentCountIcon />
-                <p>34</p>
+                <p>{data.body.comments}</p>
               </div>
               <div>
                 <ViewsCountIcon />
-                <p>8.6K</p>
+                <p>{data.body.views}</p>
               </div>
             </Details.Rightside>
           </Details>
