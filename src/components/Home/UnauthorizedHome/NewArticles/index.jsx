@@ -7,6 +7,8 @@ import CardArticle from "../../../Article/Card";
 import ListSkeleton from "../../../ListSkeleton";
 import CardSkeleton from "../../../CardSkeleton";
 import LoadMoreButton from "../../../LoadMore";
+import { mainUrl } from "../../../../utils/api";
+import axios from "axios";
 
 function NewArticles({ auth }) {
   const search = useSearch();
@@ -18,9 +20,13 @@ function NewArticles({ auth }) {
   }, [search]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setData([1, 2, 3, 4, 5, 6]);
-    }, 500);
+    // setTimeout(() => {
+    //   setData([1, 2, 3, 4, 5, 6]);
+    // }, 500);
+    axios.get(`${mainUrl}/posts?page=1&limit=6`).then((res) => {
+      if (res.status === 200) setData(res.data.posts);
+      console.log(data);
+    });
   }, []);
 
   return (

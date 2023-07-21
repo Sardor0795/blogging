@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   OuterContainer,
   Container,
@@ -19,49 +19,56 @@ import { ReactComponent as ReadingTimeIcon } from "../../../assets/icons/reading
 import { ReactComponent as CommentCountIcon } from "../../../assets/icons/comments_number.svg";
 import { ReactComponent as ViewsCountIcon } from "../../../assets/icons/views_number.svg";
 import { toTop } from "./../../../utils/toTop";
+import { useState } from "react";
 
-function CardArticle({ id }) {
+function CardArticle({ id, data }) {
+  console.log(data);
+  const [createdDate, setCreatedDate] = useState(null);
+  useEffect(() => {
+    let d = String(new Date(data.createdAt)).split(" ");
+    setCreatedDate([d[2], d[1], d[3]].join(" "));
+  }, []);
+
   return (
     <OuterContainer>
       <Container>
-        <Image url={articleImg} to={`/posts/${id}`} onClick={toTop} />
+        <Image url={data.image} to={`/posts/${data.id}`} onClick={toTop} />
         <Content>
           <TopPart>
             <TopPart.Topic to="/topics/vizual+dizayn" onClick={toTop}>
-              vizual dizayn
+              {data.postTopics[0]}
             </TopPart.Topic>
-            <TopPart.Date>17 Sep 2023</TopPart.Date>
+            <TopPart.Date>{createdDate}</TopPart.Date>
           </TopPart>
           <Title>
-            <Title.Link to={`/posts/${id}`} onClick={toTop}>
-              ChatGPT-dan UI/UX dizayneri sifatida qanday foydalanaman
+            <Title.Link to={`/posts/${data.id}`} onClick={toTop}>
+              {data.title}
             </Title.Link>
           </Title>
           <Description>
-            <Description.Link to={`/posts/${id}`} onClick={toTop}>
-              Ushbu so'nggi hodisa, ChatGPT haqida ushbu maqolani yozishni
-              boshlaganimda...
+            <Description.Link to={`/posts/${data.id}`} onClick={toTop}>
+              {data.sub_title}
             </Description.Link>
           </Description>
           <Profile>
-            <ProfileLink to="/profiles/25" onClick={toTop}>
-              <Profile.Image url={profileImg} />
-              <Profile.Name>Akbarali Khasanov</Profile.Name>
+            <ProfileLink to={`/profiles/${data.user.username}`} onClick={toTop}>
+              <Profile.Image url={data.user.user_img} />
+              <Profile.Name>{data.user.username}</Profile.Name>
             </ProfileLink>
           </Profile>
           <Details>
             <Details.Leftside>
               <Info>
                 <CommentCountIcon />
-                <div>34</div>
+                <div>{data.body.comments}</div>
               </Info>
               <Info>
                 <ViewsCountIcon />
-                <div>8.6K</div>
+                <div>{data.body.views}</div>
               </Info>
               <Info>
                 <ReadingTimeIcon />
-                <div>3 daqiqa o‘qish</div>
+                <div>{data.body.readingTimes}</div>
               </Info>
             </Details.Leftside>
             <button type="button" title="Keyinroq o‘qish">
