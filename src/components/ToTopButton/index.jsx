@@ -6,13 +6,19 @@ const ToTopButton = () => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    });
+    const handleScroll = () => {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          setShowButton(true);
+        } else {
+          setShowButton(false);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // This function will scroll the window to the top
