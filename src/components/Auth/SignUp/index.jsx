@@ -1,7 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { ErrorIcon, ErrorText, ErrorWrap } from "./style";
-import { PasswordInput } from "./PasswordInput";
+import axios from "axios";
+
+import {
+  ErrorIcon,
+  ErrorText,
+  ErrorWrap,
+  ParolInput,
+  TypeChanger,
+} from "./style";
 import {
   CloseBtn,
   Container,
@@ -22,10 +29,68 @@ import {
   Text,
   UserImg,
 } from "./style";
+import { useRef } from "react";
+import { useEffect } from "react";
+import { mainUrl } from "../../../utils/api";
 
 export const SignUp = ({ setOpened }) => {
   const [checked, setChecked] = useState(false);
+  const [type, setType] = useState("text");
+  const [typeTwo, setTypeTwo] = useState("text");
 
+  const [password, setPassword] = useState("");
+  const [confirmPass, setconfirmPass] = useState(true);
+
+  const [confirmPassValue, setConfirmPassValue] = useState("");
+
+  const typeChange = () => {
+    if (type === "text") {
+      setType("password");
+    } else {
+      setType("text");
+    }
+  };
+
+  const typeChangeTwo = () => {
+    if (typeTwo === "text") {
+      setTypeTwo("password");
+    } else {
+      setTypeTwo("text");
+    }
+  };
+
+  let nameRef = useRef("");
+  let lastNameRef = useRef("");
+  let emailRef = useRef("");
+
+  const getValues = () => {
+    let obj = {
+      name: nameRef.current.value,
+      lastname: lastNameRef.current.value,
+      email: emailRef.current.value,
+      password,
+      confirmPassValue,
+      privacyCheck: checked,
+    };
+    let n = JSON.stringify(obj);
+    console.log(n);
+    axios
+      .post(`${mainUrl}/users/auth/signup`, n)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
+  const checkConfirmPassword = (e) => {
+    setConfirmPassValue(e.target.value);
+  };
+
+  useEffect(() => {
+    if (confirmPassValue === password || confirmPassValue === "") {
+      setconfirmPass(true);
+    } else {
+      setconfirmPass(false);
+    } // eslint-disable-next-line
+  }, [confirmPassValue]);
   return (
     <Container>
       <Container.Header>
@@ -39,26 +104,65 @@ export const SignUp = ({ setOpened }) => {
           style={{ backgroundColor: "#fff", boxShadow: "unset" }}
         />
       </Container.Header>
-      <Form>
+      <Form name="form">
         <InputTitle>Ism</InputTitle>
-        <InputText type="text" placeholder="Ismingizni kiriting" />
+        <InputText
+          name="name"
+          ref={nameRef}
+          type="text"
+          placeholder="Ismingizni kiriting"
+        />
         <InputTitle>Familiya</InputTitle>
-        <InputText type="text" placeholder="Familiyangizni kiriting" />
+        <InputText
+          name="lastname"
+          ref={lastNameRef}
+          type="text"
+          placeholder="Familiyangizni kiriting"
+        />
         <InputTitle>Email</InputTitle>
-        <InputText type="text" placeholder="Email kiriting" />
-        <PasswordInput text="Parol yarating"/>
+        <InputText
+          ref={emailRef}
+          name="email"
+          type="email"
+          placeholder="Email kiriting"
+        />
+
+        <InputTitle>Parol yarating</InputTitle>
+        <ParolInput>
+          <TypeChanger type={type} onClick={typeChange} />
+          <InputText
+            name="password"
+            type={type}
+            placeholder="Parol"
+            value={password}
+            onInput={(e) => setPassword(e.target.value)}
+          />
+        </ParolInput>
 
         <ErrorWrap display="none">
           <ErrorIcon />
           <ErrorText>Error Alert</ErrorText>
         </ErrorWrap>
 
-        <PasswordInput text="Parolni tasdiqlash" error="false" />
+        {/* <PasswordInput text="Parolni tasdiqlash" error="false" /> */}
 
-        <ErrorWrap display="none">
+        <InputTitle>Parolni tasdiqlash</InputTitle>
+        <ParolInput>
+          <TypeChanger type={typeTwo} onClick={typeChangeTwo} />
+          <InputText
+            name="password"
+            type={typeTwo}
+            placeholder="Parol"
+            value={confirmPassValue}
+            onInput={(e) => checkConfirmPassword(e)}
+          />
+        </ParolInput>
+
+        <ErrorWrap display={confirmPass ? "none" : "block"}>
           <ErrorIcon />
           <ErrorText>Error Alert</ErrorText>
         </ErrorWrap>
+
         <PrivacyWrap>
           <PrivacyCheckBox
             onClick={() => setChecked(!checked)}
@@ -74,7 +178,7 @@ export const SignUp = ({ setOpened }) => {
           <GoogleIcon />
           Ro‘yhatdan o‘tish
         </SignInBtn>
-        <SignInBtn bgblack="true" type="button">
+        <SignInBtn onClick={getValues} bgblack="true" type="button">
           Ro‘yhatdan o‘tish
         </SignInBtn>
         <Line />
