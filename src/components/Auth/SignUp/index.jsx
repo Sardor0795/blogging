@@ -61,12 +61,14 @@ export const SignUp = ({ setOpened }) => {
 
   let nameRef = useRef("");
   let lastNameRef = useRef("");
+  let usernameRef = useRef("");
   let emailRef = useRef("");
 
   const getValues = () => {
     let obj = {
       name: nameRef.current.value,
       lastname: lastNameRef.current.value,
+      username: usernameRef.current.value,
       email: emailRef.current.value,
       password,
       confirmPassValue,
@@ -118,6 +120,13 @@ export const SignUp = ({ setOpened }) => {
           ref={lastNameRef}
           type="text"
           placeholder="Familiyangizni kiriting"
+        />
+        <InputTitle>Foydalanuvchi nomi</InputTitle>
+        <InputText
+          name="username"
+          ref={usernameRef}
+          type="text"
+          placeholder="Foydalanuvchi nomi yarating"
         />
         <InputTitle>Email</InputTitle>
         <InputText
