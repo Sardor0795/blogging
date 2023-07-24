@@ -21,7 +21,7 @@ function NewArticles({ auth }) {
 
   useEffect(() => {
     axios.get(`${mainUrl}/posts?page=1&limit=6`).then((res) => {
-      if (res.status === 200) setData(res.data.posts);
+      if (res.status === 200) setData(res?.data?.posts);
     });
   }, []);
 
