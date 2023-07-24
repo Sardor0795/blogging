@@ -29,6 +29,7 @@ function ListArticle({ data }) {
       let d = String(new Date(data.createdAt)).split(" ");
       setCreatedDate([d[2], d[1], d[3]].join(" "));
     }
+    console.log(data);
   }, [data]);
 
   return (
@@ -42,8 +43,11 @@ function ListArticle({ data }) {
         <RightSide>
           <RightSide.Top>
             <Top>
-              <Top.Topic to="/topics/vizual+dizayn" onClick={toTop}>
-                {data?.postTopics[0] ?? ""}
+              <Top.Topic
+                to={`/topics/${data?.postTopics[0]?.id ?? ""}`}
+                onClick={toTop}
+              >
+                {data?.postTopics[0]?.name ?? ""}
               </Top.Topic>
               <Top.Date>{createdDate}</Top.Date>
             </Top>
@@ -56,8 +60,11 @@ function ListArticle({ data }) {
               <Description.Link to={`/posts/${data?.id ?? ""}`} onClick={toTop}>
                 {data?.sub_title ?? ""}
               </Description.Link>
-              <Description.LinkShort to="/posts/99" onClick={toTop}>
-                Ushbu so'nggi hodisa, ChatGPT haqida ushbu...
+              <Description.LinkShort
+                to={`/posts/${data?.id ?? ""}`}
+                onClick={toTop}
+              >
+                {data?.sub_title ?? ""}
               </Description.LinkShort>
             </Description>
           </RightSide.Top>

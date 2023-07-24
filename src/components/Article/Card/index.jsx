@@ -42,8 +42,11 @@ function CardArticle({ data }) {
         />
         <Content>
           <TopPart>
-            <TopPart.Topic to="/topics/vizual+dizayn" onClick={toTop}>
-              {data?.postTopics[0] ?? ""}
+            <TopPart.Topic
+              to={`/topics/${data?.postTopics[0]?.id ?? ""}`}
+              onClick={toTop}
+            >
+              {data?.postTopics[0]?.name ?? ""}
             </TopPart.Topic>
             <TopPart.Date>{createdDate}</TopPart.Date>
           </TopPart>

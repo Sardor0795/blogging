@@ -21,6 +21,7 @@ function NewArticles({ auth }) {
 
   useEffect(() => {
     axios.get(`${mainUrl}/posts?page=1&limit=6`).then((res) => {
+      console.log(res);
       if (res.status === 200) setData(res?.data?.posts);
     });
   }, []);
@@ -34,9 +35,9 @@ function NewArticles({ auth }) {
             ? data?.map((item, index) => (
                 <React.Fragment key={index}>
                   {type === "card" ? (
-                    <CardArticle id={index + 1} data={item} />
+                    <CardArticle data={item} />
                   ) : (
-                    <ListArticle id={index + 1} data={item} />
+                    <ListArticle data={item} />
                   )}
                 </React.Fragment>
               ))
@@ -48,9 +49,11 @@ function NewArticles({ auth }) {
                   </React.Fragment>
                 ))}
         </Items>
-        <ButtonRow>
-          <LoadMoreButton />
-        </ButtonRow>
+        {data && (
+          <ButtonRow>
+            <LoadMoreButton />
+          </ButtonRow>
+        )}
       </Container>
     </OuterContainer>
   );
