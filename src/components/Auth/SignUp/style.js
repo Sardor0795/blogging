@@ -7,6 +7,9 @@ import checkedImg from "../../../assets/icons/checked.png";
 import googleImg from "../../../assets/icons/google.png";
 import errorIcon from "../../../assets/icons/error_icon.png";
 
+import eyeimg from "../../../assets/icons/eye_open.svg";
+import eyeHideimg from "../../../assets/icons/eye_hide.svg";
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -229,4 +232,24 @@ export const ErrorIcon = styled.div`
   background-position: center center;
   background-size: contain;
   margin-right: 4px;
+`;
+
+// Password ----
+
+export const ParolInput = styled.div`
+  position: relative;
+  height: 40px;
+  margin-bottom: 16px;
+`;
+
+export const TypeChanger = styled.div`
+  background-image: url("${({ type }) => type === "text" ? eyeHideimg : eyeimg}");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  right: 12px;
+  top: 0;
+  cursor: pointer;
 `;

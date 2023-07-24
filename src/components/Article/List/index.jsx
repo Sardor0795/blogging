@@ -23,36 +23,30 @@ import { toTop } from "./../../../utils/toTop";
 function ListArticle({ data }) {
   const [createdDate, setCreatedDate] = useState(null);
   useEffect(() => {
-    if (data.createdAt) {
-      let d = String(new Date(data.createdAt)).split(" ");
-      setCreatedDate([d[2], d[1], d[3]].join(" "));
-    }
+    let d = String(new Date(data.createdAt)).split(" ");
+    setCreatedDate([d[2], d[1], d[3]].join(" "));
   }, [data]);
 
   return (
     <Container>
       <Desktop>
-        <Image
-          url={data.image ?? ""}
-          to={`/posts/${data.id ?? 1}`}
-          onClick={toTop}
-        />
+        <Image url={data?.image} to={`/posts/${data?.id}`} onClick={toTop} />
         <RightSide>
           <RightSide.Top>
             <Top>
               <Top.Topic to="/topics/vizual+dizayn" onClick={toTop}>
-                {data.postTopics[0] ?? ""}
+                {data?.postTopics[0]}
               </Top.Topic>
               <Top.Date>{createdDate}</Top.Date>
             </Top>
             <Title>
-              <Title.Link to={`/posts/${data.id ?? 1}`} onClick={toTop}>
-                {data.title ?? ""}
+              <Title.Link to={`/posts/${data?.id}`} onClick={toTop}>
+                {data?.title}
               </Title.Link>
             </Title>
             <Description>
-              <Description.Link to={`/posts/${data.id ?? 1}`} onClick={toTop}>
-                {data.sub_title ?? ""}
+              <Description.Link to={`/posts/${data?.id}`} onClick={toTop}>
+                {data?.sub_title}
               </Description.Link>
               <Description.LinkShort to="/posts/99" onClick={toTop}>
                 Ushbu so'nggi hodisa, ChatGPT haqida ushbu...
@@ -63,8 +57,8 @@ function ListArticle({ data }) {
             <Bottom>
               <Profile>
                 <Profile.Container to="/profiles/25" onClick={toTop}>
-                  <Profile.Img url={data.user.user_img ?? ""} />
-                  <Profile.Text>{data.user.username ?? ""}</Profile.Text>
+                  <Profile.Img url={data?.user?.user_img} />
+                  <Profile.Text>{data?.user?.username}</Profile.Text>
                 </Profile.Container>
               </Profile>
               <Details>
@@ -75,15 +69,15 @@ function ListArticle({ data }) {
                 <Details.Rightside>
                   <div>
                     <ReadingTimeIcon />
-                    <p>{data.body.readingTimes ?? ""}</p>
+                    <p>{data?.body?.readingTimes}</p>
                   </div>
                   <div>
                     <CommentCountIcon />
-                    <p>{data.body.comments ?? ""}</p>
+                    <p>{data?.body?.comments}</p>
                   </div>
                   <div>
                     <ViewsCountIcon />
-                    <p>{data.body.views ?? ""}</p>
+                    <p>{data?.body?.views}</p>
                   </div>
                 </Details.Rightside>
               </Details>
@@ -96,7 +90,7 @@ function ListArticle({ data }) {
           <Profile>
             <Profile.Container to="/profiles/25" onClick={toTop}>
               <Profile.Img url={profileImg} />
-              <Profile.Text>{data.user.username ?? ""}</Profile.Text>
+              <Profile.Text>{data?.user?.username}</Profile.Text>
             </Profile.Container>
           </Profile>
           <Details>
@@ -107,15 +101,15 @@ function ListArticle({ data }) {
             <Details.Rightside>
               <div>
                 <ReadingTimeIcon />
-                <p>{data.body.readingTimes ?? ""}</p>
+                <p>{data?.body?.readingTimes}</p>
               </div>
               <div>
                 <CommentCountIcon />
-                <p>{data.body.comments ?? ""}</p>
+                <p>{data?.body?.comments}</p>
               </div>
               <div>
                 <ViewsCountIcon />
-                <p>{data.body.views ?? ""}</p>
+                <p>{data?.body?.views}</p>
               </div>
             </Details.Rightside>
           </Details>

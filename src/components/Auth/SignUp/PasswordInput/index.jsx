@@ -19,7 +19,7 @@ export const PasswordInput = ({error, text}) => {
       <InputTitle>{text}</InputTitle>
       <ParolInput>
         <TypeChanger type={type} onClick={typeChange} />
-        <InputText error={error} type={type} placeholder="Parol" />
+        <InputText name="password" error={error} type={type} placeholder="Parol" />
       </ParolInput>
     </>
   );
