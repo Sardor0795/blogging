@@ -8,7 +8,7 @@ export const OuterContainer = styled.div`
   background-image: url(${bgImg});
   background-repeat: no-repeat;
   background-position: right top;
-  
+
   @media screen and (max-width: 500px) {
     background-size: contain;
     background-position: right bottom;
@@ -85,11 +85,11 @@ Recommendation.Items = styled.div`
 `;
 
 Recommendation.Item = styled.div`
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: 0.2s linear;
   text-decoration: underline solid transparent 1px;
 
-  &:hover {
+  /* &:hover {
     text-decoration-color: #585757;
-  }
+  } */
 `;

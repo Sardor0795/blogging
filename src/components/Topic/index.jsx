@@ -8,7 +8,6 @@ import LoadMoreButton from "../LoadMore";
 
 function Topic() {
   const { id } = useParams();
-  console.log(id);
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -22,7 +21,7 @@ function Topic() {
       <Header />
       <TopicsContainer>
         {data
-          ? data.map((item, index) => <ListArticle data={item} key={index} />)
+          ? data.map((item, index) => <ListArticle data={{}} key={index} />)
           : Array(6)
               .fill()
               .map((item, index) => <ListSkeleton key={index} />)}

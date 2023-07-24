@@ -9,35 +9,126 @@ function Topics() {
     <OuterContainer>
       <Header />
       <TopicsContainer>
-        {Array(12)
-          .fill()
-          .map((item, index) => (
-            <TopicsItem key={index}>
-              <TopicsItem.Header>Title</TopicsItem.Header>
-              <TopicsItem.List>
-                <TopicsItem.ListItem>
-                  <Link to="one" onClick={toTop}>
-                    List One
-                  </Link>
-                </TopicsItem.ListItem>
-                <TopicsItem.ListItem>
-                  <Link to="two" onClick={toTop}>
-                    List Two
-                  </Link>
-                </TopicsItem.ListItem>
-                <TopicsItem.ListItem>
-                  <Link to="three" onClick={toTop}>
-                    List Three
-                  </Link>
-                </TopicsItem.ListItem>
-                <TopicsItem.ListItem>
-                  <Link to="four" onClick={toTop}>
-                    List Four
-                  </Link>
-                </TopicsItem.ListItem>
-              </TopicsItem.List>
-            </TopicsItem>
-          ))}
+        <TopicsItem>
+          <TopicsItem.List>
+            <TopicsItem.ListItem>
+              <Link to="one" onClick={toTop}>
+                List One
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="two" onClick={toTop}>
+                List Two
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="three" onClick={toTop}>
+                List Three
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="four" onClick={toTop}>
+                List Four
+              </Link>
+            </TopicsItem.ListItem>
+          </TopicsItem.List>
+        </TopicsItem>
+        <TopicsItem>
+          <TopicsItem.List>
+            <TopicsItem.ListItem>
+              <Link to="one" onClick={toTop}>
+                List One
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="two" onClick={toTop}>
+                List Two
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="three" onClick={toTop}>
+                List Three
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="four" onClick={toTop}>
+                List Four
+              </Link>
+            </TopicsItem.ListItem>
+          </TopicsItem.List>
+        </TopicsItem>
+        <TopicsItem>
+          <TopicsItem.List>
+            <TopicsItem.ListItem>
+              <Link to="one" onClick={toTop}>
+                List One
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="two" onClick={toTop}>
+                List Two
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="three" onClick={toTop}>
+                List Three
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="four" onClick={toTop}>
+                List Four
+              </Link>
+            </TopicsItem.ListItem>
+          </TopicsItem.List>
+        </TopicsItem>
+        <TopicsItem>
+          <TopicsItem.List>
+            <TopicsItem.ListItem>
+              <Link to="one" onClick={toTop}>
+                List One
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="two" onClick={toTop}>
+                List Two
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="three" onClick={toTop}>
+                List Three
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="four" onClick={toTop}>
+                List Four
+              </Link>
+            </TopicsItem.ListItem>
+          </TopicsItem.List>
+        </TopicsItem>
+        <TopicsItem>
+          <TopicsItem.List>
+            <TopicsItem.ListItem>
+              <Link to="one" onClick={toTop}>
+                List One
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="two" onClick={toTop}>
+                List Two
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="three" onClick={toTop}>
+                List Three
+              </Link>
+            </TopicsItem.ListItem>
+            <TopicsItem.ListItem>
+              <Link to="four" onClick={toTop}>
+                List Four
+              </Link>
+            </TopicsItem.ListItem>
+          </TopicsItem.List>
+        </TopicsItem>
       </TopicsContainer>
     </OuterContainer>
   );
