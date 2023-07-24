@@ -22,27 +22,14 @@ export const TopicsContainer = styled.div`
   }
 `;
 
-export const TopicsItem = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-`;
-
-/* TopicsItem.Header = styled.div`
-  color: var(--dark-black);
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.1;
-`; */
-
-TopicsItem.List = styled.ul`
+export const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 15px;
   padding-left: 18px;
 `;
 
-TopicsItem.ListItem = styled.li`
+List.Item = styled.li`
   color: var(--blue);
   font-size: 18px;
   line-height: 1.1;
