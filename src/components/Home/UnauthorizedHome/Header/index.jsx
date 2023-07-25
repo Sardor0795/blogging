@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   HashTag,
@@ -12,9 +12,18 @@ import {
 } from "./style";
 import Auth from "../../../Auth";
 import { toTop } from "../../../../utils/toTop";
+import axios from "axios";
+import { mainUrl } from "../../../../utils/api";
 
 function Header() {
   const [authOpened, setAuthOpened] = useState(false);
+  const [trandingTopics, setTrandingTopics] = useState(null);
+
+  useEffect(() => {
+    axios.get(`${mainUrl}/topics/tranding`).then((res) => {
+      if (res.status === 200) setTrandingTopics(res?.data?.data);
+    });
+  }, []);
 
   return (
     <>
@@ -34,48 +43,19 @@ function Header() {
             Hamjamiyatga qo’shiling
           </SignUpButton>
           <HashTagsWrapper>
-            <HashTag
-              to="/topics/dolzarb"
-              onClick={toTop}
-              aria-label="dolzarb mavzusidagi maqolalarni ko‘ring"
-            >
-              #dolzarb
-            </HashTag>
-            <HashTag
-              to="/topics/ta’lim"
-              onClick={toTop}
-              aria-label="ta’lim mavzusidagi maqolalarni ko‘ring"
-            >
-              #ta’lim
-            </HashTag>
-            <HashTag
-              to="/topics/iqtisodiyot"
-              onClick={toTop}
-              aria-label="iqtisodiyot mavzusidagi maqolalarni ko‘ring"
-            >
-              #iqtisodiyot
-            </HashTag>
-            <HashTag
-              to="/topics/madaniyat"
-              onClick={toTop}
-              aria-label="madaniyat mavzusidagi maqolalarni ko‘ring"
-            >
-              #madaniyat
-            </HashTag>
-            <HashTag
-              to="/topics/texnologiya"
-              onClick={toTop}
-              aria-label="texnologiya mavzusidagi maqolalarni ko‘ring"
-            >
-              #texnologiya
-            </HashTag>
-            <HashTag
-              to="/topics/san’at"
-              onClick={toTop}
-              aria-label="san’at mavzusidagi maqolalarni ko‘ring"
-            >
-              #san’at
-            </HashTag>
+            {trandingTopics &&
+              trandingTopics.map((item, index) => (
+                <HashTag
+                  key={item?.id ?? index}
+                  to={`/topics/${item?.id ?? ""}`}
+                  onClick={toTop}
+                  aria-label={`${
+                    item?.name ?? ""
+                  } mavzusidagi maqolalarni ko‘ring`}
+                >
+                  {item?.name ? `#${item?.name}` : ""}
+                </HashTag>
+              ))}
           </HashTagsWrapper>
           <MoreContentLink
             to="/topics"

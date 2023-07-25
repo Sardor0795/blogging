@@ -29,7 +29,6 @@ function ListArticle({ data }) {
       let d = String(new Date(data.createdAt)).split(" ");
       setCreatedDate([d[2], d[1], d[3]].join(" "));
     }
-    console.log(data);
   }, [data]);
 
   return (
