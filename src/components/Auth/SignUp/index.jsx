@@ -74,12 +74,13 @@ export const SignUp = ({ setOpened }) => {
       confirmPassValue,
       privacyCheck: checked,
     };
-    let n = JSON.stringify(obj);
-    console.log(n);
-    axios
-      .post(`${mainUrl}/users/auth/signup`, n)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+    console.log(obj);
+    // let n = JSON.stringify(obj);
+    // console.log(n);
+    // axios
+    //   .post(`${mainUrl}/users/auth/signup`, n)
+    //   .then((res) => console.log(res))
+    //   .catch((err) => console.log(err));
   };
 
   const checkConfirmPassword = (e) => {
