@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { globalContainer } from "./../../../root/global";
 import bgImg from "../../../assets/images/header_bg.svg";
+import { Link } from "react-router-dom";
 
 export const OuterContainer = styled.div`
   padding-block: 150px;
@@ -45,7 +46,6 @@ export const FormGroup = styled.div`
     outline: none;
     color: var(--dark-black);
     font-size: 20px;
-    line-height: 1.1;
   }
 
   label {
@@ -57,6 +57,41 @@ export const FormGroup = styled.div`
     align-items: center;
     width: 48px;
     height: 100%;
+  }
+`;
+
+export const Results = styled.div`
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  max-height: 350px;
+  overflow-y: auto;
+  padding: 12px 40px 12px 45px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-size: 18px;
+  color: #585757;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: 0.2s linear;
+  visibility: ${({ visible }) => (visible === "true" ? "visible" : "hidden")};
+  opacity: ${({ visible }) => (visible === "true" ? 1 : 0)};
+`;
+
+export const Result = styled.div``;
+
+Result.Link = styled(Link)`
+  text-decoration: none;
+  color: #585757;
+  transition: 0.2s linear;
+  text-decoration: underline solid transparent 1.5px;
+
+  &:hover {
+    text-decoration-color: #585757;
   }
 `;
 
@@ -74,7 +109,8 @@ export const Recommendation = styled.div`
   line-height: 1.1;
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  gap: 10px 16px;
   flex-wrap: wrap;
 `;
 
@@ -89,7 +125,7 @@ Recommendation.Item = styled.div`
   transition: 0.2s linear;
   text-decoration: underline solid transparent 1px;
 
-  /* &:hover {
+  &:hover {
     text-decoration-color: #585757;
-  } */
+  }
 `;

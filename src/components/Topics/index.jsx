@@ -12,7 +12,6 @@ function Topics() {
   useEffect(() => {
     axios.get(`${mainUrl}/topics`).then((res) => {
       if (res.status === 200) setTopics(res?.data?.data);
-      console.log(res);
     });
   }, []);
 
@@ -21,11 +20,11 @@ function Topics() {
       <Header />
       <TopicsContainer>
         {topics &&
-          topics.map(({ name, id }, index) => (
-            <List>
+          topics.map((item, index) => (
+            <List key={item?.id ?? index}>
               <List.Item>
-                <Link to={id} onClick={toTop}>
-                  {name}
+                <Link to={item?.id ?? ""} onClick={toTop}>
+                  {item?.name ?? ""}
                 </Link>
               </List.Item>
             </List>
