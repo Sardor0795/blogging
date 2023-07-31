@@ -13,6 +13,7 @@ import axios from "axios";
 function NewArticles({ auth }) {
   const search = useSearch();
   const [type, setType] = useState(search.get("type"));
+  const [buttonIsVisible, setButtonIsVisible] = useState(false);
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -21,9 +22,16 @@ function NewArticles({ auth }) {
 
   useEffect(() => {
     axios.get(`${mainUrl}/posts?page=1&limit=6`).then((res) => {
-      if (res.status === 200) setData(res?.data?.posts);
+      if (res.status === 200) setData(res?.data);
     });
   }, []);
+
+  useEffect(() => {
+    if (!data) setButtonIsVisible(false);
+    else if (data?.pagination?.page === data?.pagination?.totalPages)
+      setButtonIsVisible(false);
+    else setButtonIsVisible(true);
+  }, [data]);
 
   return (
     <OuterContainer>
@@ -31,7 +39,7 @@ function NewArticles({ auth }) {
         <FilterPart auth={auth} />
         <Items type={type}>
           {data
-            ? data?.map((item, index) => (
+            ? data?.posts?.map((item, index) => (
                 <React.Fragment key={index}>
                   {type === "card" ? (
                     <CardArticle data={item} />
@@ -48,7 +56,7 @@ function NewArticles({ auth }) {
                   </React.Fragment>
                 ))}
         </Items>
-        {data && (
+        {buttonIsVisible && (
           <ButtonRow>
             <LoadMoreButton />
           </ButtonRow>

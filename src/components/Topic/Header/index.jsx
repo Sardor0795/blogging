@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Leftside,
@@ -13,11 +13,20 @@ import {
   Subscriber,
 } from "./style";
 import { ReactComponent as TitleIcon } from "../../../assets/icons/topic.svg";
-import profileImg from "../../../assets/images/subscriber.png";
+// import profileImg from "../../../assets/images/subscriber.png";
 import Auth from "./../../Auth";
+import axios from "axios";
+import { mainUrl } from "../../../utils/api";
 
-function Header() {
+function Header({ id }) {
   const [opened, setOpened] = useState(false);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    axios.get(`${mainUrl}/topics/${id}`).then((res) => {
+      if (res?.status === 200) setData(res?.data?.data?.items);
+    });
+  }, [id]);
 
   return (
     <OuterContainer>
@@ -27,7 +36,7 @@ function Header() {
             <Icon>
               <TitleIcon />
             </Icon>
-            <Title>Programming Languages</Title>
+            <Title>{data?.name ?? ""}</Title>
           </TitleRow>
           <Buttons>
             <button onClick={() => setOpened(true)}>Kuzatish</button>
@@ -39,22 +48,19 @@ function Header() {
           <Info>
             <Info.Side>
               <Info.Title>Hikoyalar</Info.Title>
-              <Info.Number>48</Info.Number>
+              <Info.Number>{data?.post_count ?? 0}</Info.Number>
             </Info.Side>
             <Info.Side>
               <Info.Title>Yozuvchilar</Info.Title>
-              <Info.Number>8129</Info.Number>
+              <Info.Number>{data?.user_count ?? 0}</Info.Number>
             </Info.Side>
           </Info>
           <Subscribers>
-            <Subscriber url={profileImg} />
-            <Subscriber url={profileImg} />
-            <Subscriber url={profileImg} />
-            <Subscriber url={profileImg} />
-            <Subscriber url={profileImg} />
-            <Subscriber url={profileImg} />
-            <Subscriber url={profileImg} />
-            <Subscriber url={profileImg} />
+            {data?.users &&
+              data?.users?.length &&
+              data?.users.map((item, index) => (
+                <Subscriber url={item?.image} key={index} />
+              ))}
           </Subscribers>
         </Rightside>
       </Container>
