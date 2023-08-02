@@ -99,7 +99,7 @@ export const SignUp = ({ setOpened }) => {
       <Container.Header>
         <UserImg />
         <HeaderTitleWrap>
-          <HeaderTitle>Kirish</HeaderTitle>
+          <HeaderTitle>Ro‘yhatdan o‘tish</HeaderTitle>
           <HeaderText>Bilim ulashish har doim yaxshi</HeaderText>
         </HeaderTitleWrap>
         <CloseBtn
