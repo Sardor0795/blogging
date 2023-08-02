@@ -66,7 +66,7 @@ function CardArticle({ data }) {
               onClick={toTop}
             >
               <Profile.Image url={data?.user?.user_img ?? ""} />
-              <Profile.Name>{data?.user?.username ?? ""}</Profile.Name>
+              <Profile.Name>{data?.user?.full_name ?? ""}</Profile.Name>
             </ProfileLink>
           </Profile>
           <Details>

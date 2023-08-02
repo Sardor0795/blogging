@@ -70,9 +70,12 @@ function ListArticle({ data }) {
           <RightSide.Bottom>
             <Bottom>
               <Profile>
-                <Profile.Container to="/profiles/25" onClick={toTop}>
+                <Profile.Container
+                  to={`/profiles/${data?.user?.username}`}
+                  onClick={toTop}
+                >
                   <Profile.Img url={data?.user?.user_img ?? profileImg} />
-                  <Profile.Text>{data?.user?.username ?? ""}</Profile.Text>
+                  <Profile.Text>{data?.user?.full_name ?? ""}</Profile.Text>
                 </Profile.Container>
               </Profile>
               <Details>
@@ -102,9 +105,12 @@ function ListArticle({ data }) {
       <Tablet>
         <Bottom>
           <Profile>
-            <Profile.Container to="/profiles/25" onClick={toTop}>
+            <Profile.Container
+              to={`/profiles/${data?.user?.username}`}
+              onClick={toTop}
+            >
               <Profile.Img url={data?.user?.user_img ?? profileImg} />
-              <Profile.Text>{data?.user?.username ?? ""}</Profile.Text>
+              <Profile.Text>{data?.user?.full_name ?? ""}</Profile.Text>
             </Profile.Container>
           </Profile>
           <Details>
