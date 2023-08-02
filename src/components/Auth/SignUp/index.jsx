@@ -130,6 +130,7 @@ export const SignUp = ({ setOpened }) => {
           placeholder="Foydalanuvchi nomi yarating"
         />
         <InputTitle>Email</InputTitle>
+
         <InputText
           ref={emailRef}
           name="email"
