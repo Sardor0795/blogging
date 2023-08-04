@@ -5,7 +5,6 @@ import { ReactComponent as headerBg } from "../../assets/images/header_bg.svg";
 export const OuterContainer = styled.div`
   background-color: #fff;
   min-height: 100vh;
-  padding-bottom: 100px;
   position: relative;
 `;
 
@@ -111,9 +110,6 @@ export const HeaderBgImgMobile = styled(headerBg)`
   }
 `;
 
-export const PlainText = styled.p`
-  margin-bottom: 10px;
-`;
 export const Title = styled.p`
   margin-bottom: 10px;
   text-transform: uppercase;
