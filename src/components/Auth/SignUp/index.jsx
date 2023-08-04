@@ -66,21 +66,20 @@ export const SignUp = ({ setOpened }) => {
 
   const getValues = () => {
     let obj = {
-      name: nameRef.current.value,
-      lastname: lastNameRef.current.value,
+      full_name: `${nameRef.current.value} ${lastNameRef.current.value}`,
       username: usernameRef.current.value,
       email: emailRef.current.value,
       password,
-      confirmPassValue,
-      privacyCheck: checked,
+      confirmPassword: confirmPassValue,
+      // privacyCheck: checked,
     };
     console.log(obj);
-    // let n = JSON.stringify(obj);
-    // console.log(n);
-    // axios
-    //   .post(`${mainUrl}/users/auth/signup`, n)
-    //   .then((res) => console.log(res))
-    //   .catch((err) => console.log(err));
+    let n = JSON.stringify(obj);
+    console.log(n);
+    axios
+      .post(`${mainUrl}/users/auth/signup`, obj)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
 
   const checkConfirmPassword = (e) => {
