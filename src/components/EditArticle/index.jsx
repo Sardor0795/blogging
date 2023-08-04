@@ -27,7 +27,7 @@ function EditArticle() {
     return () => {
       ejInstance?.current?.destroy();
       ejInstance.current = null;
-    };
+    }; // eslint-disable-next-line
   }, []);
 
   const getData = () => {

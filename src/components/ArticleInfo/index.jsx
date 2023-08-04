@@ -24,7 +24,7 @@ import {
   CommentWrapper,
   Container,
   HeaderBgImg,
-  HeaderBgImgMobile,
+  // HeaderBgImgMobile,
   OuterContainer,
   SaveBtn,
   ShareLink,
@@ -39,7 +39,7 @@ import {
   WriteCommentTextArea,
   WriteCommentWrapper,
 } from "./style";
-import Navbar from "../Navbar";
+// import Navbar from "../Navbar";
 
 import calendarIcon from "../../assets/icons/calendar.png";
 import commentsIcon from "../../assets/icons/comment.png";
@@ -56,7 +56,7 @@ import complaintIcon from "../../assets/icons/complaint_share.png";
 import commentUserImg from "../../assets/images/comment_user_img.png";
 
 import replyIcon from "../../assets/icons/reply.png";
-import repliedIcon from "../../assets/icons/replyed.png";
+// import repliedIcon from "../../assets/icons/replyed.png";
 
 function ArticleInfoComponent() {
   return (
