@@ -73,15 +73,23 @@ export const SignUp = ({ setOpened }) => {
       password,
       confirmPassword: confirmPassValue,
     };
+
     axios
       .post(`${mainUrl}/users/auth/signup`, obj)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-
-    form.current.reset();
-    setPassword("");
-    setConfirmPassValue("");
-    setChecked(false);
+      .then((res) => {
+        console.log(res);
+        form.current.reset();
+        setPassword("");
+        setConfirmPassValue("");
+        setChecked(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        form.current.reset();
+        setPassword("");
+        setConfirmPassValue("");
+        setChecked(false);
+      });
   };
 
   const checkConfirmPassword = (e) => {
@@ -172,7 +180,7 @@ export const SignUp = ({ setOpened }) => {
 
         <ErrorWrap display={confirmPass ? "none" : "block"}>
           <ErrorIcon />
-          <ErrorText>Error Alert</ErrorText>
+          <ErrorText>Parolni to'g'ri takrorlang</ErrorText>
         </ErrorWrap>
 
         <PrivacyWrap>
