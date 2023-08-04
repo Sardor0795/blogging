@@ -5,7 +5,6 @@ import { ReactComponent as headerBg } from "../../assets/images/header_bg.svg";
 export const OuterContainer = styled.div`
   background-color: #fff;
   min-height: 100vh;
-  padding-bottom: 100px;
   position: relative;
 `;
 
