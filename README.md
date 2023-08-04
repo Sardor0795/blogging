@@ -1,4 +1,4 @@
-![n](https://github.com/Sardor0795/blogging/assets/87645525/f8dedbc2-d49d-4d09-9117-becbdd76af9f)
+![g](https://github.com/Sardor0795/blogging/assets/87645525/df64194d-cead-4ec7-8172-8101dae36fb0)
 
 
 # Getting Started with Create React App
