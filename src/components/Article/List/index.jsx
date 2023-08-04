@@ -23,11 +23,17 @@ import noimg from "../../../assets/images/no-img.png";
 
 function ListArticle({ data }) {
   const [createdDate, setCreatedDate] = useState(null);
+  const [viewMin, setViewMin] = useState(null);
 
   useEffect(() => {
     if (data?.createdAt) {
       let d = String(new Date(data.createdAt)).split(" ");
       setCreatedDate([d[2], d[1], d[3]].join(" "));
+    }
+    if (data?.body?.readingTimes) {
+      let viewSek = data?.body?.readingTimes;
+      let viewMin = parseInt(viewSek / 60);
+      setViewMin(viewMin);
     }
   }, [data]);
 
@@ -86,7 +92,7 @@ function ListArticle({ data }) {
                 <Details.Rightside>
                   <div>
                     <ReadingTimeIcon />
-                    <p>{data?.body?.readingTimes ?? ""}</p>
+                    <p>{viewMin ?? "0"} min</p>
                   </div>
                   <div>
                     <CommentCountIcon />
@@ -121,7 +127,7 @@ function ListArticle({ data }) {
             <Details.Rightside>
               <div>
                 <ReadingTimeIcon />
-                <p>{data?.body?.readingTimes ?? ""}</p>
+                <p>{viewMin ?? "0"} min</p>
               </div>
               <div>
                 <CommentCountIcon />
