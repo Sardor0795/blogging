@@ -63,6 +63,7 @@ export const SignUp = ({ setOpened }) => {
   let lastNameRef = useRef("");
   let usernameRef = useRef("");
   let emailRef = useRef("");
+  let form = useRef("");
 
   const getValues = () => {
     let obj = {
@@ -71,15 +72,16 @@ export const SignUp = ({ setOpened }) => {
       email: emailRef.current.value,
       password,
       confirmPassword: confirmPassValue,
-      // privacyCheck: checked,
     };
-    console.log(obj);
-    let n = JSON.stringify(obj);
-    console.log(n);
     axios
       .post(`${mainUrl}/users/auth/signup`, obj)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
+
+    form.current.reset();
+    setPassword("");
+    setConfirmPassValue("");
+    setChecked(false);
   };
 
   const checkConfirmPassword = (e) => {
@@ -106,7 +108,7 @@ export const SignUp = ({ setOpened }) => {
           style={{ backgroundColor: "#fff", boxShadow: "unset" }}
         />
       </Container.Header>
-      <Form name="form">
+      <Form ref={form} name="form">
         <InputTitle>Ism</InputTitle>
         <InputText
           name="name"
@@ -184,11 +186,24 @@ export const SignUp = ({ setOpened }) => {
             siyosatiga rozilik bildiraman.
           </PrivacyText>
         </PrivacyWrap>
-        <SignInBtn type="button">
+        <SignInBtn
+          onClick={() => {
+            getValues();
+            setOpened(false);
+          }}
+          type="button"
+        >
           <GoogleIcon />
           Ro‘yhatdan o‘tish
         </SignInBtn>
-        <SignInBtn onClick={getValues} bgblack="true" type="button">
+        <SignInBtn
+          onClick={() => {
+            getValues();
+            setOpened(false);
+          }}
+          bgblack="true"
+          type="button"
+        >
           Ro‘yhatdan o‘tish
         </SignInBtn>
         <Line />
